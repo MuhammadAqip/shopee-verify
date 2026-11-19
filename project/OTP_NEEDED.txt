@@ -1,0 +1,3 @@
+OTP diperlukan
+url: https://shopee.co.id/verify/ivs?is_initial=true
+waktu: 21:59:51

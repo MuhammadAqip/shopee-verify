@@ -1,0 +1,27 @@
+{
+ "src66264_len": 5033,
+ "apmsLiteral": "not found",
+ "newResults": [
+  {
+   "cfg": 0,
+   "ok": true,
+   "keys": [
+    "_bcy",
+    "_OU",
+    "_uPK",
+    "_e0M",
+    "_hE"
+   ],
+   "methods": [
+    "init",
+    "flush",
+    "getQueueSize",
+    "onQueueChange",
+    "onFlush",
+    "onReportFail",
+    "destroy",
+    "resetTrace"
+   ]
+  }
+ ]
+}

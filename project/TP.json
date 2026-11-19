@@ -1,0 +1,57 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/abtest/traffic/get_web_experiments",
+   "s": 200,
+   "b": "{\"data\":[],\"error\":null,\"error_msg\":null,\"debug\":null,\"retcode\":0}"
+  },
+  {
+   "u": "/api/v4/abtest/traffic/get_web_experiments",
+   "s": 200,
+   "b": "{\"data\":[{\"version\":2785825,\"dimension\":\"userId\",\"dimension_value\":\"17048587964\",\"feature_map\":[{\"feature_key\":\"order.opc_retrigger_voucher_autoapply\",\"feature_value\":\"control\"},{\"feature_key\":\"order.fbs_cc_fe_abt\",\"feature_value\":\"{\\n    \\\"show_shipping_fee\\\": true,\\n    \\\"show_non_fbs_shipping_promo_banner\\\": true,\\n    \\\"show_fbs_shipping_promo_banner\\\": false, \\n    \\\"enable_fbs_super_group\\\": false,\\n    \\\"choice_floating_counter_new_api\\\": false\\n}\"},{\"feature_key\":\"order.final_price_4\",\"feature_value\":\"{\\n  \\\"item_card\\\": {\\n  \\\"show_final_price_icon_with_shop\\u0026platform_voucher\\\": true\\n  },\\n  \\\"pdp\\\": {\\n    \\\"show_final_price_text_\\u0026_labels\\\": true,\\n    \\\"show_final_price_text\\\": true,\\n    \\\"show_final_price_label\\\": false\\n  },\\n  \\\"cart\\\": {\\n    \\\"show_final_price_text\\\": true,\\n    \\\"hide_strikethrough_price\\\": true\\n  },\\n  \\\"opc\\\": {\\n    \\\"show_final_price\\\": true\\n  }\\n}\"},{\"feature_key\":\"order.PDP_Price_Improvement\",\"feature_value\":\"{\\\"PDP_new_combine_drawer\\\":true}\"},{\"feature_key\":\"order.opc_revamp_web\",\"feature_value\":\"{\\n  \\\"mode\\\": \\\"revamp\\\",\\n  \\\"revamp_id\\\": true,\\n  \\\"revamp_newPaymentEntrance\\\": false\\n}\"},{\"feature_key\":\"order.osp_revamp_FE\","
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOKAAAADLmw1RVsjp8F0sP7HK5KqUOY01e5XXae4FE4IbvVj5KlT0RLBI_XpCKxTeJgZc527msHeYT9Vu9xfHqG_Kca39q-trBY8P5rTxZcs7Qq4i_vlHgtPR5cxtLA6fdDlL7Vt7NyvncCrHdSZpu4KfAzMVIMJ_FVNibkUQ3tpKMYf_ZsXdPPjYqQ_QcrZzwLZVXuvoSbb0LEHGsoMVTevWa2Vsw8A9l0H3O_x2hf-jk7Shm4E3fdV_sv34qQKmGRE2wURqHBfYMW5W47QMwaRl7pM1ikNrIQT2acZNTxG0m_kNnWdJFufdOnBpzVlOG4Rm0YErRXNk6ck8GOfFId1ETuz8MFrhvbbS4Og67uTbEaMX4X4K6vglPI3PZQDw3fEWCYGV6e0KV_ciN4ZWX1AW9-EOU87ORA4ebkkqvB-PvrJmAQ2G78JWtCYp9IOSNwHilxf4y78FLPlOTOei5xZsUxMzEJI0KNjc-ZjlhdePuc5RbRTgGqhXJomqEsc5v8b-1OOKF0iZaDNox6_EesWTjmGEnKbhM9gxv6f-9j2M48gCJZMXISOET07q7YehXh0_TNeV090p6xNGo4oItO5XuXyEn2h-cKQFF7oVhLsIPpstlW0dCF7QpyvXHtFceX3Oc5d8mazo6GurgEwL1wb_U5vdx4etlSHDvgIxE9JUGlE4tW7coHE8n1bHnGXcA8r5lZjF9nma7uGIWoAlvzjT81IrQWvGSMtXZGGM7jJH2q5KPJ9bOjs6aa7SO-cSXwfKj8Tna9khsF8x6S8uNntqHvJHjPy6tKyM5CywA4vUll"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"14146738c67-89a2-4f9d-9ab0-b6e4453f678f\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":false,\"need_captcha\":true,\"captcha_scene\":\"signup\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"7b6b38bf-a122-4c99-9502-553bce9e18b0\",\"flow_name\":\"default_flow\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500101,\"data\":{\"seed\":\"7b6b38bf-a122-4c99-9502-553bce9e18b0\",\"delivery_channel\":3,\"available_channels\":[3,2,1],\"otp_tracking_id\":\"\",\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"flow_name\":\"default_flow\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500152,\"data\":{\"seed\":\"7b6b38bf-a122-4c99-9502-553bce9e18b0\",\"delivery_channel\":2,\"available_channels\":[3,2,1],\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false}}"
+  }
+ ],
+ "send": {
+  "tries": [
+   {
+    "ch": 3,
+    "err": 23500101,
+    "trk": ""
+   },
+   {
+    "ch": 2,
+    "err": 23500152,
+    "trk": null
+   }
+  ],
+  "settings": {
+   "err": 0,
+   "seed": "7b6b38bf-a122-4c99-9502-553bce9e18b0"
+  }
+ }
+}

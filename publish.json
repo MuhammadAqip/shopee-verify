@@ -1,0 +1,17 @@
+{
+  "description": "Bot Telegram yang mengganti nomor Shopee lewat HTTP murni: cek akun, cek nomor, OTP, commit, plus percabangan IVS dan panel admin kredit.",
+  "topics": [
+    "shopee",
+    "reverse-engineering",
+    "telegram-bot",
+    "python",
+    "http-api",
+    "webpack",
+    "automation",
+    "ivs",
+    "api-reverse-engineering",
+    "requests"
+  ],
+  "homepage": "",
+  "has_issues": true
+}

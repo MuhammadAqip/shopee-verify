@@ -1,0 +1,48 @@
+[
+ {
+  "input": "089601416330",
+  "phone": "6289601416330",
+  "verdict": "NOT_ALLOW_UNBIND",
+  "label": "Terdaftar - TIDAK boleh unbind",
+  "exist": true,
+  "username": "m*****h",
+  "error": 12301115,
+  "raw": {
+   "error": 12301115
+  }
+ },
+ {
+  "input": "087876125616",
+  "phone": "6287876125616",
+  "verdict": "RESTRICTED",
+  "label": "Terdaftar - akun/nomor di-restrict",
+  "exist": true,
+  "username": "k*****f",
+  "error": 12301116,
+  "raw": {
+   "error": 12301116
+  }
+ },
+ {
+  "input": "087876125617",
+  "phone": "6287876125617",
+  "verdict": "FRESH",
+  "label": "Belum terdaftar (fresh)",
+  "exist": false,
+  "username": null,
+  "error": null,
+  "raw": null
+ },
+ {
+  "input": "6283122563357",
+  "phone": "6283122563357",
+  "verdict": "BISA_UNBIND",
+  "label": "Terdaftar - BISA di-unbind",
+  "exist": true,
+  "username": "r*****y",
+  "error": 0,
+  "raw": {
+   "error": 0
+  }
+ }
+]

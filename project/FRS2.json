@@ -1,0 +1,177 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/abtest/traffic/get_web_experiments",
+   "s": 200,
+   "b": "{\"data\":[],\"error\":null,\"error_msg\":null,\"debug\":null,\"retcode\":0}"
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":false,\"next_tos_consent_check_timestamp\":1795658332}}"
+  },
+  {
+   "u": "https://security-captcha.cache.susercontent.com/api/v4/50017751/client",
+   "s": 200,
+   "b": "!function(a){a=Date.now();var b=g;function c(p,s,w,K,n,y,h){for(var S,D,R,t,H,C,_,L,N,Z,i,Y,$,W,n1,t1,r,i1,r1,e1,o1,o,u,f1,u1,a1,c1,l1,a,v1,p1,s1,w1,y1,l,h1,O1,d1,b1,q1,v,Q1,B1,z1,g1,O,b,q,Q,B,z,X,A,U,j,F,T,M,P,V,J,I,E,G,x,X1,A1,U1,m,j1,k=g,F1=\"function\",T1=eval;U1=U1||(c.$=[c.$=\"PR\",c.apply[c.$]=c.call[c.$]=c.call,c.apply,[].push,[].pop,[].slice],P=15,V=4,I=void 0,J=String[k(0)],j1=Math[k(1)],m=function(n,t,i,r,e,o,u,a){var l,v=g;if(x<670)if(x<347)if(x<328)if(x<257)if(x<225)try{G(B,T1(y[E(z)]))}catch(n){G(B,I)}else n=f[p++],t=f[p++],i=f[p++],G(n,(l=w.slice(),function(){return x=844,m(3,l,[]),665===(a=c(t,t+i,l,this,arguments,y,h))&&(x=844,a=m(4,l[l.length-1])),l.pop(),a}));else for(T=0;!a&&T<A;T++)j[T]!=U&&null!=j[T]||(p+=F[T],a=!0);else{if(!(x<338))throw E(f[p++]);v(2),G(z,(F1!=typeof Symbol||\"symbol\"!=typeof Symbol.iterator)&&E(B)&&F1==typeof Symbol&&E(B).constructor===Symbol&&E(B)!==Symbol.prototype?\"symbol\":typeof E(B))}else if(x<621)if(x<480)for(a=[],A=0;A<z;A++)c.$[1][c.$[0]](c.$[3],a,E(f[p++]));else U=c(A=p,s,w,K,X1,y,h),p+=B,665==U&&0<w[w.length-1].length&&(Q=U);else if(x<633)p+=B,j=[],Array.prototype.push.apply(j,X1),c.$[1][c.$[0]](c.$[3],j,A1),665==(U=c(A=p,s,w,K,j,y,h))&&(Q=665);else for(U=0,a=\"\";U<X.length;)(n=X[U])<128?(a+=J(n),U++):n<224?(t=X[U+1],a+=J((31&n)<<6|63&t),U+=2):n<240?(t=X[U+1],i=X[U+2],a+=J((15&n)<<12|(63&t)<<6|63&i),U+=3):(t=X[U+1],i=X[U+2],r=X[U+3],e=(7&n)<<18|(63&t)<<12|(63&i)<<6|63&r,a+=J(55296+((e-=65536)>>>10),56320+(1023&e)),U+=4);else if(x<"
+  },
+  {
+   "u": "https://security-captcha.cache.susercontent.com/api/v4/50017751/client",
+   "s": 200,
+   "b": ".Hu8O1l{border:0;padding:0;margin:0;position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px, 1px, 1px, 1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);white-space:nowrap}\n\n.BlzSBH{opacity:0.7;cursor:not-allowed}.OHc2Kt{text-transform:uppercase}.gCoWhN{width:100%}\n\n.ZLtLVH{opacity:0.7;cursor:not-allowed}.VUNe9h,.cDUOQx,.KjwaR9{outline:none;padding:0;border:0;cursor:pointer}.VUNe9h{height:2.625rem;font-size:1rem;line-height:1.2;min-width:4rem;background-color:#2673dd;color:white;text-transform:capitalize;border-radius:2px;padding:0 1rem}.VUNe9h:not(.ZLtLVH):active{background-color:#1e62c1}.cDUOQx{height:2.625rem;font-size:1rem;line-height:1.2;min-width:4rem;background-color:#ee4d2d;color:white;text-transform:capitalize;border-radius:2px;padding:0 1rem}.cDUOQx:not(.ZLtLVH):active{background-color:#e2492b}.KjwaR9{height:42px;font-size:16px;line-height:1.2;min-width:64px;background-color:#1b92f5;color:white;text-transform:capitalize;border-radius:2px;padding:0 16px}.KjwaR9:not(.ZLtLVH):active{background-color:#1e62c1}.sT4RYC{margin:8px 0 8px;color:rgba(0,0,0,0.54);font-size:14px;max-height:54px;text-align:center}.zmcud2{color:rgba(0,0,0,0.65);font-size:16px;font-weight:500;text-align:center}.hNXCGm{background-color:#2673dd;border-radius:4px}._0ml6zu{background-color:#2673dd;-webkit-transform:translateX(-100%);transform:translateX(-100%)}.qiIuMC{background-color:#2673dd}.VznHVy{background-color:#2673dd;border-radius:4px}._81FllL{background-color:#ee4d"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/experiment/performance",
+   "s": 200,
+   "b": "{\"is_success\":true}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init",
+   "s": 200,
+   "b": "{\"error\":10002}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"change_phone_token\":\"EUuZq5sG83dHd8MnVDj6v983xdTLzeIw13LW6nGlGoMMRBtQrPP7FNK63498cCMFgNy7hicy7e6RA3aIDq+wm+LqE3wL0xs9Wn2x3c6j9/2BDLsCNQ+/sRDekQclBspzHVWf2akQeDMEXwam4UMP6i9XolglFRNsNpmKzWfqA+7PFYP+9r3DWsMJh/9YdBXz0/5IoxT7dBr2Bjc/20MA2gcLOrLvRRwg4Tkzb5Xcir9c\",\"ivs_required\":false,\"ivs_utoken\":\"\",\"is_delayed\":false,\"has_phone_pix_key\":false}}"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":false,\"need_captcha\":true,\"captcha_scene\":\"signup\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"2f70a6b8-f238-484b-bac2-aa4412863aae\",\"flow_name\":\"default_flow\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500101,\"data\":{\"seed\":\"2f70a6b8-f238-484b-bac2-aa4412863aae\",\"delivery_channel\":3,\"available_channels\":[3,2,1],\"otp_tracking_id\":\"\",\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"flow_name\":\"default_flow\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500152,\"data\":{\"seed\":\"2f70a6b8-f238-484b-bac2-aa4412863aae\",\"delivery_channel\":2,\"available_channels\":[3,2,1],\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500152,\"data\":{\"seed\":\"2f70a6b8-f238-484b-bac2-aa4412863aae\",\"delivery_channel\":1,\"available_channels\":[3,2,1],\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false}}"
+  }
+ ],
+ "otp": {
+  "init": {
+   "error": 10002
+  },
+  "init2": {
+   "error": 0,
+   "data": {
+    "change_phone_token": "EUuZq5sG83dHd8MnVDj6v983xdTLzeIw13LW6nGlGoMMRBtQrPP7FNK63498cCMFgNy7hicy7e6RA3aIDq+wm+LqE3wL0xs9Wn2x3c6j9/2BDLsCNQ+/sRDekQclBspzHVWf2akQeDMEXwam4UMP6i9XolglFRNsNpmKzWfqA+7PFYP+9r3DWsMJh/9YdBXz0/5IoxT7dBr2Bjc/20MA2gcLOrLvRRwg4Tkzb5Xcir9c",
+    "ivs_required": false,
+    "ivs_utoken": "",
+    "is_delayed": false,
+    "has_phone_pix_key": false
+   }
+  },
+  "settings": {
+   "error": 0,
+   "data": {
+    "need_login": false,
+    "need_captcha": true,
+    "captcha_scene": "signup",
+    "masked_phone": "",
+    "preferred_channel": 3,
+    "available_channels": [
+     3,
+     2,
+     1
+    ],
+    "hidden_available_channels": [
+     2
+    ],
+    "skip_channel_confirmation": false,
+    "seed": "2f70a6b8-f238-484b-bac2-aa4412863aae",
+    "flow_name": "default_flow",
+    "captcha_app_key": "User.PC",
+    "captcha_id": ""
+   }
+  },
+  "sends": [
+   {
+    "ch": 3,
+    "err": 23500101,
+    "data": {
+     "seed": "2f70a6b8-f238-484b-bac2-aa4412863aae",
+     "delivery_channel": 3,
+     "available_channels": [
+      3,
+      2,
+      1
+     ],
+     "otp_tracking_id": "",
+     "preferred_channel": 3,
+     "hidden_available_channels": [
+      2
+     ],
+     "skip_channel_confirmation": false,
+     "flow_name": "default_flow"
+    }
+   },
+   {
+    "ch": 2,
+    "err": 23500152,
+    "data": {
+     "seed": "2f70a6b8-f238-484b-bac2-aa4412863aae",
+     "delivery_channel": 2,
+     "available_channels": [
+      3,
+      2,
+      1
+     ],
+     "preferred_channel": 3,
+     "hidden_available_channels": [
+      2
+     ],
+     "skip_channel_confirmation": false
+    }
+   },
+   {
+    "ch": 1,
+    "err": 23500152,
+    "data": {
+     "seed": "2f70a6b8-f238-484b-bac2-aa4412863aae",
+     "delivery_channel": 1,
+     "available_channels": [
+      3,
+      2,
+      1
+     ],
+     "preferred_channel": 3,
+     "hidden_available_channels": [
+      2
+     ],
+     "skip_channel_confirmation": false
+    }
+   }
+  ],
+  "seq": null,
+  "seed": "2f70a6b8-f238-484b-bac2-aa4412863aae"
+ }
+}

@@ -1,0 +1,302 @@
+[
+ {
+  "input": "6285119115863",
+  "phone": "6285119115863",
+  "verdict": "TERDAFTAR_UNBINDABLE",
+  "detail": {
+   "check_exist": {
+    "bff_meta": null,
+    "error": 0,
+    "error_msg": null,
+    "data": {
+     "exist": true,
+     "user": {
+      "userid": null,
+      "shopid": null,
+      "username": "u*****2",
+      "portrait": "",
+      "score": null,
+      "products": null,
+      "nickname": null,
+      "phone": null,
+      "region": null,
+      "follower_count": null,
+      "status": null,
+      "shopee_verified_flag": null,
+      "last_login_time": null,
+      "shop_rating": null,
+      "following_count": null,
+      "response_time": null,
+      "response_rate": null,
+      "pickup_address_id": null,
+      "is_official_shop": null,
+      "seller_coin_setting": null,
+      "shop_label_ids": null,
+      "is_ship_from_overseas": null,
+      "visible_regions": null,
+      "block_cb_user": null,
+      "cb_option": null,
+      "email_verified": null,
+      "shop_cover": null,
+      "user_nickname": null
+     }
+    }
+   },
+   "exist": true,
+   "user": {
+    "userid": null,
+    "shopid": null,
+    "username": "u*****2",
+    "portrait": "",
+    "score": null,
+    "products": null,
+    "nickname": null,
+    "phone": null,
+    "region": null,
+    "follower_count": null,
+    "status": null,
+    "shopee_verified_flag": null,
+    "last_login_time": null,
+    "shop_rating": null,
+    "following_count": null,
+    "response_time": null,
+    "response_rate": null,
+    "pickup_address_id": null,
+    "is_official_shop": null,
+    "seller_coin_setting": null,
+    "shop_label_ids": null,
+    "is_ship_from_overseas": null,
+    "visible_regions": null,
+    "block_cb_user": null,
+    "cb_option": null,
+    "email_verified": null,
+    "shop_cover": null,
+    "user_nickname": null
+   },
+   "unbind_check": {
+    "error": 0,
+    "data": {
+     "account_status_check_failed": false,
+     "phone_reuse_limit_check_failed": false
+    }
+   },
+   "account_status_check_failed": false,
+   "phone_reuse_limit_check_failed": false,
+   "precheck": {
+    "error": 10002
+   }
+  }
+ },
+ {
+  "input": "6281234567890",
+  "phone": "6281234567890",
+  "verdict": "FRESH",
+  "detail": {
+   "check_exist": {
+    "bff_meta": null,
+    "error": 0,
+    "error_msg": null,
+    "data": {
+     "exist": false,
+     "user": null
+    }
+   },
+   "exist": false,
+   "user": null
+  }
+ },
+ {
+  "input": "628999888777",
+  "phone": "628999888777",
+  "verdict": "TERDAFTAR_UNBINDABLE",
+  "detail": {
+   "check_exist": {
+    "bff_meta": null,
+    "error": 0,
+    "error_msg": null,
+    "data": {
+     "exist": true,
+     "user": {
+      "userid": null,
+      "shopid": null,
+      "username": "h*****r",
+      "portrait": "BAfhPS0gm3u4xnEyzOgB7wo3SZ9hVlZn_zMcqW17cCQZZ8gjQt0qXEIGxdrKKNmldEZY1BU21CUu4U7IuPhQA4iw89xzsh6HwQ@encrypt_v1",
+      "score": null,
+      "products": null,
+      "nickname": null,
+      "phone": null,
+      "region": null,
+      "follower_count": null,
+      "status": null,
+      "shopee_verified_flag": null,
+      "last_login_time": null,
+      "shop_rating": null,
+      "following_count": null,
+      "response_time": null,
+      "response_rate": null,
+      "pickup_address_id": null,
+      "is_official_shop": null,
+      "seller_coin_setting": null,
+      "shop_label_ids": null,
+      "is_ship_from_overseas": null,
+      "visible_regions": null,
+      "block_cb_user": null,
+      "cb_option": null,
+      "email_verified": null,
+      "shop_cover": null,
+      "user_nickname": null
+     }
+    }
+   },
+   "exist": true,
+   "user": {
+    "userid": null,
+    "shopid": null,
+    "username": "h*****r",
+    "portrait": "BAfhPS0gm3u4xnEyzOgB7wo3SZ9hVlZn_zMcqW17cCQZZ8gjQt0qXEIGxdrKKNmldEZY1BU21CUu4U7IuPhQA4iw89xzsh6HwQ@encrypt_v1",
+    "score": null,
+    "products": null,
+    "nickname": null,
+    "phone": null,
+    "region": null,
+    "follower_count": null,
+    "status": null,
+    "shopee_verified_flag": null,
+    "last_login_time": null,
+    "shop_rating": null,
+    "following_count": null,
+    "response_time": null,
+    "response_rate": null,
+    "pickup_address_id": null,
+    "is_official_shop": null,
+    "seller_coin_setting": null,
+    "shop_label_ids": null,
+    "is_ship_from_overseas": null,
+    "visible_regions": null,
+    "block_cb_user": null,
+    "cb_option": null,
+    "email_verified": null,
+    "shop_cover": null,
+    "user_nickname": null
+   },
+   "unbind_check": {
+    "error": 0,
+    "data": {
+     "account_status_check_failed": false,
+     "phone_reuse_limit_check_failed": false
+    }
+   },
+   "account_status_check_failed": false,
+   "phone_reuse_limit_check_failed": false,
+   "precheck": {
+    "error": 10002
+   }
+  }
+ },
+ {
+  "input": "628123456789",
+  "phone": "628123456789",
+  "verdict": "TERDAFTAR_UNBINDABLE",
+  "detail": {
+   "check_exist": {
+    "bff_meta": null,
+    "error": 0,
+    "error_msg": null,
+    "data": {
+     "exist": true,
+     "user": {
+      "userid": null,
+      "shopid": null,
+      "username": "s*****2",
+      "portrait": "",
+      "score": null,
+      "products": null,
+      "nickname": null,
+      "phone": null,
+      "region": null,
+      "follower_count": null,
+      "status": null,
+      "shopee_verified_flag": null,
+      "last_login_time": null,
+      "shop_rating": null,
+      "following_count": null,
+      "response_time": null,
+      "response_rate": null,
+      "pickup_address_id": null,
+      "is_official_shop": null,
+      "seller_coin_setting": null,
+      "shop_label_ids": null,
+      "is_ship_from_overseas": null,
+      "visible_regions": null,
+      "block_cb_user": null,
+      "cb_option": null,
+      "email_verified": null,
+      "shop_cover": null,
+      "user_nickname": null
+     }
+    }
+   },
+   "exist": true,
+   "user": {
+    "userid": null,
+    "shopid": null,
+    "username": "s*****2",
+    "portrait": "",
+    "score": null,
+    "products": null,
+    "nickname": null,
+    "phone": null,
+    "region": null,
+    "follower_count": null,
+    "status": null,
+    "shopee_verified_flag": null,
+    "last_login_time": null,
+    "shop_rating": null,
+    "following_count": null,
+    "response_time": null,
+    "response_rate": null,
+    "pickup_address_id": null,
+    "is_official_shop": null,
+    "seller_coin_setting": null,
+    "shop_label_ids": null,
+    "is_ship_from_overseas": null,
+    "visible_regions": null,
+    "block_cb_user": null,
+    "cb_option": null,
+    "email_verified": null,
+    "shop_cover": null,
+    "user_nickname": null
+   },
+   "unbind_check": {
+    "error": 0,
+    "data": {
+     "account_status_check_failed": false,
+     "phone_reuse_limit_check_failed": false
+    }
+   },
+   "account_status_check_failed": false,
+   "phone_reuse_limit_check_failed": false,
+   "precheck": {
+    "error": 10002
+   }
+  }
+ },
+ {
+  "input": "081234567890",
+  "phone": "6281234567890",
+  "verdict": "FRESH",
+  "detail": {
+   "check_exist": {
+    "bff_meta": null,
+    "error": 0,
+    "error_msg": null,
+    "data": {
+     "exist": false,
+     "user": null
+    }
+   },
+   "exist": false,
+   "user": null
+  }
+ }
+]

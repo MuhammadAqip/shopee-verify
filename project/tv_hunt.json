@@ -1,0 +1,133 @@
+{
+ "auth": [
+  1
+ ],
+ "ut": 448,
+ "cpt": 832,
+ "methods": [
+  {
+   "t": 10,
+   "vt": 920,
+   "keys": [
+    "type",
+    "v_token",
+    "is_auto_select"
+   ]
+  },
+  {
+   "t": 2,
+   "vt": 100,
+   "keys": [
+    "type",
+    "v_token",
+    "is_auto_select"
+   ]
+  }
+ ],
+ "sel": {
+  "2": {
+   "e": 0,
+   "d": {
+    "credit_liveness_check": null,
+    "masked_username": null,
+    "is_new_lc_flow": false,
+    "operation_code": null
+   }
+  },
+  "10": {
+   "e": 0,
+   "d": {
+    "credit_liveness_check": null,
+    "masked_username": null,
+    "is_new_lc_flow": false,
+    "operation_code": null
+   }
+  }
+ },
+ "tv": {
+  "2": [
+   {
+    "nm": "Password",
+    "e": 90309999,
+    "sig": 0
+   },
+   {
+    "nm": "OTP",
+    "e": 90309999,
+    "sig": 0
+   },
+   {
+    "nm": "NewShopeePayPin",
+    "e": 90309999,
+    "sig": 0
+   },
+   {
+    "nm": "ShopeePay",
+    "e": 90309999,
+    "sig": 0
+   },
+   {
+    "nm": "DEVICE_TOKEN",
+    "e": 90309999,
+    "sig": 0
+   },
+   {
+    "nm": "SkipVerification",
+    "e": 90309999,
+    "sig": 0
+   },
+   {
+    "nm": "2",
+    "e": 90309999,
+    "sig": 0
+   },
+   {
+    "nm": "2",
+    "e": 90309999,
+    "sig": 0
+   }
+  ],
+  "10": [
+   {
+    "nm": "Password",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "nm": "OTP",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "nm": "NewShopeePayPin",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "nm": "ShopeePay",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "nm": "DEVICE_TOKEN",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "nm": "SkipVerification",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "nm": "10",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "nm": "10",
+    "e": 90309999,
+    "sig": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOQAAAADFQBuEPcBhiAX0gMBjfwg4dRZZ4Ac0BrBUDrhUuQD4LZPqBy66Kfj9xEPIvp2k4Y53t8e-KDN5OJao7YbCAteQ5G9QQYL1NgA68nHN667A5s6OQWI8L0c8KYwFQSW8pZeM2_nNvAJD-mRhQtcuNZr3dLyHKXO8YP9gtHc8GXTt1X7qDiEmkEyNWtpYusBbGWSAPBkm-Sw30DUEUrZo3KQMFWIlZ8nlc6IkDC1uxhFSOYR9sbTa3PkPFaIfnuEOHBDnbRsGJKg3y9HRb0TsR8b7il7e3BwmjFeD7suxUQhVq6YIvP66TVCFRScQvKKLsFRTWELtAma1QkCA2r3dAnr4mq0el4rW5tIrXKCak8n4-W999TLQQwXCqb69gQSrXn2MYkcwetSnKjNiNezltndl4MVyzi1rEog0o7OIBdifP68ecNv_tdR1CupuzEn-P-B0DJfsEazWWzORmb-tyc8IyDF8lVli6typOL2eRXwqIN2sppDITMG8p4r5k_xWhZGep0j_7LfxY1BsLVCJDt98CWg8nDc26NJxAN45uKMfzjo3N6M78Gm4_JyTbGYkK6XoLVOnzmtK8RRmkQnAnwncOV8fs0zvGbTTs00ewIICpb3zrv4dVzL9DN_qLxP6hjSZFQj_MdYoY9MJBeubGajqxdJcgjLmq1uV8XMocbc4-HgGkCaNhxZ5qqTFR4SVaFD3tXGptgc5LLRt5Tr707voO8pGRyzKRTOIilA8LyuZd-NfdTsW9QSJi94uVrEpyEZH_Eg4wnkaa5Ltz603bAm2AQ2R9lrDcKVMFd5EPdJWJfd8WZcFDW6BeNaRhhVGo_H465dgLkKL-XoXxS1-Vw1gwZ3jBsvOqD7Rki7r0ZQJWqks3LXdRjSaQTmYCZdtqv5be-cA9HusIRN44BLum_vzhzZMAWxLMEp8cqaNHcZKxX8ea0wnsE0DGXkenQ02q69-DI4zYflwmLSUjTHcJBWMVY89cjEX4_SDI7SXQRMb-XY-RG_kK4g4uNQDb0l7BZPsIj0f_Og-EcFmtfDvX6pnVLPoHRKGGUPwrNqgWTIU4PXuetixHF28LrIVyvDe_arzBVsoWcytA2s2lSBHoX"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"691b83264fa-cf73-4146-bacd-4ba8b3ffceef\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":false,\"need_captcha\":true,\"captcha_scene\":\"signup\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"473193aa-b014-40fe-bd30-bbc219dda119\",\"flow_name\":\"default_flow\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPTAAAADK6W9DRKz8jpTuSxTK-L0A5yUW2JvMXVZntThE76EgKXj0NWQkEoaJtGCa75FjaRsUy1paQwZZdPZo1LVB8NkWHHkZoXCQaAMnVBuTAz58or6YHlnz29x28jWf624UBOxs0KNC8sleXQIT9rRRVQSaNsr_prshicJXwsLxEzx62aMoZo8RPpCXbBC91FJ8rZQevd5A-IgBtTe9Y6VN-c_pBu24Pe6yH2IA8pgf2yloFvtnHo27iirrQZxriukERRatxPnjxixkQdP73cSKVj0SrqSXeSH6EbLGb61nnXbxZxsiC5e774Ix08Yj0n_HUXyZENNnCAdb5oGF9K3Nw02taA7XmAW9mKf87scyde968EHZ3lAJEoL1_Wb68fn2TbLPYxcLub9aFc8-V4yVMXLAGahJudXN-iVRWKuPys4tb7dpZ_Pv6jg9HzfxikG0q3lcFqaVfFf4mvLSJbL3RVtYrT5MYhgp6cXAOaxKrPqBcNF92sxMBEKb6eCzYxSbqOptyjLqN6b7_aboRLVlHr9zQ4XP4oYajO9sN2jd3R92cEqCH4KanVNFgjmA-OtdLDAKpxBA-ddoU9nn02PE4YHtW_EGHRF_yh6po8g7I081DBPw2Tk8IvvcTdcM71WE54GJU2ovYwLjUDweer8NsyzHQ6rF_l-JWelE5KUqWP9q8jG4lVGUHCNLU5CAWkshND4VWSpOPKr3533wi9-EEkW3KPiZ1bkP1HuIsZ-2Yt7JmYDXj4h699UoSnGU9dI1uPt8UNhEzWkLNQXM1WtaTblc1Dil_omYk6BOndb_q6p7EXU3R8J8Om7x7TYIxcm3jeMbfYbG7fi_Huh7RvMNQc7scrNE4TMYdqNB4YklXfp06R5oJDbURlstMMhB8jOXML641GO2_O4vkasWx2hsixn1k3VLykaZTIMvw-RI0rs0J-Vz42mI0KDpdTg3oWrgSvSKRnLZ3-OL-iJzgf6Wo62J_ZXKrD-Onp2VjU0hfYAnTxRkUy6RwgACdnpELAW838CkSkC6pTnEQTa0UbIhSs0mGkL1zeFqTY5VBM6qlpuF2nXAc_zvlKWQe4SyuWqcOGiCdn0JlxTkWwjwfoHLJs"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"5816986d809-84b8-42d5-9561-1ba78899441c\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500101,\"data\":{\"seed\":\"473193aa-b014-40fe-bd30-bbc219dda119\",\"delivery_channel\":3,\"available_channels\":[3,2,1],\"otp_tracking_id\":\"\",\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"flow_name\":\"default_flow\"}}"
+  }
+ ],
+ "init": {
+  "init2": 0,
+  "ivs": false,
+  "cp": 236,
+  "settings": 0,
+  "seed": "473193aa-b014-40fe-bd30-bbc219dda119",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "scene": "signup"
+ },
+ "send": {
+  "tries": [
+   {
+    "ch": 3,
+    "err": 23500101,
+    "trk": ""
+   },
+   {
+    "ch": 2,
+    "err": 23500152,
+    "trk": null
+   }
+  ]
+ }
+}

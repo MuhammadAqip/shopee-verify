@@ -1,0 +1,53 @@
+{
+ "tests": [
+  {
+   "name": "full",
+   "err": 49900000,
+   "sig_len": 0,
+   "data": "None"
+  },
+  {
+   "name": "no_df",
+   "err": 49900000,
+   "sig_len": 0,
+   "data": "None"
+  },
+  {
+   "name": "str_method",
+   "err": 211,
+   "sig_len": 0,
+   "data": "None"
+  },
+  {
+   "name": "ev2",
+   "err": 49900000,
+   "sig_len": 0,
+   "data": "None"
+  },
+  {
+   "name": "ev0",
+   "err": 49900000,
+   "sig_len": 0,
+   "data": "None"
+  },
+  {
+   "name": "no_misc",
+   "err": 49900000,
+   "sig_len": 0,
+   "data": "None"
+  }
+ ],
+ "dfp": null,
+ "select": {
+  "s": 200,
+  "j": {
+   "error": 0,
+   "data": {
+    "credit_liveness_check": null,
+    "masked_username": null,
+    "is_new_lc_flow": false,
+    "operation_code": null
+   }
+  }
+ }
+}

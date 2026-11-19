@@ -1,0 +1,37 @@
+{
+ "url": "https://shopee.co.id/verify/captcha?anti_bot_tracking_id=gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPNAAAADDIICpWS-mBLOsxMLOo0oEhYbSjAsMyE4nfspmWaUYhvRLSkUUZUEzFpr4rTYhDRuwt_LHjFrtejBCzbZvoqrGwh0ofUlNS6eXL0_QWhszyFZZxTFZpF8KvxHdC3bFIIrdL2r5hiyoZr6VXJmrOJjBOakWlPRkAJHjzpeowaB8G4tXFmsAf_MrkWoF2q6sXi0prflpWqVx9iYtLS9LWqdJ45jzApMlLF7R7JsBSS5G6NPKPmmupwimb9KXbNjX6G1ZyEF8ajq8ysDTNybufseYbsJJFF4_u14DmuSkF0GjqwyrY_s5AqQKEVglhp8Mf7O2vPJZeqAfFUQ12XtA6CxP4bfwIOtyPwUNsMqwsuSAdFQ0jqwJugiYAyIv_sEDIi9-fG2DviE8Y98o7ahplu6Y7OtGiERd9dJPjfE4MagtfO23Q6LHjJ7jekoY7IB3-vSa14JevBuIG67zPr8Ki36P781JpoyNLPsj2UWb0GvTU1iGXfWRJsooSP9EM5-4pRXGDArJgDsGUZn32S8_Wq7DlJOL7qt_d6lAVhUFF2swIlEEH8lSfBe7KWwZEig3zbcpdrCHlhGIVdCpwTwo9crJl-QutlDBhrAk6xwUT0xuQ3B27iz2fB5OJVIy0IsOm_LaNTNUHzRv0Sh9802mcjPfK5x8gd-OVnRNmoU069LTuSs0KXMbxo7iqhk70CysWh8KWB9zy9qY3_ZTd3rva1j5VNolHD56OCO6SXwIMm1PAObVUlEcPoNAExidwtm7eQIS0zhzDmNYqWF_iVGhKtrSMgS4xLpCUYnONGd8dATns2zp8_cJ9hP35m6KyJNBHoDBGGtH3u1PzYtslUEryFb3LzM4DYSAOpMy_rsQoPzsk5PCC7XI9EStQyvGvODFagD_tw-3Lfvj-Zeg6C31PctQ8yD3LI_hmIMqcM2qZ4YFj0R23YLNFZshAnjBne7HuafCKa-S9DSiPRraAGCuj95woBWPNsiMtFvPLj_R5jXnTJF2aGbYhmSCPrKMkD27krUXdpNj_duAIOl38CavS6VZ3zrNOhWqeAf6ZjsdRqlZbgN3Ju_KhhxCagm6KbGClRMfG170OEZSsIZjLm7XbyTc8xp12EIsMD04lz7aqm2Ncv7TP5X96_xn_GeYJXYGnaIfDdQq5c1hiVZf9VQIqZzzwKBBzBwKvycm4pnHm1cYuuNUKxieyz20RsBevGyCN6AI5NAJzZGH8IO64p8o9hXRVNBhZ-LE--dGfh_i05YApfT1FoT5_59fADmFnIHMSfx-Xi4IFV35ex0w&app_key=Cart.PC&client_id=1&next=https%3A%2F%2Fshopee.co.id%2Fverify%2Ftraffic%3F%3Fclient_id%3D%26next%3Dhttps%253A%252F%252Fshopee.co.id%252Fuser%252Faccount%252Fprofile%26redirect_type%3D2%26should_replace_history%3Dtrue&redirect_type=2&scene=crawler_item&should_replace_history=true",
+ "net": [
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPKAAAADJ9IUtLLLGIe1p5bKpb4dhBliUvvav9R1nwdX8keqG15hN5UqAM6-JbfOrf8i_0mrnAQLnhzPk2ejE33FdTbhX9kYq7dYu90DssaXv4a7CTcsOagYE3oeoNKZ38at9q_JeM2QMvnqzXn7E_VyWWony2L9noV3xhn-PuyqWa5OjYjmpTGZP73Jzbv2juUATlusgL7dp2lGLMNeoVikdxFtrbaOfjsM0-HA8alZt47Ea0_O0f_4FtuOxNe6bstfXZ8ZmUnp4eBrXYGWh8sV87e-ejF9J7-YZ0uGe-5U-jbh71bwIUZWK2D1cfIDvtOXDi9QvYRdoNNu9IYkgwcwJ3KLVxMCYENh5XnU50ZDPrUp9Xwmer1pbRMVScrnBp0v2ZN_NuGWfzKnm1SsjELxQjOBEyF-6Oh7SV1LuRIFstr4UudZ4jG1b7LyQSB9YvrwM9nayIavxxZgI7DVB3jmHSjryagNp_Jy_aqPX-cddl3D7b0l3Mll7elPm05WA223KpcZ_yi08ODqT2yiadG6XlDz71CzVAGMpF9LqEoUffEMeADHIsr0yVoRsU4DM6YOlCm_fKGJw54CRB6t4g0Ery_YyT77BwAB0PDnUz9ZMHj-11HBuPJaLWBtTQYrPoDZV6ufsqXrZZGGYdKYd_eY76tvq8Tsp3pwjguEmKBwP99bOpwECt4prwWRxgX6x3w7flOx4eEqPc8JoXcT86ptHJEaplT3JdGrZHkjTsBiq8h-Fh9TnW_mAUqUM6NSLIqMeEZkhONMyGMcR1MBsFspsYC9lcf-2OMyhnTP52a1bz8"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPNAAAADMO4xIhFkQsHeaUb_NsTCFhO0OnqjRspbeWMjifApDYbjX12dZqpliNv4dCQU3JbCUKs0gWrlH6Nl8aeMAmm6CdSLxoeqdx8gL7QPM5SXxMJ4F1gg1MsF_cB1dVvmODvAisNCcUapG9siaVKpcPmFKXi8LVqzPwvut-EdrkKJnB32f1nkDbmLbM_s5lY4b3mnGjRVgmdTg54bGOdRkyDX_xXI0Xiw8HtxVOkEEjxm2NmhuMBVFfqofZ-rPkk5yiV_iwXnpLZcgXwuv_X-Lp0KK0yfhrsNDohYXt6E_quUfCxmKmPGmbofR4MGktlhIKlLkOfCRaqYg-AZwLT7eZj-ySy3CIrjBJZ_fbeoJYcGz4U2wEoU7TlC_WsRuErGJeqGn48qTpXkTpqSbq48asVLPHdYc1Hesp3KpHnxH8NO_NMh4JpjZb6rFuNhkxUltpmqj2cK1wjvRJWdyjnuVjFMBMDbunwPSpeGtil3jGqdeM8x0lXWIGjzhWSfu5QIKdEpxoPcMzGoqApZajiKYmOZh-ftnMsxlr9VT7aC9Kpp5fHAyUAhu_QkCwXk3O1tCyPIVnCrGRHfl4TkK5LeQeFAXEy8FbIFghSFJIBDUYbFOslqvh8v8WjHCwgvhwe7INYM_OSfKupa8K45zymkQ2ByK5X4lslOCuhRz9pmMfGQwCCQwbwYRnK_1ouyiJm-Rl0PBcPFbu3Llmt2O-cryL2AeL89rx5C8dPdhkiDhDL7tMzUz89oHXsnsWW8WARlATrgn3bXbVaHxoFybE5In4ekru7xNnAhWj5dxDKqS1h"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPNAAAADDIICpWS-mBLOsxMLOo0oEhYbSjAsMyE4nfspmWaUYhvRLSkUUZUEzFpr4rTYhDRuwt_LHjFrtejBCzbZvoqrGwh0ofUlNS6eXL0_QWhszyFZZxTFZpF8KvxHdC3bFIIrdL2r5hiyoZr6VXJmrOJjBOakWlPRkAJHjzpeowaB8G4tXFmsAf_MrkWoF2q6sXi0prflpWqVx9iYtLS9LWqdJ45jzApMlLF7R7JsBSS5G6NPKPmmupwimb9KXbNjX6G1ZyEF8ajq8ysDTNybufseYbsJJFF4_u14DmuSkF0GjqwyrY_s5AqQKEVglhp8Mf7O2vPJZeqAfFUQ12XtA6CxP4bfwIOtyPwUNsMqwsuSAdFQ0jqwJugiYAyIv_sEDIi9-fG2DviE8Y98o7ahplu6Y7OtGiERd9dJPjfE4MagtfO23Q6LHjJ7jekoY7IB3-vSa14JevBuIG67zPr8Ki36P781JpoyNLPsj2UWb0GvTU1iGXfWRJsooSP9EM5-4pRXGDArJgDsGUZn32S8_Wq7DlJOL7qt_d6lAVhUFF2swIlEEH8lSfBe7KWwZEig3zbcpdrCHlhGIVdCpwTwo9crJl-QutlDBhrAk6xwUT0xuQ3B27iz2fB5OJVIy0IsOm_LaNTNUHzRv0Sh9802mcjPfK5x8gd-OVnRNmoU069LTuSs0KXMbxo7iqhk70CysWh8KWB9zy9qY3_ZTd3rva1j5VNolHD56OCO6SXwIMm1PAObVUlEcPoNAExidwtm7eQIS0zhzDmNYqWF_iVGhKtrSMgS4xLpCUYnONGd8dA"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"604ff8883e3-1d74-460e-b409-f56d1bc1d7b2\",\"9\":true}\n"
+  }
+ ],
+ "sig": null,
+ "body": "lompat ke konten utama\nButuh bantuan?\nSilakan Coba Lagi Nanti\nVerifikasi gagal. Silakan coba lagi beberapa menit lagi.\nCoba Lagi"
+}

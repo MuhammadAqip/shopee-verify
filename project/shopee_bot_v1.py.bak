@@ -1,0 +1,656 @@
+# -*- coding: utf-8 -*-
+"""
+shopee_bot.py — Telegram bot untuk CEK NOMOR SHOPEE.
+
+Perintah:
+  /start            menu + saldo
+  /cek 628xxx       cek 1 nomor
+  /cek              (reply ke pesan berisi daftar nomor) batch
+  /batch            (kirim file .txt) batch dari file
+  /saldo            lihat saldo
+  /topup            QRIS topup
+  /harga            daftar harga
+  /admin            (khusus admin) tambah cookie + stats
+  /addcookie        (admin) kirim cookie baru
+  /stats            (admin)
+
+Model bisnis: per 1x cek potong saldo. Topup via QRIS GPM.
+Engine: satu Chromium persisten (bukan per request) -> hemat RAM/CPU.
+"""
+from __future__ import annotations
+
+import json
+import logging
+import os
+import re
+import sys
+import threading
+import time
+from dataclasses import dataclass, field
+from datetime import datetime
+from pathlib import Path
+
+import telebot
+from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+
+# ============ KONFIG ============
+BOT_TOKEN = os.environ.get("SHOPEE_BOT_TOKEN", "7365738992:AAH8VvN6rO-YOUR_TOKEN_HERE")
+ADMIN_IDS = {int(x) for x in os.environ.get("SHOPEE_ADMIN_IDS", "0").split(",") if x.strip().isdigit()}
+
+BASE = Path("/root/shopee-verify")
+DB_PATH = BASE / "bot_db.json"
+COOKIE_DIR = BASE / "cookies"
+RESULT_DIR = BASE / "results"
+CK_MAIN = BASE / ".ck_new"
+
+PRICE_PER_CHECK = 100          # poin per 1x cek
+TOKEN_PER_POINT = 1            # 1 poin = 1 rupiah (placeholder)
+
+COOKIE_DIR.mkdir(exist_ok=True)
+RESULT_DIR.mkdir(exist_ok=True)
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+log = logging.getLogger("shopee-bot")
+
+bot = telebot.TeleBot(BOT_TOKEN, parse_mode="HTML")
+
+
+# ============ DB ============
+_db_lock = threading.Lock()
+
+
+def _load_db() -> dict:
+    if DB_PATH.exists():
+        try:
+            return json.loads(DB_PATH.read_text())
+        except Exception:
+            pass
+    return {"users": {}, "orders": {}, "stats": {"total_checks": 0}}
+
+
+def _save_db(db: dict) -> None:
+    tmp = DB_PATH.with_suffix(".tmp")
+    tmp.write_text(json.dumps(db, indent=1, ensure_ascii=False))
+    tmp.replace(DB_PATH)
+
+
+def get_user(uid: int) -> dict:
+    with _db_lock:
+        db = _load_db()
+        u = db["users"].get(str(uid))
+        if not u:
+            u = {"id": uid, "saldo": 0, "created": int(time.time()),
+                 "total_checks": 0, "name": ""}
+            db["users"][str(uid)] = u
+            _save_db(db)
+        return dict(u)
+
+
+def upd_user(uid: int, **kw) -> dict:
+    with _db_lock:
+        db = _load_db()
+        u = db["users"].setdefault(str(uid), {"id": uid, "saldo": 0,
+                                              "created": int(time.time()),
+                                              "total_checks": 0, "name": ""})
+        u.update(kw)
+        _save_db(db)
+        return dict(u)
+
+
+def add_saldo(uid: int, amount: int) -> int:
+    with _db_lock:
+        db = _load_db()
+        u = db["users"].setdefault(str(uid), {"id": uid, "saldo": 0,
+                                              "created": int(time.time()),
+                                              "total_checks": 0, "name": ""})
+        u["saldo"] = int(u.get("saldo", 0)) + amount
+        _save_db(db)
+        return u["saldo"]
+
+
+def charge(uid: int, n: int) -> tuple[bool, int]:
+    """Potong saldo n*PRICE. Return (ok, sisa)."""
+    cost = n * PRICE_PER_CHECK
+    with _db_lock:
+        db = _load_db()
+        u = db["users"].setdefault(str(uid), {"id": uid, "saldo": 0,
+                                              "created": int(time.time()),
+                                              "total_checks": 0, "name": ""})
+        cur = int(u.get("saldo", 0))
+        if cur < cost:
+            return False, cur
+        u["saldo"] = cur - cost
+        u["total_checks"] = int(u.get("total_checks", 0)) + n
+        db["stats"]["total_checks"] = int(db["stats"].get("total_checks", 0)) + n
+        _save_db(db)
+        return True, u["saldo"]
+
+
+# ============ COOKIE POOL ============
+class CookiePool:
+    """Kelola cookie; rotasi saat kena rate limit."""
+
+    def __init__(self):
+        self.files: list[Path] = []
+        self.idx = 0
+        self.used = 0
+        self.reload()
+
+    def reload(self):
+        self.files = [CK_MAIN] if CK_MAIN.exists() else []
+        if COOKIE_DIR.exists():
+            self.files += [p for p in sorted(COOKIE_DIR.glob("*.txt"))
+                           if p.stat().st_size > 100]
+        self.idx = 0
+        self.used = 0
+
+    def current(self) -> Path | None:
+        if not self.files:
+            return None
+        return self.files[self.idx % len(self.files)]
+
+    def next(self) -> Path | None:
+        if not self.files:
+            return None
+        self.idx = (self.idx + 1) % len(self.files)
+        self.used = 0
+        return self.current()
+
+    def add(self, path: Path):
+        self.files.append(path)
+        self.idx = len(self.files) - 1
+        self.used = 0
+
+
+POOL = CookiePool()
+
+
+def load_jar(path: Path) -> dict:
+    jar = {}
+    for seg in path.read_text().replace("\n", " ").split(";"):
+        seg = seg.strip()
+        if seg and "=" in seg:
+            k, v = seg.split("=", 1)
+            jar[k.strip()] = v
+    return jar
+
+
+# ============ ENGINE ============
+class Engine:
+    """Satu Chromium hidup, dipakai ulang lintas request."""
+
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._pw = None
+        self._b = None
+        self._ctx = None
+        self._page = None
+        self._jar_key = None
+        self._ready = False
+
+    def _boot(self):
+        from playwright.sync_api import sync_playwright
+        self._pw = sync_playwright().start()
+        self._b = self._pw.chromium.launch(headless=True, args=[
+            "--no-sandbox", "--disable-dev-shm-usage",
+            "--disable-blink-features=AutomationControlled",
+            "--disable-gpu", "--disable-extensions",
+        ])
+        self._ready = True
+        log.info("chromium booted")
+
+    def _new_context(self, jar: dict):
+        from phone_batch2 import UA  # reuse konstanta
+        if self._ctx:
+            try:
+                self._ctx.close()
+            except Exception:
+                pass
+        self._ctx = self._b.new_context(
+            user_agent=UA, locale="id-ID",
+            viewport={"width": 1366, "height": 900},
+            timezone_id="Asia/Jakarta")
+        self._page = self._ctx.new_page()
+        try:
+            self._ctx.add_cookies([{"name": k, "value": v,
+                                    "domain": ".shopee.co.id", "path": "/",
+                                    "secure": True, "sameSite": "None"}
+                                   for k, v in jar.items()])
+        except Exception:
+            pass
+        cdp = self._ctx.new_cdp_session(self._page)
+        cdp.send("Network.enable")
+        for k, v in jar.items():
+            try:
+                cdp.send("Network.setCookie", {"name": k, "value": v,
+                                               "domain": ".shopee.co.id",
+                                               "path": "/", "secure": True})
+            except Exception:
+                pass
+        self._page.goto("https://shopee.co.id/",
+                        wait_until="domcontentloaded", timeout=60000)
+        self._page.wait_for_timeout(5000)
+        uid = self._page.evaluate("""async () => {
+            try {
+                const r = await fetch('/api/v4/account/basic/get_account_info',
+                                      {credentials:'include'});
+                const j = await r.json();
+                return (j && j.data && j.data.userid) || 0;
+            } catch(e) { return 0; }
+        }""")
+        self._jar_key = jar.get("SPC_U")
+        log.info("context ready uid=%s", uid)
+        return bool(uid)
+
+    def ensure(self) -> bool:
+        """Pastikan browser + cookie siap. TIDAK pakai lock (dipanggil dalam lock check)."""
+        if not self._ready:
+            self._boot()
+        p = POOL.current()
+        if not p:
+            return False
+        jar = load_jar(p)
+        key = jar.get("SPC_U")
+        if self._page and self._jar_key == key:
+            return True
+        return self._new_context(jar)
+
+    def check(self, phone: str) -> dict:
+        """Cek satu nomor. Return dict dengan verdict."""
+        with self._lock:
+            if not self.ensure():
+                return {"phone": phone, "verdict": "NO_COOKIE"}
+            from phone_batch2 import CHECK_JS, verdict_of
+            try:
+                r = self._page.evaluate(CHECK_JS, {"phone": phone})
+            except Exception as e:
+                return {"phone": phone, "verdict": "ERROR", "err": str(e)}
+
+            if r.get("exist_raw", {}).get("error") == 90309999 or r.get("blocked"):
+                log.warning("rate limit, rotate")
+                POOL.next()
+                self._jar_key = None
+                r2 = self._page.evaluate(CHECK_JS, {"phone": phone}) \
+                    if self.ensure() else {"phone": phone, "blocked": True}
+                if r2.get("blocked"):
+                    return {"phone": phone, "verdict": "RATE_LIMITED"}
+                r = r2
+
+            v = verdict_of(r)
+            user = r.get("user") or {}
+            return {
+                "phone": phone,
+                "verdict": v,
+                "username": user.get("username") or "",
+                "exist": r.get("exist"),
+                "unbind": (r.get("unbind_raw") or {}).get("data"),
+            }
+
+    def check_many(self, phones: list[str], on_progress=None) -> list[dict]:
+        out = []
+        for i, p in enumerate(phones, 1):
+            out.append(self.check(p))
+            if on_progress:
+                try:
+                    on_progress(i, len(phones), out[-1])
+                except Exception:
+                    pass
+            time.sleep(0.8)
+        return out
+
+
+ENGINE = Engine()
+
+
+# ============ FORMAT ============
+ICON = {
+    "FRESH": "🟢",
+    "BISA_UNBIND": "🔵",
+    "LOCKED": "🔴",
+    "REUSE_LIMIT": "🟠",
+    "TERDAFTAR_UNKNOWN": "🟡",
+    "RATE_LIMITED": "⏳",
+    "ERROR": "⚫",
+    "NO_COOKIE": "🚫",
+}
+LABEL = {
+    "FRESH": "Belum terdaftar (fresh)",
+    "BISA_UNBIND": "Terdaftar — BISA di-unbind",
+    "LOCKED": "Terdaftar — TIDAK bisa unbind",
+    "REUSE_LIMIT": "Terdaftar — kena limit pemakaian",
+    "TERDAFTAR_UNKNOWN": "Terdaftar — status unbind tidak diketahui",
+    "RATE_LIMITED": "Rate limit, coba lagi nanti",
+    "ERROR": "Error",
+    "NO_COOKIE": "Server belum punya cookie aktif",
+}
+
+
+def fmt_one(r: dict) -> str:
+    v = r.get("verdict", "?")
+    lines = [f"{ICON.get(v,'·')} <b>{r.get('phone','')}</b>",
+             f"├ {LABEL.get(v, v)}"]
+    if r.get("username"):
+        lines.append(f"├ Akun: <code>{r['username']}</code>")
+    ub = r.get("unbind")
+    if ub:
+        lines.append(f"├ account_status_check_failed: <code>{ub.get('account_status_check_failed')}</code>")
+        lines.append(f"└ phone_reuse_limit_check_failed: <code>{ub.get('phone_reuse_limit_check_failed')}</code>")
+    return "\n".join(lines)
+
+
+def esc(s: str) -> str:
+    return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+
+
+def norm(p: str) -> str:
+    d = re.sub(r"\D", "", str(p or ""))
+    if not d:
+        return ""
+    if d.startswith("0"):
+        d = "62" + d[1:]
+    elif d.startswith("8"):
+        d = "62" + d
+    elif d.startswith("620"):
+        d = "62" + d[3:]
+    return d
+
+
+def extract_phones(text: str) -> list[str]:
+    cands = re.findall(r"(?:\+?62|0)?8\d{8,12}", text or "")
+    out, seen = [], set()
+    for c in cands:
+        n = norm(c)
+        # nomor Indonesia valid: 62 + 8 + 8..10 digit = 11..13
+        if n and 11 <= len(n) <= 13 and n not in seen:
+            seen.add(n)
+            out.append(n)
+    return out
+
+
+# ============ HANDLERS ============
+LOCKED_MSG = "⏳ Cek sedang berjalan, tunggu sebentar..."
+
+
+def guard(uid: int) -> bool:
+    return True
+
+
+@bot.message_handler(commands=["start", "menu"])
+def cmd_start(m: Message):
+    u = get_user(m.from_user.id)
+    bot.reply_to(m, f"""<b>🔍 SHOPEE PHONE CHECKER</b>
+
+Halo <b>{esc(m.from_user.first_name or 'bro')}</b>!
+
+<b>Saldo:</b> <code>{u['saldo']}</code> poin
+<b>Harga:</b> <code>{PRICE_PER_CHECK}</code> poin / nomor
+
+<b>Perintah:</b>
+/cek <code>628xxx</code> — cek 1 nomor
+/cek — reply pesan berisi daftar nomor
+/batch — kirim file .txt (1 nomor per baris)
+/saldo — cek saldo
+/topup — isi saldo via QRIS
+/harga — daftar harga
+/stats — statistik
+/help — bantuan
+
+<b>Contoh:</b>
+<code>/cek 6281234567890</code>""")
+
+
+@bot.message_handler(commands=["help"])
+def cmd_help(m: Message):
+    cmd_start(m)
+
+
+@bot.message_handler(commands=["saldo"])
+def cmd_saldo(m: Message):
+    u = get_user(m.from_user.id)
+    bot.reply_to(m, f"""💰 <b>Saldo kamu</b>
+
+<code>{u['saldo']}</code> poin
+≈ {u['saldo'] // PRICE_PER_CHECK} kali cek
+
+Total cek: <code>{u.get('total_checks',0)}</code>""")
+
+
+@bot.message_handler(commands=["harga"])
+def cmd_harga(m: Message):
+    bot.reply_to(m, f"""💵 <b>Harga</b>
+
+• Cek nomor: <code>{PRICE_PER_CHECK}</code> poin
+• Batch: sama, per nomor
+
+<b>Topup:</b>
+/topup — QRIS otomatis""", reply_markup=InlineKeyboardMarkup().add(
+        InlineKeyboardButton("💳 Topup", callback_data="topup")))
+
+
+@bot.message_handler(commands=["stats"])
+def cmd_stats(m: Message):
+    with _db_lock:
+        db = _load_db()
+    users = len(db["users"])
+    total = db["stats"].get("total_checks", 0)
+    cookies = len(POOL.files)
+    bot.reply_to(m, f"""📊 <b>Statistik Bot</b>
+
+Users: <code>{users}</code>
+Total cek: <code>{total}</code>
+Cookie aktif: <code>{cookies}</code>
+Harga: <code>{PRICE_PER_CHECK}</code> poin/cek""")
+
+
+@bot.message_handler(commands=["cek"])
+def cmd_cek(m: Message):
+    uid = m.from_user.id
+    arg = (m.text or "").split(maxsplit=1)
+    phones = []
+
+    if len(arg) > 1:
+        phones = extract_phones(arg[1])
+
+    if not phones and m.reply_to_message:
+        phones = extract_phones(m.reply_to_message.text or "")
+
+    if not phones:
+        bot.reply_to(m, "❌ Tidak ada nomor valid.\n\nContoh: <code>/cek 6281234567890</code>")
+        return
+
+    if len(phones) > 50:
+        bot.reply_to(m, f"❌ Maks 50 nomor per /cek. Pakai /batch untuk jumlah besar.")
+        return
+
+    ok, sisa = charge(uid, len(phones))
+    if not ok:
+        bot.reply_to(m, f"❌ Saldo kurang.\n\nButuh: <code>{len(phones)*PRICE_PER_CHECK}</code> poin\n"
+                        f"Punya: <code>{sisa}</code> poin\n\n/topup untuk isi saldo")
+        return
+
+    sent = bot.reply_to(m, f"⏳ Cek {len(phones)} nomor...")
+    results = []
+    for i, p in enumerate(phones, 1):
+        r = ENGINE.check(p)
+        results.append(r)
+        try:
+            bot.edit_message_text(f"⏳ {i}/{len(phones)} — {p}",
+                                  chat_id=sent.chat.id, message_id=sent.message_id)
+        except Exception:
+            pass
+        time.sleep(0.6)
+
+    body = "\n\n".join(fmt_one(r) for r in results)
+    tail = f"\n\n<b>Sisa saldo:</b> <code>{sisa}</code> poin"
+    txt = body + tail
+    if len(txt) > 4000:
+        # kirim file kalau kepanjangan
+        fp = RESULT_DIR / f"cek_{uid}_{int(time.time())}.txt"
+        fp.write_text("\n\n".join(
+            f"{r['phone']} | {r['verdict']} | {r.get('username','')} | {r.get('unbind')}"
+            for r in results))
+        bot.edit_message_text(f"✅ Selesai {len(phones)} nomor.\nHasil kepanjangan, dikirim file.",
+                              chat_id=sent.chat.id, message_id=sent.message_id)
+        bot.send_document(m.chat.id, fp.open("rb"))
+    else:
+        bot.edit_message_text(txt, chat_id=sent.chat.id, message_id=sent.message_id)
+
+
+@bot.message_handler(commands=["batch"])
+def cmd_batch(m: Message):
+    bot.reply_to(m, "📄 Kirim file <b>.txt</b> berisi nomor (satu per baris).\n"
+                    "Maks 500 nomor per file.")
+
+
+@bot.message_handler(content_types=["document"])
+def handle_doc(m: Message):
+    uid = m.from_user.id
+    doc = m.document
+    if not doc.file_name.lower().endswith(".txt"):
+        bot.reply_to(m, "❌ Cuma file .txt")
+        return
+
+    try:
+        fi = bot.get_file(doc.file_id)
+        raw = bot.download_file(fi.file_path).decode("utf-8", "ignore")
+    except Exception as e:
+        bot.reply_to(m, f"❌ Gagal unduh: {e}")
+        return
+
+    phones = extract_phones(raw)
+    if not phones:
+        bot.reply_to(m, "❌ Tidak ada nomor valid di file.")
+        return
+    if len(phones) > 500:
+        bot.reply_to(m, f"❌ {len(phones)} nomor, maks 500. Pecah file-nya.")
+        return
+
+    ok, sisa = charge(uid, len(phones))
+    if not ok:
+        bot.reply_to(m, f"❌ Saldo kurang untuk {len(phones)} nomor "
+                        f"(butuh {len(phones)*PRICE_PER_CHECK}, punya {sisa}).\n/topup")
+        return
+
+    sent = bot.reply_to(m, f"⏳ Batch {len(phones)} nomor dimulai...")
+    results = []
+    t0 = time.time()
+    last_edit = 0
+
+    for i, p in enumerate(phones, 1):
+        r = ENGINE.check(p)
+        results.append(r)
+        now = time.time()
+        if now - last_edit > 3 or i == len(phones):
+            last_edit = now
+            done = len(results)
+            fresh = sum(1 for x in results if x["verdict"] == "FRESH")
+            unbin = sum(1 for x in results if x["verdict"] == "BISA_UNBIND")
+            try:
+                bot.edit_message_text(
+                    f"⏳ <b>Batch berjalan</b>\n\n"
+                    f"Progress: <code>{done}/{len(phones)}</code> ({done*100//len(phones)}%)\n"
+                    f"🟢 Fresh: <code>{fresh}</code>\n"
+                    f"🔵 Bisa unbind: <code>{unbin}</code>\n"
+                    f"⏱ {int(now-t0)}s",
+                    chat_id=sent.chat.id, message_id=sent.message_id)
+            except Exception:
+                pass
+        time.sleep(0.6)
+
+    # ringkasan
+    from collections import Counter
+    c = Counter(r["verdict"] for r in results)
+    fp = RESULT_DIR / f"batch_{uid}_{int(time.time())}.txt"
+    with fp.open("w") as f:
+        f.write(f"# Shopee Phone Check — {datetime.now():%Y-%m-%d %H:%M}\n")
+        f.write(f"# Total: {len(results)}\n\n")
+        for r in results:
+            f.write(f"{r['phone']} | {r['verdict']} | {r.get('username','')}\n")
+
+    summary = f"""✅ <b>Batch selesai</b> — {len(results)} nomor
+
+🟢 Fresh: <code>{c.get('FRESH',0)}</code>
+🔵 Bisa unbind: <code>{c.get('BISA_UNBIND',0)}</code>
+🔴 Tidak bisa unbind: <code>{c.get('LOCKED',0)}</code>
+🟠 Limit reuse: <code>{c.get('REUSE_LIMIT',0)}</code>
+⏳ Rate limited: <code>{c.get('RATE_LIMITED',0)}</code>
+⚫ Error: <code>{c.get('ERROR',0)}</code>
+
+<b>Sisa saldo:</b> <code>{sisa}</code> poin
+<b>Durasi:</b> {int(time.time()-t0)}s"""
+
+    try:
+        bot.edit_message_text(summary, chat_id=sent.chat.id, message_id=sent.message_id)
+    except Exception:
+        bot.send_message(m.chat.id, summary)
+    bot.send_document(m.chat.id, fp.open("rb"))
+
+
+@bot.message_handler(commands=["topup"])
+def cmd_topup(m: Message):
+    kb = InlineKeyboardMarkup(row_width=2)
+    kb.add(InlineKeyboardButton("Rp 10.000 — 100 cek", callback_data="buy_10000"),
+           InlineKeyboardButton("Rp 25.000 — 250 cek", callback_data="buy_25000"))
+    kb.add(InlineKeyboardButton("Rp 50.000 — 500 cek", callback_data="buy_50000"),
+           InlineKeyboardButton("Rp 100.000 — 1000 cek", callback_data="buy_100000"))
+    bot.reply_to(m, "💳 <b>Topup Saldo</b>\n\nPilih paket:", reply_markup=kb)
+
+
+@bot.callback_query_handler(func=lambda c: c.data.startswith("buy_"))
+def on_buy(c):
+    amount = int(c.data.split("_")[1])
+    bot.answer_callback_query(c.id, "Menyiapkan QRIS...")
+    # TODO: integrate GPM QRIS
+    bot.send_message(c.message.chat.id,
+                     f"💳 Topup <b>Rp {amount:,}</b>\n\n"
+                     f"<i>Integrasi QRIS GPM menyusul — flow sudah siap di apaja-clone/app/services/gpm.py</i>")
+
+
+@bot.callback_query_handler(func=lambda c: c.data == "topup")
+def on_topup_cb(c):
+    bot.answer_callback_query(c.id)
+    cmd_topup(c.message)
+
+
+@bot.message_handler(commands=["admin"])
+def cmd_admin(m: Message):
+    if m.from_user.id not in ADMIN_IDS and ADMIN_IDS != {0}:
+        bot.reply_to(m, "❌ Bukan admin.")
+        return
+    bot.reply_to(m, f"""🔧 <b>Admin Panel</b>
+
+Cookie: <code>{len(POOL.files)}</code> file
+Engine: {'✅ ready' if ENGINE._ready else '❌ belum boot'}
+User: <code>{ENGINE._jar_key or '-'}</code>
+
+<b>Perintah:</b>
+/addcookie — kirim cookie baru
+/reloadcookie — muat ulang pool
+/stats — statistik""")
+
+
+@bot.message_handler(commands=["addcookie"])
+def cmd_addcookie(m: Message):
+    if m.from_user.id not in ADMIN_IDS and ADMIN_IDS != {0}:
+        return
+    bot.reply_to(m, "Kirim isi cookie (satu baris, format <code>name=value; name2=value2</code>)")
+
+
+@bot.message_handler(commands=["reloadcookie"])
+def cmd_reload(m: Message):
+    if m.from_user.id not in ADMIN_IDS and ADMIN_IDS != {0}:
+        return
+    POOL.reload()
+    ENGINE._jar_key = None
+    bot.reply_to(m, f"✅ Pool di-reload: {len(POOL.files)} cookie")
+
+
+def main():
+    log.info("bot starting... cookies=%d", len(POOL.files))
+    threading.Thread(target=lambda: (ENGINE.ensure(), log.info("engine warm")),
+                     daemon=True).start()
+    bot.infinity_polling(timeout=30, long_polling_timeout=25)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,81 @@
+{
+ "steps": [
+  {
+   "n": "init",
+   "e": 0,
+   "auth": [
+    1
+   ]
+  },
+  {
+   "n": "init_v2",
+   "e": 0,
+   "ut": 428,
+   "cpt": 804
+  },
+  {
+   "n": "methods",
+   "e": 0,
+   "list": [
+    {
+     "t": 10,
+     "vt": 896
+    },
+    {
+     "t": 2,
+     "vt": 100
+    }
+   ]
+  },
+  {
+   "n": "select_10",
+   "e": 0,
+   "d": {
+    "credit_liveness_check": null,
+    "masked_username": null,
+    "is_new_lc_flow": false,
+    "operation_code": null
+   },
+   "r_token": 0
+  },
+  {
+   "n": "select_2",
+   "e": 0,
+   "d": {
+    "credit_liveness_check": null,
+    "masked_username": null,
+    "is_new_lc_flow": false,
+    "operation_code": null
+   },
+   "r_token": 0
+  }
+ ],
+ "ut": "U2FsdGVkX19r2LD53SP7hCtjgH9TASXHck39+ppISUzyjM+mbM8o9EVEFAwRzjuuRW16/5B0BEvbPgmcaCg+8HHOV4MKVsMXCtoePt9Sy6nIMQPdZryu2UhI4EiZEPuB8TgjOFVbTkwUgsFE85IrFr1QtMpT640s+mmIFfbBwIV3HB2aWtDQD+dNNBYaHlNaDAPzhLFxGn+DYRJ8ryTmnRoAoFiWKskrYtfiZEHpd+kbOb116aYbvkdicOnEi1/wYQ+pPIzVLxq1ALwp35qzLLcgR8PBBE+lly9YFC1/v2OPwJyB34KOS8+DFLzQj4B3pCQxv20IbeLxfw7vrG38Mji38hYDjrWbwT+2NvzEjGjscCEOWJwdtwg03HzomBD0FberSkOR/gW28bcaPnsSjrsFTBcpHDLFR0kMS1JvPmc=",
+ "cpt": "EAHLQ/9ROjoNDuqgI2xEsO7E2F+uVjKmGlvBgxNIEJlS/WWgDE0FdZnzd7lkJ7vQb3kqwU1lGoEYAkQG5WqZ2aT3MxbPJWW++CM+x4GRcEwOFAY7AxVmrtr2R0AkUcqzJEzY2q41M5FH2tkhba0/SpdLSImygcZU7ubgdnYzruHZF/lM7ZwwVqSlc0TbHaKKtNvi/vHdkFCl/omA/V23ZhLmbgJequBF697+i57EAE1sK2Q1TgVWYzp6d3sX/Ra79vlhH3a3nf1sDck2hD8x8L46NNjBEs8ru/4OCVs4tWnv4ur6fRcGFB/u64r7p/CR4vNWXCXMX/gNqIJnWJaXZTyrp9nLZhvwomCwx660O+ROaNrq0y/yjvB9pI77YaXqqQqZeMF5gigpWLGeYzTni3Wjj/B7uJ3gxnxy5Efbds0fT4gPLqRXkUVWrB1DNnQFxY5DGLHw6554QXx70T74ypSGo9P21hf+xu4/CYp9dfxeAJlPY+IfRQe46UmqfbF9G4TE2Fzo3MQo6c5SWQoapOBQ4kHTZcvZDt9Ep3k9660wiKxctNiud7PhyjhxB13JZNImQGf5Y6RprFLgmbTuxgpYoaHGSSHStZ4iYmVojZBhCZLqXhFE3nBMlD3NKGFcpPr56PHuKGWnTFmWHAFbzDJ/LYWLq24ruvRFvhz8EhGQhAlTngp4VYXDaobve9GxRgNJ1os0/H/1gSA94GDpLnziiJucl98ov8ACXhDAe4FVNvmnlblZN9uU689LnEgTgB1QgJuVjPtk+bquSOHtf4l671EhDc7bh3A1",
+ "methods": [
+  {
+   "t": 10,
+   "vt": 896
+  },
+  {
+   "t": 2,
+   "vt": 100
+  }
+ ],
+ "tv": [
+  {
+   "t": 10,
+   "mn": "NewShopeePayPin",
+   "e": 211,
+   "sig": 0,
+   "rt": 896
+  },
+  {
+   "t": 2,
+   "mn": "Password",
+   "e": 211,
+   "sig": 0,
+   "rt": 100
+  }
+ ]
+}

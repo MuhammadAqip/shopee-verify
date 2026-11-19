@@ -1,0 +1,75 @@
+{
+ "cap": [
+  {
+   "u": "https://shopee.co.id/api/v4/cart/mini",
+   "hdr": true,
+   "ri": "a63ffe6a61ae5de458ead235160177e22e9d24b6d1801054d665",
+   "sec": 2916,
+   "t": 1795047334800
+  },
+  {
+   "u": "https://shopee.co.id/api/v4/account/subaccount",
+   "hdr": true,
+   "ri": "aa3ffe6a6e6d8cecf19e7b331601a824bf98e35f0c316568ed55",
+   "sec": 2916,
+   "t": 1795047338147
+  },
+  {
+   "u": "https://shopee.co.id/api/v4/account/basic/get_payment_info",
+   "hdr": true,
+   "ri": "aa3ffe6a8c21c11bedd6473516015e0790fed7e5a64354b16bee",
+   "sec": 2908,
+   "t": 1795047338491
+  },
+  {
+   "u": "https://shopee.co.id/api/v4/homepage/campaign_modules",
+   "hdr": true,
+   "ri": "aa3ffe6a8ad26ecb93732a301601d574506e1c931679123aac3b",
+   "sec": 2912,
+   "t": 1795047339076
+  },
+  {
+   "u": "https://shopee.co.id/api/v4/cart/mini",
+   "hdr": true,
+   "ri": "ab3ffe6a5dc1ffe09119b83116013a4ba3f161aefa32305f1f8e",
+   "sec": 2932,
+   "t": 1795047339553
+  },
+  {
+   "u": "https://shopee.co.id/api/v4/pages/get_footer_layout",
+   "hdr": true,
+   "ri": "ab3ffe6abdc11186f7b080341601ed89dbd37dfbfe31e8609b94",
+   "sec": 2908,
+   "t": 1795047339744
+  },
+  {
+   "u": "https://shopee.co.id/api/v4/account/check_tos_consent",
+   "hdr": true,
+   "ri": "ab3ffe6aa19ea7a4bda9333f16014d29e88a71bae2b8e0ef8235",
+   "sec": 2904,
+   "t": 1795047340041
+  },
+  {
+   "u": "https://shopee.co.id/api/v4/pages/get_homepage_category_list",
+   "hdr": true,
+   "ri": "b43ffe6aa0321d4057a7453b16011db82e065638eead5963c7a0",
+   "sec": 2916,
+   "t": 1795047348608
+  },
+  {
+   "u": "s://shopee.co.id/api/v4/account/management/change_phone_init",
+   "hdr": true,
+   "ri": "b63ffe6a8061119e5a95db33160142053f4de4208cb762e7eeee",
+   "sec": 3576,
+   "t": 1795047352908
+  },
+  {
+   "u": "/shopee.co.id/api/v4/account/management/change_phone_init_v2",
+   "hdr": true,
+   "ri": "bb3ffe6a864ca61dcea0c93116010124e3dbff8023df20bc277d",
+   "sec": 3596,
+   "t": 1795047357143
+  }
+ ],
+ "dfs": []
+}

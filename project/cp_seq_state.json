@@ -1,0 +1,28 @@
+{
+ "account": {
+  "uid": 15539296185,
+  "phone": "6285119115863"
+ },
+ "v1": {
+  "seq_no": "09109dbd-f082-4fb7-a729-7756c9e1fe2c",
+  "auth_required": [
+   1
+  ]
+ },
+ "methods": {
+  "verify_method": 2
+ },
+ "verify_init": null,
+ "verify_commit": {},
+ "channels": null,
+ "send": null,
+ "precheck": {
+  "body": [
+   "phone",
+   "seq_no"
+  ],
+  "resp": {
+   "error": 10002
+  }
+ }
+}

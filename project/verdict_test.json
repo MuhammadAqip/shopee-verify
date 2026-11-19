@@ -1,0 +1,18 @@
+[
+ {
+  "phone": "6289601416330",
+  "exist": true,
+  "username": "m*****h",
+  "acct_fail": false,
+  "reuse_fail": false,
+  "verdict": "TIDAK_BISA"
+ },
+ {
+  "phone": "6287876125616",
+  "exist": true,
+  "username": "k*****f",
+  "acct_fail": true,
+  "reuse_fail": false,
+  "verdict": "BISA_UNBIND"
+ }
+]

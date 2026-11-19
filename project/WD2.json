@@ -1,0 +1,35 @@
+{
+ "modsDetail": [
+  {
+   "id": "15",
+   "keys": [
+    "default"
+   ]
+  },
+  {
+   "id": "60",
+   "keys": [
+    "Z"
+   ]
+  }
+ ],
+ "hits": [
+  {
+   "id": "60",
+   "k": "Z",
+   "len": 95,
+   "val": "{\"key\":null,\"ref\":null,\"props\":{\"fallback\":null,\"children\":{\"key\":null,\"ref\":null,\"props\":{}}}}"
+  }
+ ],
+ "err": null,
+ "modCount": 4,
+ "fnCount": 1,
+ "objCount": 1,
+ "fnSample": [
+  {
+   "id": "60",
+   "k": "Z",
+   "src": "function(e){return(0,c.jsx)(u.Suspense,{fallback:t?(0,c.jsx)(t,{}):null,children:(0,c.jsx)"
+  }
+ ]
+}

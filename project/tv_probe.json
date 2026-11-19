@@ -1,0 +1,165 @@
+{
+ "login": {
+  "userid": null,
+  "ivs_flow_no": "f359b41d-13b3-4975-96d2-5b0df34d0e75",
+  "ivs_token": "U2FsdGVkX18Bt1XSHz0WcGtFFFmd5Q/FqA4Uh0baHPv6jHc3eaT561pYNMlhSMsdYZjU1S9ndTIAAcdaXLikyT2Xs+BkRODObnVfcnBeWwhC50U97JHU/KoFt3BK05Oggiv8fGM+RWC5n+EMvYEPk2ctPpuLWqbtkwS4mYH4jmwMOxLpKy5SIruHVGQ4PsfWKlsEcBAmoNzWPMlIq4v2atySO28q4wSSPqn/BH+EG2TdvcHUSYX91kVdzwFHgH4TzODKCXSWbBbdngERyHgs5fIEyDtEH1TOmdzwpBLcA/wlqlWUn0k69pPDhJfM/ZCqAqqE6X2oJL6NLLk1crJtYj2CB24xl729vZNoeA6VloBEb/7gxVlV2DP/UPRhRmhc3nLaIlFSpWuPchb30+4BbSWBzGlooDLNIfJGW2GiNVKDq6QY7/NHb0zrDmouIQuoVak8W9TuGXOpORNAjLfsAkLJGBXJwqNhn+KxcqL0W08=",
+  "encrypted_phone": null
+ },
+ "results": [
+  {
+   "variant": "baseline",
+   "body_sent": [
+    "u_token"
+   ],
+   "result": {
+    "s": 200,
+    "j": {
+     "data": null,
+     "error": 49900000,
+     "error_msg": ""
+    }
+   }
+  },
+  {
+   "variant": "flow_no",
+   "body_sent": [
+    "u_token",
+    "ivs_flow_no"
+   ],
+   "result": {
+    "s": 200,
+    "j": {
+     "data": null,
+     "error": 49900000,
+     "error_msg": ""
+    }
+   }
+  },
+  {
+   "variant": "event2",
+   "body_sent": [
+    "u_token",
+    "event"
+   ],
+   "result": {
+    "s": 200,
+    "j": {
+     "data": null,
+     "error": 49900000,
+     "error_msg": ""
+    }
+   }
+  },
+  {
+   "variant": "event1",
+   "body_sent": [
+    "u_token",
+    "event"
+   ],
+   "result": {
+    "s": 200,
+    "j": {
+     "data": null,
+     "error": 49900000,
+     "error_msg": ""
+    }
+   }
+  },
+  {
+   "variant": "flow_event2",
+   "body_sent": [
+    "u_token",
+    "ivs_flow_no",
+    "event"
+   ],
+   "result": {
+    "s": 200,
+    "j": {
+     "data": null,
+     "error": 49900000,
+     "error_msg": ""
+    }
+   }
+  },
+  {
+   "variant": "token_field",
+   "body_sent": [
+    "token"
+   ],
+   "result": {
+    "s": 200,
+    "j": {
+     "data": null,
+     "error": 49900000,
+     "error_msg": ""
+    }
+   }
+  },
+  {
+   "variant": "utoken_flow",
+   "body_sent": [
+    "utoken",
+    "flow_no"
+   ],
+   "result": {
+    "s": 200,
+    "j": {
+     "0": 2,
+     "1": "1065f3cc99f-bf67-4bcf-b47b-c286362b32a5",
+     "2": false,
+     "3": 90309999,
+     "5": false,
+     "9": true,
+     "error": 90309999
+    }
+   }
+  }
+ ],
+ "seen": [
+  {
+   "url": "/api/v4/account/login_by_password",
+   "status": 200,
+   "body": "{\"bff_meta\":null,\"error\":98,\"error_msg\":\"\",\"data\":{\"userid\":null,\"ivs_flow_no\":\"f359b41d-13b3-4975-96d2-5b0df34d0e75\",\"ivs_token\":\"U2FsdGVkX18Bt1XSHz0WcGtFFFmd5Q/FqA4Uh0baHPv6jHc3eaT561pYNMlhSMsdYZjU1S9ndTIAAcdaXLikyT2Xs+BkRODObnVfcnBeWwhC50U97JHU/KoFt3BK05Oggiv8fGM+RWC5n+EMvYEPk2ctPpuLWqbtkwS4mYH4jmwMOxLpKy5SIruHVGQ4PsfWKlsEcBAmoNzWPMlIq4v2atySO28q4wSSPqn/BH+EG2TdvcHUSYX91kVdzwFHgH4TzODKCXSWbBbdngERyHgs5fIEyDtEH1TOmdzwpBLcA/wlqlWUn0k69pPDhJfM/ZCqAqqE6X2oJL6NLLk1crJtYj2CB24xl729vZNoeA6VloBEb/7gxVlV2DP/UPRhRmhc3nLaIlFSpWuPchb30+4BbSWBzGlooDLNIfJGW2GiNVKDq6QY7/NHb0zrDmouIQuoVak8W9TuGXOpORNAjLfsAkLJGBXJwqNhn+KxcqL0W08=\",\"encrypted_phone\":null}}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/methods",
+   "status": 200,
+   "body": "{\"error\":0,\"data\":[{\"type\":7,\"v_token\":\"U2FsdGVkX18MChaaSkoaXfLlZImucb7WVgPBk7VKX96pCxGTFlBd7ZSGO2fDorC0QcdVY5Z6K7rJ3D/IHmGlxcFghl7l9sRCGECW/ln5M4q8syuHuTFzmjQqKu9pYINm7e05IP5KGmg4dpd5anLipXvI+o3OLz7mjlX12HepV+S3PkFRQEWUhYuwVFOHAbSEEnk2YNe6ItUZmsI2tUAxOOrKux/ZIlKBt6/nhri3YbK/PH9eu0hi2+pL237XmCip25+wFDgxyuCM2UajWDbMTWpa5kQM4i9qYxDTgMKxEk0x8p9A5Jz3vEJqKuEpsKk3JbMpbJlWsR7ABpr8i+0veJk8COKLP3bFb82Gzf7DVhGO8V9OsNSbHx+ky4XVoTvb6mKRRkxUp/mLlXnVi4I/uH8MI9KchDlpjb00HnETBDI+ZqafxoN6cAflbOsb2cN3XB9SnEjn3HnI25TGycKNUsRvsGkIqfo7mjthe4gvo//dhzGQZMjug9ROalE6vNW6/xlSeCwcFKB9j3V7KiuiTEEIuXFPMAsxDb+ytKOK4lgycO6Pyg8dutzRR9mrG8IVkud2oW+HpsKB8cGO7cD8pXZ8wQrltXljfUvJII+m2x4oYicmnpIgxGtOsOMjq7r2Tn1iIcCJ40/Bz9Q2DtSrSFmJTkK34y5oXW375s36EsKwZH1yT+5eD6h/AQNZ4V3FyR2im7JFKKho4amwAmLb4fTloOvNI/nBPQyUfh/oV1Cqnkd9nZ94X9LeMRyytO36QZ2tTcahWcJrt7pUqHfDmiU3Y5Yp9YfS3lS/oTpL4dNN4RKXe5IOofEp29wBqyHMzZ0Nlo8WpGxAucetNhcEd8CRi1hC5300nDT9TEXLGBVWGsefJ18ofGeJx0GKPUUmsiZUR6qYW84teXuJoZXYq+rEQZCZaTkEKCcUIq70EpLEFD/ZbmtWiFf0S85eZoA7XTvnEB65r+eeRmDfRz3bvEaH1/SUqQQJe+7E7UkZFWOvR9eUpA8suJuJo22P6GW2\",\"is_auto_select\":null}]}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/token/verify",
+   "status": 200,
+   "body": "{\"data\":null,\"error\":49900000,\"error_msg\":\"\"}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/token/verify",
+   "status": 200,
+   "body": "{\"data\":null,\"error\":49900000,\"error_msg\":\"\"}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/token/verify",
+   "status": 200,
+   "body": "{\"data\":null,\"error\":49900000,\"error_msg\":\"\"}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/token/verify",
+   "status": 200,
+   "body": "{\"data\":null,\"error\":49900000,\"error_msg\":\"\"}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/token/verify",
+   "status": 200,
+   "body": "{\"data\":null,\"error\":49900000,\"error_msg\":\"\"}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/token/verify",
+   "status": 200,
+   "body": "{\"data\":null,\"error\":49900000,\"error_msg\":\"\"}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/token/verify",
+   "status": 200,
+   "body": "{\"5\":false,\"2\":false,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"1065f3cc99f-bf67-4bcf-b47b-c286362b32a5\",\"9\":true}\n"
+  }
+ ]
+}

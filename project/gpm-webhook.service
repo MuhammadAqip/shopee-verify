@@ -1,0 +1,19 @@
+[Unit]
+Description=Shopee bot - GPM QRIS webhook receiver
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/shopee-verify
+EnvironmentFile=/root/shopee-verify/.env
+Environment=WEBHOOK_HOST=0.0.0.0
+Environment=WEBHOOK_PORT=8082
+ExecStart=/root/sniffenv/bin/python3 webhook_server.py
+Restart=always
+RestartSec=3
+StandardOutput=append:/var/log/gpm-webhook.log
+StandardError=append:/var/log/gpm-webhook.log
+
+[Install]
+WantedBy=multi-user.target

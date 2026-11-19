@@ -1,0 +1,26 @@
+{
+ "log": [
+  {
+   "url": "/api/v4/account/login_by_password",
+   "status": 200,
+   "body": "{\"bff_meta\":null,\"error\":98,\"error_msg\":\"\",\"data\":{\"userid\":null,\"ivs_flow_no\":\"4ecda8aa-718b-4b1e-8ec9-c4812ffa0409\",\"ivs_token\":\"U2FsdGVkX1//8xwLbL5FYm2BqogOzslLAlB1zk/zvc/R3HeP3ekUnbMmHhtzZmYiR2ktg3SSmACK3RQKfRxDBLDKXhYM2FaG/fUrTy4F+rtvOJ4V6MGuAErY7xW3iON7dowyqdm7czHgAa2ZVc5u4ThOjzYGyzIyEtvhf+UFAAH7B8Ma+N5Wyk3UxBBvPoHhleNS9/IEhBzN4V44j4U0LchxT922hDSUi9skfGRpNh0FxLioVJ/fbM/ZEyuFMx1FTWQ9OzzRKR79gy+CD+DR4ixUSw1BtKXUCWt7lFCm9C7EuK0J5OSqKtWKyvD1MpIFDii5ZvkA55Ye3ZhEyhJGOaQixtSPnDk58RVqGeZ57+76vxXtrOKB0p9LgOw2v9yIy8mGOcMzH/+tDvz9vCKJlFylbnpI0bbJY8rdAWFIVLI3ux1mzBPfMRKAVX5827kSKTI9QaAl4TuKh/72H7pJCz6np/36rwYcUrKd0xt+tp0=\",\"encrypted_phone\":null}}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/methods",
+   "status": 200,
+   "body": "{\"error\":0,\"data\":[{\"type\":7,\"v_token\":\"U2FsdGVkX1+U84D3y12uF3WasX01eAdBawZwAivW4ienz5dumTK+3LUPLzlnNPFW+d3A8+h5se/xC3HBiVEjY26wnufipB4w5QSJHOYPSZzX/kB0x/JRQuHNwHwJn4X5Bo9VKYZM8yH6+Yz2wF4X5jDlpbgzKb6guTVf3cim/skISyPGniwEq7vlcnL8/Ad/jalpfwcs2eefAgeho6nZ3TvBbjZSZZEP8IS6aE+aPEJyC4JoVN8MF3PGPXkoF3W11w/QRXRE7tMwSe65VG4cp90Ea97dwSGiGw5GbDR654advJ2ztSz835lAwuUpEAKBqszzc/lBK1tIzK2tOfNYgq+cO+8NRSx0WPm4pGShb13wk/OWT+6PKoj3tIyCDZRnQdEyv3ULxW3rV5U1vfTSdfmN4/EY2UknBVmCU5ZdUl3O+aV0SLwPQ/bM7Pt4uhsFT/5Z7AodIoTvwKiy9SHluhnZm3wXTS8VoVhsEE+YejtjNVhtUt/+j33qTAWB8b1LHO/0wcS7hluHRP7lyHbvDuD6BsQ2LIrXL+abv3KHPgd8yZXVJVmpWTxzV4kFVE0jEnEEdwQglSvKKzENjsl5i6Cwu1fknodekbu3AkEMUeN8caFYETBL1vZS+4EB1VX7R1HAgsSizeJ8xQ5wyhcQ/yz8eGuPceNM5m/HGeTyDqdXn11ShCZOMDNkfaR6+DhVWeFO7F6/EQOH7q9tEOXz5sdvW5awGM2+HvwaFGux5HHX82ilwMvaKI3ICWkFyLFNwsES/tQrxblBTYACMJbYjDRA3AIKXJLBF8u3+4+LJToMozmz7g4O/ZhJU16YevVoRMGf2G2eeCkBgG3BUMtCijUDc+OhTqG5C2XjnI4OmJZd+EU3pQu7fRZmunJh8LYSLIhLapl3gE/kRiL0HTuR0EbqfcrDd5XWHHdBtvVCl/QKHFLeGWDEO7885k77kkRWOgVRWs4UojSY02Tvt+undOa2iQkKtUWWA/gYgXT8zQdr9m+CE5wi1XMD36xDBJfg\",\"is_auto_select\":null}]}"
+  },
+  {
+   "url": "/api/v4/account/login_by_password",
+   "status": 200,
+   "body": "{\"bff_meta\":null,\"error\":98,\"error_msg\":\"\",\"data\":{\"userid\":null,\"ivs_flow_no\":\"0edc2e88-97ba-4f5e-93fc-f18129ff9d9c\",\"ivs_token\":\"U2FsdGVkX1/IEYeAy0HDIXs+A7Atg45Yf9Oq11Nva3zT00SN8m2LG00gkW1gPa7QWUq46wfEg321YYp7IK4qGzNwU7t2CeJCUGXFO3ni5TGdppsdfMhNIkII/C8+wThRtZuNVmx+88eJOIyJDrkV9uy7QMh/1QPPnFOiqZh0p59hL7qYCV7MVy9tzo7dC6J/qGmkwxZRvdRx/nDnq4WfHFOo9u5tbJIRSJCCZwukySuIixHO1mlYUGXuoJ77yf85BbVvWxtVr5ZJjZlqU1VOFmHoGSokzBe8hcvuGqBKIdPgLshP4SQXAPxCmJb5/878G2SgG+Q6GIBuE10KX6p2DKUnNMqv1R8zJ9lxiGIsWW0Rd2SYOEDvaCUvZu7vSp+8s8lx7YJ5lIhJ+/rKPxnZHBZgOjCEoNT03Ozu15yp3Zwb4anHSbuMA6sOL+fhFvWCJkXyJLtR6ES8oV3A8GYMezFV/HP+tKdY3k7BsIHd/O4=\",\"encrypted_phone\":null}}"
+  },
+  {
+   "url": "/api/v4/anti_fraud/ivs/methods",
+   "status": 200,
+   "body": "{\"error\":0,\"data\":[{\"type\":7,\"v_token\":\"U2FsdGVkX18eu6wjegCGf1L37SqGXlNX9yXJNLnLYHalZyQTmv7dRAeUIk0viHVZOvyLFmmtFWTds+qNiRXCH67HxtgpOw59KnT+LFEBHnVg+d3ElsM9vyoT84fDg93mAsA67TpVhiCCAHzSt/dD/+v1nZcL3zCVLsUqw+2mrWMPEPp0ouT1DUZd4C6MkCthlRKiowPK3upMAFErg0dvYNGrtU9bxmRzrRNJlKaSJ3++liMi6YvAKuNcMXaLDIARLupjQfVS053o41RuhhZiUgN5cPRFncizeenSEnSArTX9XQ50Vy4ebsa1nTD9a9WtOQk3KElArAa6lNuIGc01Tbsp5RSHTuI4KPJtAUiDmzWq1dXh2iLTJIp6pmTRsGkX9fmrSRHKLLmoihzVWJqFR0WB/j7LKUj0KBbs82hibd9gXI2rQjWDS03R+MrvN0xXZNFT6YHlVm3X6L3zw8kVl9hq8kRhf1OaOeWcL1S6l5uc2JPpuG0CGb3swMd6dC1PleSMsG0JH7U+GDJpNqE5SvD32OBNB3+/ZKT8hIFMWrfmspxhuCKOvgZQSWs6EW8EIEPa73A7IVseZhDP9stIu2keNxFe9qwrim7Po8+nWebNzV4m11Wd8Or7FJuDRhw71VzE0InI6WGgwwn0KsqPtfPv7Vb39daFF6Qn0Q+lujFB+TVSJumC8s7gzGxITr3sYLYbR95FcrdFuVnsIRJo9X4ofpaEqPJ9wQf0LrR8LOTewH/Z8dHiFoaYs4066Ox1MeF8Mc2g7BSgSTIS51TmePACu2zDRJla+OAqSQfgSKSPAGXuCPz56M/yZK3AwmVX8arxIQgeFInNJvbQau99oJqfxpLRcmMh+W2i0rqeSZUVNFfkHMZBl9XMOZ0Hs8UV2ySVxdZZInHeEom2fwt7SjIMiO87B3Y5PxiNp6M9MvdU9EhrmK4rgDl6M+QkmsYXPGgS5j+zCrGdOM/TeGv5te3ik5RyWDvD1CIlnFigvfddIEcKdhHuNhowqLFIckIF\",\"is_auto_select\":null}]}"
+  }
+ ],
+ "has_st": false,
+ "url": "https://shopee.co.id/verify/ivs?is_initial=true"
+}

@@ -1,0 +1,24 @@
+{
+ "dump": {
+  "globals": {
+   "webpackChunk_shopee_antifraud_captcha_pc": "obj:0,push",
+   "renderCaptchaDesktop": "fn:function(n,t){var r=aa,e=null!=t&&null!=(e=t[r(2371)])&&e[r(2370)]?z1[r(77)](t8,",
+   "renderCaptchaPopupDesktop": "fn:function(n,t){var r=aa,e=null!=t&&null!=(e=t[r(2371)])&&e[r(2370)]?z1[r(77)](t8,"
+  },
+  "dfp": null,
+  "tokens": {},
+  "webpack": "len=1"
+ },
+ "tokens": {
+  "tried": []
+ },
+ "storage": {
+  "LS:_sapid": "7e189f210c46614b7b455323033a956f4366dbd3cb78de580ec14292",
+  "SS:_sapid": "7e189f210c46614b7b455323033a956f4366dbd3cb78de580ec14292",
+  "SS:@shopee/security-theme": "default",
+  "SS:@shopee/antifraud/captcha-tracking-id": "uqMSLNXKhVMfOBe9TRWALVEBGyKgiMFK"
+ },
+ "found": {
+  "get_config": "{'bundle_url': 'https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js', 'style_url': 'https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css', 'error': 0, 'trac"
+ }
+}

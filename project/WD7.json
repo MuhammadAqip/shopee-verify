@@ -1,0 +1,33 @@
+{
+ "steps": [
+  {
+   "newOk": true,
+   "cfg": {
+    "appKey": "TSS.PC",
+    "appId": "TSS.PC",
+    "sampleRate": 1,
+    "disabled": false
+   },
+   "m": "keys=_bcy,_OU,_uPK,_e0M,_hE"
+  },
+  {
+   "step": "init",
+   "err": "TypeError: Cannot read properties of undefined (reading 'slice')"
+  },
+  {
+   "step": "queue",
+   "n": 0
+  },
+  {
+   "step": "flush",
+   "err": "TypeError: Cannot read properties of undefined (reading 'slice')"
+  },
+  {
+   "step": "queue2",
+   "n": 0
+  }
+ ],
+ "captured": {},
+ "e0M": "{\"appKey\":\"TSS.PC\",\"appId\":\"TSS.PC\",\"sampleRate\":1,\"disabled\":false}",
+ "hE": "76051953-f064-44c3-ae57-042969059183"
+}

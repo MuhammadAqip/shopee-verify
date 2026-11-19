@@ -1,0 +1,40 @@
+{
+ "grid": [
+  {
+   "name": "m_only",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "m_r",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "m_df",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "m_misc",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "m_full",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "m_flow",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  }
+ ]
+}

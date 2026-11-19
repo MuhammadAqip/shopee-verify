@@ -1,0 +1,56 @@
+{
+ "flow_no": "690b1643-ff06-4b9c-824a-781746e4be0b",
+ "methods": [
+  {
+   "type": 7,
+   "len": 1024
+  }
+ ],
+ "select": {
+  "s": 200,
+  "j": {
+   "data": {
+    "credit_liveness_check": null,
+    "masked_username": null,
+    "is_new_lc_flow": false,
+    "operation_code": null
+   },
+   "error": 0
+  }
+ },
+ "token_verify": [
+  {
+   "name": "nvp1",
+   "err": 90309999,
+   "resp": null
+  },
+  {
+   "name": "nvp2",
+   "err": 90309999,
+   "resp": null
+  },
+  {
+   "name": "nvp3",
+   "err": 90309999,
+   "resp": null
+  },
+  {
+   "name": "nvp4",
+   "err": 90309999,
+   "resp": null
+  }
+ ],
+ "fingerprint": {
+  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)",
+  "webdriver": null,
+  "plugins": 5,
+  "langs": [
+   "id-ID",
+   "id",
+   "en"
+  ],
+  "canvas": "BDuCUtWaK/hwAAAABJRU5ErkJggg==",
+  "tz": "Asia/Jakarta",
+  "memory": 4
+ }
+}

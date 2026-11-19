@@ -1,0 +1,17 @@
+{
+ "scripts": [
+  "https://deo.shopeemobile.com/shopee/modules-federation/live/0/shopee__web-bridge-sdk/1.18.0-1.js",
+  "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/sfu-stable.c3d38f8e0e81e513.2023.js",
+  "https://deo.shopeemobile.com/shopee/shopee-trackingsdk-live-sg/@shopee/tracking-loader@1.2.2.min.js",
+  "https://deo.shopeemobile.com/shopee/modules-federation/live/0/shopee__web_enhance_sap/2.52.71-r.7e58suyo7y.js"
+ ],
+ "ver": {
+  "sapVer": "2.52.71-r.7e58suyo7y",
+  "sdkVer": null,
+  "sfc": 5,
+  "root": [
+   "init",
+   "push"
+  ]
+ }
+}

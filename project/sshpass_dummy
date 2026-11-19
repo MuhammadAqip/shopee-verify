@@ -1,0 +1,318 @@
+# -*- coding: utf-8 -*-
+"""changenum.py — fitur Change Number Shopee (operation:23, tanpa captcha).
+
+Pipeline terbukti (dua akun sukses):
+  init_v2 -> change_phone_token
+  get_settings_v2 op=23 -> need_captcha FALSE + available_channels
+  send_vcode op=23 ch=<pilihan user>
+  verify_vcode {vcode, operation:23, m_token} -> vcode_token
+  req(66199).K.changePhoneCommitV2({phone, changePhoneToken, vcodeToken}) -> error 0
+
+Dipakai bot.py lewat:  import changenum
+"""
+import json
+import os
+import time
+
+MITM = os.environ.get("SHOPEE_MITM", "http://127.0.0.1:8080")
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36")
+OP = 23
+
+CHANNEL_NAME = {1: "SMS", 2: "Voice Call", 3: "WhatsApp", 4: "Email", 5: "Zalo", 6: "Viber"}
+
+# error yang artinya "nomor tidak bisa dipakai" -> user harus kirim nomor lain
+NUMBER_BAD = {
+    23500158: "Nomor ini diblokir Shopee (terlalu banyak OTP hari ini). Coba nomor lain.",
+    23500152: "Rate limit untuk nomor ini. Coba nomor lain.",
+    10001:    "Nomor tidak valid.",
+    10002:    "Nomor tidak valid / parameter ditolak.",
+    10013:    "Nomor tidak bisa dipakai untuk akun ini.",
+    23500000: "Kode/nomor tidak cocok.",
+}
+
+# substrings penanda akun ter-restrict (tidak bisa unbind)
+RESTRICT_HINTS = ("restrict", "cannot", "delink", "banned", "suspend")
+
+
+def error_text(code):
+    return NUMBER_BAD.get(code, f"Shopee menolak (error {code}).")
+
+
+def _cookies(ck):
+    return [{"name": p.split("=", 1)[0].strip(),
+             "value": p.split("=", 1)[1].strip(),
+             "domain": ".shopee.co.id", "path": "/"}
+            for p in ck.split(";") if "=" in p]
+
+
+def norm_phone(raw):
+    """628xxx / 08xxx / +628xxx -> 628xxx. Return None kalau tidak valid."""
+    s = "".join(ch for ch in str(raw or "") if ch.isdigit() or ch == "+")
+    s = s.replace("+", "")
+    if s.startswith("0"):
+        s = "62" + s[1:]
+    elif s.startswith("8"):
+        s = "62" + s
+    if not s.startswith("62"):
+        return None
+    if not (10 <= len(s) <= 15):
+        return None
+    return s
+
+
+def is_cookie(txt):
+    return ("SPC_" in txt or "csrftoken" in txt) and "=" in txt
+
+
+# ---------------------------------------------------------------------------
+# Browser session — satu instance per request, semua via mitmproxy residensial
+# ---------------------------------------------------------------------------
+
+class Session:
+    def __init__(self, cookie, headless=True):
+        self.cookie = cookie
+        self.headless = headless
+        self._pw = None
+        self._br = None
+        self._ctx = None
+        self.pg = None
+
+    def __enter__(self):
+        from playwright.sync_api import sync_playwright
+        self._pw = sync_playwright().start()
+        self._br = self._pw.chromium.launch(headless=self.headless, args=[
+            "--no-sandbox", "--disable-dev-shm-usage",
+            "--window-size=1366,900",
+            "--disable-blink-features=AutomationControlled",
+            "--lang=id-ID", "--ignore-certificate-errors"])
+        self._ctx = self._br.new_context(
+            user_agent=UA, locale="id-ID",
+            viewport={"width": 1366, "height": 900},
+            timezone_id="Asia/Jakarta",
+            proxy={"server": MITM} if MITM else None,
+            ignore_https_errors=True)
+        self._ctx.add_cookies(_cookies(self.cookie))
+        self._ctx.add_init_script(
+            "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"
+            "window.chrome={runtime:{}};")
+        self.pg = self._ctx.new_page()
+        self.warm()
+        return self
+
+    def warm(self):
+        try:
+            self.pg.goto("https://shopee.co.id/",
+                         wait_until="domcontentloaded", timeout=70000)
+        except Exception:
+            pass
+        self.pg.wait_for_timeout(12000)
+        # ambil webpack require
+        for _ in range(3):
+            if self.pg.evaluate("""() => {
+                if (window.__WR) return true;
+                const wp = window.webpackChunkshopee_pc;
+                if (!wp) return false;
+                wp.push([[Math.random().toString(36).slice(2)], {},
+                         function(r){ window.__WR = r; }]);
+                return !!window.__WR;
+            }"""):
+                return True
+            self.pg.wait_for_timeout(3000)
+        return False
+
+    def __exit__(self, *a):
+        try:
+            self._br.close()
+        except Exception:
+            pass
+        try:
+            self._pw.stop()
+        except Exception:
+            pass
+
+    # --- API steps ---
+    def account_info(self):
+        return self.pg.evaluate("""async () => { try {
+            const r = await fetch('/api/v4/account/basic/get_account_info',
+                                  {credentials:'include'});
+            const j = await r.json(); const d = j.data || {};
+            return {err: j.error, username: d.username, phone: d.phone,
+                    verified: d.phone_verified};
+        } catch(e) { return {ex:String(e).slice(0,80)}; } }""")
+
+    def init_change(self, phone):
+        return self.pg.evaluate("""async (a) => { try {
+            const r = await fetch('/api/v4/account/management/change_phone_init_v2',
+              {method:'POST', credentials:'include',
+               headers:{'Content-Type':'application/json'},
+               body: JSON.stringify({phone:a.phone, seq_no:null})});
+            const j = await r.json(); const d = j.data || {};
+            return {err:j.error, cp:d.change_phone_token||'',
+                    ivs:d.ivs_required, ongoing:d.ongoing_request_phone||null,
+                    delayed:d.is_delayed||false,
+                    msg:j.error_msg||''};
+        } catch(e) { return {ex:String(e).slice(0,80)}; } }""", {"phone": phone})
+
+    def settings(self, phone):
+        return self.pg.evaluate("""async (a) => { try {
+            const r = await fetch('/api/v4/otp/get_settings_v2',
+              {method:'POST', credentials:'include',
+               headers:{'Content-Type':'application/json'},
+               body: JSON.stringify({phone:a.phone, operation:23})});
+            const j = await r.json(); const d = j.data || {};
+            return {err:j.error, need_captcha:d.need_captcha,
+                    scene:d.captcha_scene, seed:d.seed||'',
+                    channels:d.available_channels||[],
+                    preferred:d.preferred_channel,
+                    masked:d.masked_phone||'',
+                    msg:j.error_msg||''};
+        } catch(e) { return {ex:String(e).slice(0,80)}; } }""", {"phone": phone})
+
+    def send_vcode(self, phone, seed, channel):
+        return self.pg.evaluate("""async (a) => { try {
+            const r = await fetch('/api/v4/otp/send_vcode',
+              {method:'POST', credentials:'include',
+               headers:{'Content-Type':'application/json'},
+               body: JSON.stringify({phone:a.phone, channel:a.ch,
+                                     operation:23, seed:a.seed})});
+            const j = await r.json(); const d = j.data || {};
+            return {err:j.error, trk:d.otp_tracking_id||'',
+                    delivery:d.delivery_channel,
+                    channels:d.available_channels||[],
+                    msg:j.error_msg||''};
+        } catch(e) { return {ex:String(e).slice(0,80)}; } }""",
+            {"phone": phone, "seed": seed, "ch": channel})
+
+    def verify_vcode(self, phone, code, cp):
+        return self.pg.evaluate("""async (a) => { try {
+            const r = await fetch('/api/v4/otp/verify_vcode',
+              {method:'POST', credentials:'include',
+               headers:{'Content-Type':'application/json'},
+               body: JSON.stringify({phone:a.phone, vcode:a.code,
+                                     operation:23, m_token:a.cp})});
+            const j = await r.json(); const d = j.data || {};
+            return {err:j.error, vt:d.vcode_token||'', msg:j.error_msg||''};
+        } catch(e) { return {ex:String(e).slice(0,80)}; } }""",
+            {"phone": phone, "code": code, "cp": cp})
+
+    def commit(self, phone, cp, vt):
+        return self.pg.evaluate("""async (a) => {
+            const req = window.__WR;
+            if (!req) return {err:'no_webpack'};
+            const out = {};
+            for (const c of [5427,8963,9308,1250,2735,8167,5358,896]) {
+                try { await req.e(c); } catch(e) {}
+            }
+            try { req(7231); } catch(e) {}
+            let svc = null;
+            try { svc = req(66199).K; } catch(e) { out.svcErr = String(e).slice(0,120); }
+            if (!svc) return {...out, err:'svc_null'};
+            try {
+                const r = await svc.changePhoneCommitV2({
+                    phone: a.phone,
+                    changePhoneToken: a.cp,
+                    vcodeToken: a.vt,
+                    ivsSignature: "",
+                    ivsMethod: null
+                });
+                out.raw = JSON.parse(JSON.stringify(r||{}));
+                out.err = (r && typeof r.error !== 'undefined') ? r.error : 0;
+            } catch(e) { out.err = 'exception'; out.ex = String(e).slice(0,300); }
+            return out;
+        }""", {"phone": phone, "cp": cp, "vt": vt})
+
+
+# ---------------------------------------------------------------------------
+# High-level helper untuk bot (dipanggil dalam thread)
+# ---------------------------------------------------------------------------
+
+def check_number(cookie, phone):
+    """Cek akun + apakah nomor fresh/bisa dipakai.
+
+    Return dict:
+      ok            : True kalau nomor siap dipakai
+      username / old_phone
+      need_captcha  : bool
+      channels      : [int] channel yang tersedia
+      reason        : pesan error kalau ok=False
+      seed, cp
+    """
+    with Session(cookie) as s:
+        acc = s.account_info()
+        if acc.get("err") not in (0, None):
+            return {"ok": False,
+                    "reason": f"Sesi cookie tidak valid (error {acc.get('err')})."}
+        out = {"ok": False,
+               "username": acc.get("username") or "?",
+               "old_phone": acc.get("phone") or "?"}
+
+        ini = s.init_change(phone)
+        if ini.get("err") != 0:
+            out["reason"] = error_text(ini.get("err"))
+            return out
+        if ini.get("ivs"):
+            out["reason"] = ("Akun ini minta verifikasi identitas (IVS). "
+                             "Ganti nomor diblokir untuk akun ini.")
+            return out
+        if ini.get("ongoing"):
+            out["reason"] = (f"Akun masih punya permintaan ganti nomor yang "
+                             f"menggantung ke {ini['ongoing']}. Tunggu / selesaikan dulu.")
+            return out
+
+        st = s.settings(phone)
+        if st.get("err") != 0:
+            out["reason"] = error_text(st.get("err"))
+            return out
+
+        chans = [c for c in (st.get("channels") or []) if c in CHANNEL_NAME]
+        if not chans:
+            out["reason"] = "Shopee tidak menawarkan channel OTP untuk nomor ini."
+            return out
+
+        out.update({
+            "ok": True,
+            "need_captcha": bool(st.get("need_captcha")),
+            "channels": chans,
+            "preferred": st.get("preferred"),
+            "seed": st.get("seed") or "",
+            "cp": ini.get("cp") or "",
+            "phone": phone,
+        })
+        return out
+
+
+def request_otp(cookie, phone, cp, seed, channel):
+    """Kirim OTP di channel pilihan. Return dict ok/trk/reason."""
+    with Session(cookie) as s:
+        r = s.send_vcode(phone, seed, channel)
+        if r.get("err") == 0:
+            return {"ok": True, "trk": r.get("trk"),
+                    "delivery": r.get("delivery") or channel}
+        return {"ok": False, "reason": error_text(r.get("err")),
+                "channels": r.get("channels") or []}
+
+
+def commit_change(cookie, phone, cp, code):
+    """verify + commit. Return dict ok/new_phone/reason."""
+    with Session(cookie) as s:
+        v = s.verify_vcode(phone, code, cp)
+        if v.get("err") != 0:
+            return {"ok": False, "reason": error_text(v.get("err"))}
+        vt = v.get("vt") or ""
+        if not vt:
+            return {"ok": False, "reason": "vcode_token kosong dari Shopee."}
+
+        c = s.commit(phone, cp, vt)
+        if c.get("err") != 0:
+            if c.get("err") == "svc_null" or c.get("err") == "no_webpack":
+                return {"ok": False,
+                        "reason": "Modul Shopee tidak ter-load (webpack belum siap). Coba lagi."}
+            return {"ok": False, "reason": error_text(c.get("err")),
+                    "detail": c.get("ex")}
+
+        info = s.account_info()
+        return {"ok": True,
+                "new_phone": info.get("phone") or phone,
+                "username": info.get("username") or "?",
+                "verified": info.get("verified")}

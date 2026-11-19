@@ -1,0 +1,81 @@
+{
+ "assign": [
+  {
+   "name": "__SFUC",
+   "t": 1795013684482,
+   "type": "number"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013684482,
+   "type": "number"
+  },
+  {
+   "name": "__ShopeeSSS_root",
+   "t": 1795013684750,
+   "type": "object"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013684874,
+   "type": "number"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013685503,
+   "type": "number"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013686188,
+   "type": "number"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013686676,
+   "type": "number"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013688751,
+   "type": "number"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013689080,
+   "type": "number"
+  },
+  {
+   "name": "__SFUC",
+   "t": 1795013689173,
+   "type": "number"
+  }
+ ],
+ "captured": {
+  "__ShopeeSSS_root": {
+   "props": [
+    "init",
+    "push"
+   ],
+   "fns": [
+    "push"
+   ],
+   "src": [
+    {
+     "k": "push",
+     "src": "(...a)=>{for(let{k:r,a:o,v:s}of a)switch(o){case\"s\":t(r,s),e(r,s);break;case\"a\":e(r,n(r,s));break;case\"p\":e(r,i(r,...s))}}"
+    }
+   ]
+  }
+ },
+ "scan": [],
+ "root": {
+  "props": [
+   "init",
+   "push"
+  ],
+  "fns": [
+   "push"
+  ]
+ }
+}

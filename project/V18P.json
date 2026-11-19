@@ -1,0 +1,73 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/account/management/change_phone_init_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"change_phone_token\":\"EUrTfgHanrQ1lDEnYfCgPEAs7WLi9jf7LGQPNdmsIO+cEv9OTK3cZo6xrNPTz/eDP4WprFVJ+HNpYDweuOPmmvhu1LHwZ+y8SIH97TpIXvJV+FhMMZL6tmtAnMhGeUwFQen4wMoVwCxdRfGB5aANIxeVZjkpUA8vIrsRcUCunLasX5KcFGAYmrD4pcmUnlw1BJhYqkOBDiUim2HOXah6TztJdkzULltB9QusXWp0KrHY\",\"ivs_required\":false,\"ivs_utoken\":\"\",\"is_delayed\":false,\"has_phone_pix_key\":false}}"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":true,\"need_captcha\":false,\"captcha_scene\":\"phone_otp_account_set_phone\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"bbbfb3bf-1c33-48fd-b8d4-83171c05a495\",\"flow_name\":\"prefer_sms_and_hide_voice\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/otp/verify_vcode",
+   "s": 200,
+   "b": "{\"error\":23500000}"
+  },
+  {
+   "u": "/api/v4/otp/verify_vcode",
+   "s": 200,
+   "b": "{\"error\":23500000}"
+  },
+  {
+   "u": "/api/v4/otp/verify_vcode",
+   "s": 200,
+   "b": "{\"error\":23500000}"
+  },
+  {
+   "u": "/api/v4/otp/verify_vcode",
+   "s": 200,
+   "b": "{\"error\":23500000}"
+  },
+  {
+   "u": "/api/v4/otp/verify_vcode",
+   "s": 200,
+   "b": "{\"error\":23500000}"
+  },
+  {
+   "u": "/api/v4/otp/verify_vcode",
+   "s": 200,
+   "b": "{\"error\":23500000}"
+  }
+ ],
+ "state": {
+  "init_err": 0,
+  "ivs": false,
+  "cp_token": "EUrTfgHanrQ1lDEnYfCgPEAs7WLi9jf7LGQPNdmsIO+cEv9OTK3cZo6xrNPTz/eDP4WprFVJ+HNpYDweuOPmmvhu1LHwZ+y8SIH97TpIXvJV+FhMMZL6tmtAnMhGeUwFQen4wMoVwCxdRfGB5aANIxeVZjkpUA8vIrsRcUCunLasX5KcFGAYmrD4pcmUnlw1BJhYqkOBDiUim2HOXah6TztJdkzULltB9QusXWp0KrHY",
+  "init_keys": [
+   "change_phone_token",
+   "ivs_required",
+   "ivs_utoken",
+   "is_delayed",
+   "has_phone_pix_key"
+  ],
+  "set_err": 0,
+  "seed": "bbbfb3bf-1c33-48fd-b8d4-83171c05a495",
+  "need_cap": false,
+  "set_keys": [
+   "need_login",
+   "need_captcha",
+   "captcha_scene",
+   "masked_phone",
+   "preferred_channel",
+   "available_channels",
+   "hidden_available_channels",
+   "skip_channel_confirmation",
+   "seed",
+   "flow_name",
+   "captcha_app_key",
+   "captcha_id"
+  ]
+ }
+}

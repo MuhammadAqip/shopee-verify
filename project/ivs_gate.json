@@ -1,0 +1,147 @@
+{
+ "init": {
+  "auth": [
+   1
+  ],
+  "ut": "U2FsdGVkX1/zJtuCO8YXzO1/m2yvMuItn/mWNaB2TsmUrrMLF/E/DV6VQv+IxaTOa8vEleYP+6UQrgbQt0JyB/Is7gPePRxFnDdDXOkUj3YlGX55PwOcxn0GrhUNx+TCVzT8EaGKPh1ysTetsqOLgXSjDYzsrAgt5w2vM0DZDWS0SV/TVL0AeOOVjKLxl0WnTZrD9k4/yUGM9PAXeLOl/RFzfq3QCbvOpUxsi/Gk/tw1r0xsNnuADe4IPc6WihMw653HUaO3Na6hZzV11Efk32KqG8bNMa74GMu1BVKyyi1ewhLlOphpvJw3Jh9U2HMI5MdEQszudMm3NF9+PJHJLCD/oDcpxzVz8gO318uDXp9Bxo6eKTe279vKz/0Q5Jc6xEStXj2SicJRJu6Q65Tarsh3KR3dH321InWW9UZnEStQB8OBjVEqLiH8rZWxXthS",
+  "cpt": "ELba/IrYCKaLk48NNeKcIxfMpEet9OgmVgYLxle+1CgTyfrEEdZx0R2W7e3++9VbOjUqjeagIDCW59cH28C2V8rveXmeguw+000wJmUmH8NbR2R1GZ4HlNS9lJ+dM7VTtgGHGEn11Xp9ludIaS7ZaDvcT3qfZH20PnRWnlLwtEF0SY9KJwNlhJiRTmC/AkGtlY5iHwL2qMymBiuvpeEzWTpaeGfGSdy+Gm9rp4YywChw8c+RRVvYCi/ixAwXF45aRxetByMtrA5a5vz4Ml+0apqlz4fVGfLVeJWcLzRd2+jLW1Qu+BJ3EOVT/8ZeKLXMV/TrgyDQUjdkGfCKpoP4sRaIfmrxNxwanyfHh2ATJvi4pkVTXxu6tybfvrk8qlu7EHXxefeqF9Dwi4H4EzYSzxNqrTJI73AjYIBPKoG5FOIc4vlJeeg9ocWHirGkTikgZLli6dUUO1koBHO/TTLMXmdga9QnIl4bYEv9OUvfqtaJo/VEMJHwVxOMdgQEQiRUfw2Jgl+1P5FHcX0K/aqaERWWGgUg8zEnpiEEb4h7Ac4XkrJl/csTG4iJq2A1/8y7jCIlHHGdEtDMsyrJ7hiF9nWmQBtDm+gZk11XUa3PJIiLFC/nxQ0Bs5NlM6MQtPccdt3Ewh29Va4ukcyElW3gBY9z31tDTBSOlAy1MAwMPmD7poMxFnOcHscRzCu+hGYwoVKoDWmy/804MeKNmgJHL9ZT2KAI3HBK7USeWJCDdpA/iOXByEfYAwlyoRicQDeffvFc3G0mVwSXh+pt/zL42W/SQGC1mruuudXAKjan3bYuFhKh5lURIiqHjps3I8g="
+ },
+ "tv": {
+  "methods": [
+   {
+    "t": 10,
+    "vt": 920
+   },
+   {
+    "t": 2,
+    "vt": 100
+   }
+  ],
+  "tv": [
+   {
+    "t": 10,
+    "mn": "NewShopeePayPin",
+    "e": 211,
+    "sig": 0
+   },
+   {
+    "t": 2,
+    "mn": "Password",
+    "e": 211,
+    "sig": 0
+   }
+  ]
+ },
+ "net": [
+  {
+   "u": "/api/v4/account/management/change_phone_init",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"seq_no\":\"548f6f90-f45e-4268-ae8c-78eb7986135f\",\"auth_required\":[1]}}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"change_phone_token\":\"ELba/IrYCKaLk48NNeKcIxfMpEet9OgmVgYLxle+1CgTyfrEEdZx0R2W7e3++9VbOjUqjeagIDCW59cH28C2V8rveXmeguw+000wJmUmH8NbR2R1GZ4HlNS9lJ+dM7VTtgGHGEn11Xp9ludIaS7ZaDvcT3qfZH20PnRWnlLwtEF0SY9KJwNlhJiRTmC/AkGtlY5iHwL2qMymBiuvpeEzWTpaeGfGSdy+Gm9rp4YywChw8c+RRVvYCi/ixAwXF45aRxetByMtrA5a5vz4Ml+0apqlz4fVGfLVeJWcLzRd2+jLW1Qu+BJ3EOVT/8ZeKLXMV/TrgyDQUjdkGfCKpoP4sRaIfmrxNxwanyfHh2ATJvi4pkVTXxu6tybfvrk8qlu7EHXxefeqF9Dwi4H4EzYSzxNqrTJI73AjYIBPKoG5FOIc4vlJeeg9ocWHirGkTikgZLli6dUUO1koBHO/TTLMXmdga9QnIl4bYEv9OUvfqtaJo/VEMJHwVxOMdgQEQiRUfw2Jgl+1P5FHcX0K/aqaERWWGgUg8zEnpiEEb4h7Ac4XkrJl/csTG4iJq2A1/8y7jCIlHHGdEtDMsyrJ7hiF9nWmQBtDm+gZk11XUa3PJIiLFC/nxQ0Bs5NlM6MQtPccdt3Ewh29Va4ukcyElW3gBY9z31tDTBSOlAy1MAwMPmD7poMxFnOcHscRzCu+hGYwoVKoDWmy/804MeKNmgJHL9ZT2KAI3HBK7USeWJCDdpA/iOXByEfYAwlyoRicQDeffvFc3G0mVwSXh+pt/zL42W/SQGC1mruuudXAKjan3bYuFhKh5lURIiqHjps3I8g=\",\"ivs_required\":true,\"ivs_utoken\":\"U2FsdGVkX1/zJtuCO8YXzO1/m2yvMuItn/mWNaB2TsmUrrMLF/E/DV6VQv+IxaTOa8vEleYP+6UQrgbQt0JyB/Is7gPePRxFnDdDXOkUj3YlGX55PwOcxn0GrhUNx+TCVzT8EaGKPh1ysTetsqOLgXSjDYzsrAgt5w2vM0DZDWS0SV/TVL0AeOOVjKLxl0WnTZrD9k4/yUGM9PAXeLOl/RFzfq3QCbvOpUxsi/Gk/tw1r0xsNnuADe4IPc6WihMw653HUaO3Na6hZzV11Efk32KqG8bNMa74GMu"
+  },
+  {
+   "u": "/verify/ivs?u_token=U2FsdGVkX1/zJtuCO8YXzO1/m2yvMuItn/mWNaB2TsmUrrMLF/E/DV6VQv+IxaTOa8vEle",
+   "s": 200,
+   "b": "<!doctype html>\n<html dir=\"ltr\">\n<head><script type=\"text/shopee-short-url-checked\">1</script>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=1240,shrink-to-fit=no\">\n<link rel=\"preconnect\" href=\"//down-id.img.susercontent.com/\">\n<link rel=\"preconnect\" href=\"//deo.shopeemobile.com/shopee/\">\n<meta name=\"shopee:git-sha\" content=\"e5dbd863737cd1924d6aed6aa44dfb8622a6584a\">\n<meta name=\"shopee:version\" content=\"sw-WEBFE-MKP-2026.11.02.v4-PDP-1-emergency\">\n<link rel=\"preload\" href=\"https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/bundle.a14d8fcd3ef583b0.2023.css\" as=\"style\" data-modern=\"true\">\n<link rel=\"preload\" href=\"https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/webpack-runtime.583dce620212857d.2023.js\" as=\"script\" crossorigin=\"anonymous\" data-modern=\"true\">\n<link rel=\"preload\" href=\"https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/entry-modules.02ca39241aac2cf3.2023.js\" as=\"script\" crossorigin=\"anonymous\" data-modern=\"true\">\n<link rel=\"preload\" href=\"https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/bundle.5cfd3214f28f4e52.2023.js\" as=\"script\" crossorigin=\"anonymous\" data-modern=\"true\">\n<link rel=\"preload\" hr"
+  },
+  {
+   "u": "%2Fverify%2Fivs%3Fu_token%3DU2FsdGVkX1%2FzJtuCO8YXzO1%2Fm2yvMuItn%2FmWNaB2TsmUrrMLF%2FE%2F",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/runtime.bfd5d027861",
+   "s": 200,
+   "b": "(self.mfeModules=self.mfeModules||[]).push([\"\",[\"Platform\"],e=>()=>{(()=>{\"use strict\";var t,r,o,n,a,i,s,l,d={},f={};function u(e){var t=f[e];if(void 0!==t)return t.exports;var r=f[e]={id:e,loaded:!1,exports:{}};return d[e](r,r.exports,u),r.loaded=!0,r.exports}u.m=d,u.x=e=>{},u.microfeA=(e,t)=>{e.exports;var r,o,n=e.exports=new Promise((e,t)=>{r=e,o=t});t().then(()=>{if(e.exports.then){var t=e.exports;e.exports=n,t.then(r,o)}else r(e.exports)}).catch(o)},t={0:{version:\"2.8.4\",bundler:\"webpack\"},1:{version:\"3.7.0\",bundler:\"webpack\"},2:{version:\"3.7.8\",bundler:\"webpack\"},3:{version:\"3.8.2\",bundler:\"webpack\"},4:{version:\"0.2.57\",bundler:\"webpack\"}},r={0:\"shopee_common__time\",1:\"shopee__domain\",2:\"shopee__language\",3:\"shopee__settings\",4:\"shopee__pc-page-configuration-context\"},o={type:\"module\",requester:\"pcmall-antifraudivs\"},u.microfeM=n=>e.getModule(r[n],Object.assign({},o,t[n])),u.microfeI=n=>e.getModuleImmediate(r[n],Object.assign({},o,t[n])),e._.registerFederatedModules({base:o,map:t,name:r}),n=[],u.O=(e,t,r,o)=>{if(!t){var a=1/0;for(d=0;d<n.length;d++){for(var[t,r,o]=n[d],i=!0,s=0;s<t.length;s++)(!1&o||a>=o)&&Object.keys(u.O).every(e=>u.O[e](t[s]))?t.splice(s--,1):(i=!1,o<a&&(a="
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/144.b2707b8fce0e38d",
+   "s": 200,
+   "b": "(self.webpackChunk_shopee_identity_verification_pc=REDACTED n;!function(){\"use strict\";var r={}.hasOwnProperty;function o(){for(var e=\"\",t=0;t<arguments.length;t++){var n=arguments[t];n&&(e=s(e,i(n)))}return e}function i(e){if(\"string\"==typeof e||\"number\"==typeof e)return e;if(\"object\"!=typeof e)return\"\";if(Array.isArray(e))return o.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes(\"[native code]\"))return e.toString();var t=\"\";for(var n in e)r.call(e,n)&&e[n]&&(t=s(t,n));return t}function s(e,t){return t?e?e+\" \"+t:e+t:e}e.exports?(o.default=o,e.exports=o):void 0===(n=function(){return o}.apply(t,[]))||(e.exports=n)}()},9569:(e,t,n)=>{\"use strict\";function r(e,t){if(null==e)return{};var n,r,o={},i=Object.keys(e);for(r=0;r<i.length;r++)n=i[r],t.indexOf(n)>=0||(o[n]=e[n]);return o}n.d(t,{Z:()=>r})},5429:(e,t,n)=>{\"use strict\";var r,o;n.d(t,{dU:()=>x,Kd:()=>b,of:()=>L});var i=n(4068),s=n(1183),u=/beeshop|shopee/i,c=/airpay|shopeepay/i,a=/now/i,f=/mitra/i,l=/shopee.*app_type=2(\\s|$)/i,p=/shopee-toc-acc-sdk/i,d=/spinjam.*app_type=20(\\s|$)/i,g=/shopee.*food.*driver/i,v=/seatal"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/755.c9d7916dcda34cc",
+   "s": 200,
+   "b": "\"use strict\";(self.webpackChunk_shopee_identity_verification_pc=REDACTED;var s=n(7363),o=n(8394);const r=60,a=1e3;function i({countdownTime:t=r,countdownInterval:e=a,forceCountdown:n=!1}){const[i,l]=(0,s.useState)(n),[c,p]=(0,s.useState)(t),[u,h]=(0,s.useState)(!0),f=(0,s.useCallback)(e=>{p(e||t),l(!0)},[]),d=(0,s.useCallback)(()=>{p(0),l(!1)},[]);return(0,o.Z)(()=>{c<=1?d():p(c-1)},i,e),(0,s.useEffect)(()=>{n&&f()},[n,f]),{active:i,pristine:u,count:c,setActive:l,setPristine:h,setCount:p,startCountdown:f,stopCountdown:d}}},8394:(t,e,n)=>{n.d(e,{Z:()=>o});var s=n(7363);function o(t,e,n,o=!1){const r=(0,s.useRef)(t);(0,s.useEffect)(()=>{r.current=t},[t]),(0,s.useEffect)(()=>{function t(){r.current()}if(e){o&&t();const e=setInterval(t,n);return()=>clearInterval(e)}},[e,o,n])}},119:(t,e,n)=>{n.d(e,{Z:()=>f});var s=n(5188),o=n(9569),r=n(3722);function a(t,e){return t.replace(new RegExp(\"(^|\\\\s)\"+e+\"(?:\\\\s|$)\",\"g\"),\"$1\").replace(/\\s+/g,\" \").replace(/^\\s*|\\s*$/g,\"\")}var i=n(7363),l=n.n(i),c=n(6384),p=n(6513),u=function(t,e){return t&&e&&e.split(\" \").forEach(function(e){return s=e,void((n=t).classLis"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/pcmall-antifraudivs",
+   "s": 200,
+   "b": ".RzthFC,.u5eBXl{align-items:center}.RzthFC,.t5kKol,.u5eBXl{display:flex}.t5kKol{flex-wrap:wrap}.RzthFC,.t5kKol{justify-content:space-between}@media (-ms-high-contrast:active),(-ms-high-contrast:none){.RzthFC{height:1px}.RzthFC:after{content:\"\";font-size:0;min-height:inherit}}.cjBhT5{background-color:var(--security-fe-container-background-light,#fff);border-radius:4px;box-shadow:0 3px 10px 0 rgba(0,0,0,.14);box-sizing:border-box;overflow:hidden;width:500px}.cjBhT5.Dd_msX{width:400px}.RzthFC{box-sizing:border-box;min-height:80px}.zAIOjd{margin-bottom:30px}.lVQ4_k{overflow:hidden;padding:0 30px 30px}.lVQ4_k.Dd_msX{padding:0 80px 64px}.u5eBXl{padding-bottom:14px}.YQYU3z{color:#ccc;font-size:.75rem;padding:0 16px;text-transform:uppercase}.zpEou8{background-color:#dbdbdb;flex:1;height:1px;width:100%}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:2dppx){.zpEou8{height:.5px}}.t5kKol{margin:0 -5px}.SKUrUk,.tXIgZM{align-items:center;display:flex}.tXIgZM{justify-content:center}.FVIfO1{margin:20px auto 0;width:314px}.FVIfO1:first-child{margin-top:0}.SKUrUk{background:none;border:1px solid rgba(0,0,0,.09);border-radius:2px;font-size:.875rem;font-weight:500;height:42px;outline:none;pa"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/182.21492277cb975bd",
+   "s": 200,
+   "b": "\"use strict\";(self.webpackChunk_shopee_identity_verification_pc=REDACTED;const r=Object.freeze({OK:0,DEPRECATED:-4,DROPPED_PER_USER:-3,DROPPED:-2,UNKNOWN:-1,PARAM:1,PERM:2,LIMIT:3,NOTFOUND:4,EXIST:5,OUTSTOCK:6,EXPIRE:7,INVITATION:8,BANNED:9,DUPCMD:10,DUPLICATE:11,COUNTRY_RESTRICT:12,DELETED:13,PROMOTION:14,FREQUENT:15,SHADOW_ACC:16,PRICE_LIMIT:17,PRICERULE:18,NOT_LOGIN:19,FRAUD:20,HASHTAG_LIMIT:21,LOCKED:22,SELLER_PROMOTION:23,USER_FREEZED:24,LOGIN_DEVICE_LIMIT:25,ESTIMATED_DAYS_LIMIT:26,ITEM_EMPTY_DESC:27,BE_BLOCKED:28,I_BLOCKED:29,CATEGORY_LEVEL:30,CATEGORY_REMOVED:31,CATEGORY_CONSISTENT:32,NAME_LIMIT:33,DISABLED:34,NEED_OTP:35,PASSWORD_CHANGE:36,TRANSFEERA_VALIDATE_FAILED:22,VERSION:37,NEED_VOICE_OTP:38,HOLIDAY:39,SHADOW:40,NEED_VERIFY_PHONE:41,PRICE:42,LISTING_PENALTY:43,NEWLY_REGISTERED:44,NO_ORDER:45,PHONE_REGISTERED:46,REFERRAL_FULLY_REDEEMED:47,GROUP_BUY:48,WELCOME_PACKAGE:49,UNLISTED:50,SHOPNAME_INVALID:51,MESSAGE_CENSORED:52,PHONE_FORMAT:53,SLASH_PRICE_DAILY_LIMIT:54,SLASH_PRICE_ENDED:56,DAILY_LIMIT:54,ITEM_LIMIT:55,ENDED:56,SLASH_PRICE:57,WALLET_COMPENSATE_WRONG_PROVIDER:58,NEED_RE"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/773.a23d6a608f0bd46",
+   "s": 200,
+   "b": "\"use strict\";(self.webpackChunk_shopee_identity_verification_pc=REDACTED;var h=t(7363);const c=h.createContext({setPageWrapperConfig:()=>{},setPageTrackingInfo:()=>{}});var s=t(6094);function p({setPageWrapperConfig:e,setPageTrackingInfo:o,config:t,trackingInfo:c}){return h.useEffect(()=>{e(t)},[t]),h.useEffect(()=>{o(c)},[c]),null}function l({config:e,trackingInfo:o}){return(0,s.jsx)(c.Consumer,{children:({setPageWrapperConfig:t,setPageTrackingInfo:h})=>(0,s.jsx)(p,{setPageWrapperConfig:t,setPageTrackingInfo:h,config:e,trackingInfo:o})})}var n=t(5188),i=t(757),a=t.n(i),r=t(8246),v=t(1523);const m=t.microfeI(4),u=function(e){return(0,s.jsx)(\"svg\",(0,n.Z)({viewBox:\"0 0 192 65\"},e,{children:(0,s.jsx)(\"g\",{fillRule:\"evenodd\",children:(0,s.jsx)(\"path\",{d:\"M35.6717403 44.953764c-.3333497 2.7510509-2.0003116 4.9543414-4.5823845 6.0575984-1.4379707.6145919-3.36871.9463856-4.896954.8421628-2.3840266-.0911143-4.6237865-.6708937-6.6883352-1.7307424-.7375522-.3788551-1.8370513-1.1352759-2.6813095-1.8437757-.213839-.1790053-.239235-.2937577-.0977428-.4944671.0764015-.1151823.2172535-.3229831.5286"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/30.a741ca1176a316d2",
+   "s": 200,
+   "b": "\"use strict\";(self.webpackChunk_shopee_identity_verification_pc=REDACTED;var i=o(5188),n=o(1760),a=o(6065);let _=function(e){return e[e.OTP=1]=\"OTP\",e[e.Password=2]=\"Password\",e[e.ShopeePay=3]=\"ShopeePay\",e[e.AuthenticationLink=5]=\"AuthenticationLink\",e[e.Email=6]=\"Email\",e[e.Qr=7]=\"Qr\",e[e.EmailLink=8]=\"EmailLink\",e[e.WhatsAppLink=11]=\"WhatsAppLink\",e[e.NewShopeePayPin=10]=\"NewShopeePayPin\",e[e.SecurityQuestions=14]=\"SecurityQuestions\",e[e.SecurityEmail=15]=\"SecurityEmail\",e[e.SecurityDeviceToken=17]=\"SecurityDeviceToken\",e[e.ToBEmailOTP=19]=\"ToBEmailOTP\",e[e.DEVICE_TOKEN=20]=\"DEVICE_TOKEN\",e[e.ToBOTP=21]=\"ToBOTP\",e[e.ToBPassword=22]=\"ToBPassword\",e[e.BehaviorQuestions=23]=\"BehaviorQuestions\",e[e.TOBOneCredPhoneOTP=24]=\"TOBOneCredPhoneOTP\",e[e.TOBOneCredEmailOTP=25]=\"TOBOneCredEmailOTP\",e[e.TOBOneCredPassword=26]=\"TOBO"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/137.acb3d0ae479e898",
+   "s": 200,
+   "b": "\"use strict\";(self.webpackChunk_shopee_identity_verification_pc=REDACTED;var r=t(6065),n=t(3884);let a=function(e){return e.SystemError=\"SystemError\",e.Failed=\"Failed\",e.RateLimit=\"RateLimit\",e.RateLimitForDay=\"RateLimitForDay\",e.RateLimitForAnswer=\"RateLimitForAnswer\",e.TooFrequently=\"TooFrequently\",e.UseridMismatch=\"UseridMismatch\",e.RejectOrExpired=\"RejectOrExpired\",e.TokenExpired=\"TokenExpired\",e.SetupErrorType=\"SetupErrorType\",e.UnableSetupError=\"UnableSetupError\",e}({}),i=function(e){return e.ShopeeInternal=\"1\",e.Seller=\"2\",e}({});const s={matchType:r.VT.HostnameRegex,regexList:[n.zP,n.lA,n.hU,...n.ct]},o=n.ct.map(e=>({hostname:e,pathname:/^\\/portal\\/all-settings\\/account$/})),d={default:s,[i.ShopeeInternal]:s,[i.Seller]:{matchType:r.VT.HostnameAndPathnameRegex,regexList:o}};let c=function(e){return e.Init=\"init\",e.Error=\"error\",e.Common=\"common\",e.Validating=\"validating\",e.Verifying=\"verifying\",e.Success=\"success\",e}({}),l=function(e){return e[e.ERROR_TRUSTED_DEVICE_BOLCK_BY_RE=1643000103]=\"ERROR_TRUSTED_DEVICE_BOLCK_BY_RE"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/668.e2c7e235735036f",
+   "s": 200,
+   "b": "\"use strict\";(self.webpackChunk_shopee_identity_verification_pc=REDACTED;var r={};t.r(r),t.d(r,{getAuthenticationLinkInfo:()=>V,getAuthenticationLinkInfoCountDown:()=>U,getNeedRegetIvm:()=>Q,getPageState:()=>g,getSignature:()=>C,getSignatureProgress:()=>f,getVerificationLinkMessageType:()=>k,getVerificationMethodUToken:()=>N,getVerificationMethods:()=>v,getVerificationMethodsProgress:()=>R});var o={};t.r(o),t.d(o,{autoCountDown:()=>B,getVerificationMethods:()=>K,initCountDown:()=>G,proceedToNext:()=>w,proceedToNoMethod:()=>W,proceedToValidating:()=>Y,proceedToVerificationFailed:()=>q,reset:()=>H,resetCountDown:()=>M,selectVerificationMethod:()=>x,setVerificationLinkMessageType:()=>J,verifyToken:()=>Z});var _=t(437),i=t(5011);async function a({v_token:e,request_id:n,tobAppType:t}){return _.FetchUtils.post(\"/api/v4/anti_fraud/ivs/link/get_message_type\",{v_token:e,request_id:n},{headers:{\"x-app-type\":t}})}const s=\"IVS/RESET\",c=\"IVS/PROCEED_TO_NEXT\",E=\"IVS/PROCEED_TO_VALIDATING\",u=\"IVS/PROCEED_TO_NO_METHOD\",T=\"IVS/PROCEED_TO_VERIFICATION_FAI"
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/pcmall-antifraudivs",
+   "s": 200,
+   "b": "\"use strict\";(self.mfeModules=self.mfeModules||[]).push([\"\",[\"Platform\",\"React\",\"ReactRouter\",\"ReactRedux\",\"Redux\",\"WithInjectReducer\",\"ReactHelmet\",\"PrometheusTracker\",\"Account\",\"TrackingHoc\",\"ReactDom\",\"NebulaCore\"],(e,t,n,i,o,s,r,a,l,c,d,u)=>()=>{(self.webpackChunk_shopee_identity_verification_pc=REDACTED;const i=\"#EE4D2D\"},77:(e,t,n)=>{n.d(t,{Z:()=>r}),n(7363);var i=n(394),o=n(9145),s=n(6094);const r=function({children:e,anchor:t}){return o.N?(0,i.createPortal)(e,t||window.document.getElementById(\"modal\")):(0,s.jsx)(\"span\",{})}},7438:(e,t,n)=>{n.d(t,{Z:()=>a}),n(7363);var i=n(757),o=n.n(i),s=n(2907),r=n(6094);function a({show:e=!1,color:t=s._8,hideOverlay:n=!1,spinnerClassName:i}){return(0,r.jsx)(\"div\",{className:o()({\"stardust-spinner--hidden\":!e},\"stardust-spinner\"),children:(0,r.jsx)(\"div\",{className:o()(\"stardust-spinner__background\",{\"stardust-spinner__background--no-overlay\":n}),children:(0,r.jsx)(\"div\",{className:o()(i,\"stardust-spinner__main\"),role:\"img\",children:(0,r.jsxs)(\"svg\",{width:\"34\",height:\"12\",viewBox:\"-1 0 33 12\",children:[(0,r.jsx)(\"circle\",{className:\"stardust-spinne"
+  },
+  {
+   "u": "%2Fverify%2Fivs%3Fu_token%3DU2FsdGVkX1%2FzJtuCO8YXzO1%2Fm2yvMuItn%2FmWNaB2TsmUrrMLF%2FE%2F",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/antifraudivs/703.3e54e8f7771bda3",
+   "s": 200,
+   "b": "(self.webpackChunk_shopee_identity_verification_pc=REDACTED Oqoq0qoo(t,e){var n=Oqqqqoo0o();return Oqoq0qoo=function(e,r){var o=n[e-=394];void 0===Oqoq0qoo.qNWBTm&&(Oqoq0qoo.SgeDez=function(t){for(var e,n,r=\"\",o=\"\",i=0,a=0;n=t.charAt(a++);~n&&(e=i%4?64*e+n:n,i++%4)?r+=String.fromCharCode(255&e>>(-2*i&6)):0)n=\"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=\".indexOf(n);for(var c=0,u=r.length;c<u;c++)o+=\"%\"+(\"00\"+r.charCodeAt(c).toString(16)).slice(-2);return decodeURIComponent(o)},t=arguments,Oqoq0qoo.qNWBTm=!0);var i=e+n[0],a=t[i];return a?o=a:(o=Oqoq0qoo.SgeDez(o),t[i]=o),o},Oqoq0qoo(t,e)}function Oqqo0q(t,e){var n=Oqqqqoo0o();return Oqqo0q=function(e,r){var o=n[e-=394];void 0===Oqqo0q.uMVrTd&&(Oqqo0q.lQRduu=function(t,e){var n,r,o=[],i=0,a=\"\";for(t=function(t){for(var e,n,r=\"\",o=\"\",i=0,a=0;n=t.charAt(a++);~n&&(e=i%4?64*e+n:n,i++%4)?r+=String.fromCharCode(255&e>>(-2*i&6)):0)n=\"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=\".indexOf(n);for(var c=0,u=r.length;c<u;c++)o+=\"%\"+(\"00\"+r.charCodeAt(c).toString(16)).slice(-2);r"
+  },
+  {
+   "u": "/api/v4/anti_fraud/ivs/token/verify",
+   "s": 200,
+   "b": "{\"data\":null,\"error\":49900000,\"error_msg\":\"\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/ivs/methods",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":[{\"type\":10,\"v_token\":\"U2FsdGVkX18WGoCyJxeo374YxZaGhWGFEUUrFi3LxhxOZMi4YkK9Bw0z9Y9yUtX8hUq19cm/EzgehdftTI6m2taI9phIYCXgfo1zNHfDIA2zZw/i5YjGOC+xcUBdHZcVjqSH3LAr9G0iluIFrYmV00IS8mTdmskOkJ34XGUKf75iFIdQT7nfCBt1LYFUmBRmPbbS6Q0kN3/tlfjJvIeLvLnlh/YQF/6VBtq9AePjb8xG/Ueos7PQ7LMKF5+Z0MfLjxoBhXe9U779m9Kk49FgZ70AXAg1Dli5ONJTJmfs8GsOyQTflS86NGW2hLWw/kUF392GuqUUFgaTLy6ETdTL1KyDLN+Be29lNoOx0RBsNmra9w0ez4JerQbnq+lXRbKLkG+wbEIsyw62V3LmVtieJ28+5zAGAIVs4O8eKKfOvK6KhNv7aBAoGhoX49EkSh4VpzW7Jtz2ey8k/GWweKIIbT8iTDCpsCAiHuHv6Oq3dtWzSdV/P1FInP7R9pVtVFmyKaSmXKKsmKdRZC0uRe9LMnm7NfCUhsb3DPBAnuAMvspHJnfJfE3EgDEkvBUqrEZtSfCoPop7MmA0ykgbkWhyUbxNxFhb4Mnc8F/S7TRJq4qC+hDaavfDwU6c57arIdQPNdVVSVc652WKZF9O1VJC1aNamqXmTjylLaJoBPCaEsH0+xsQDURL9vtbfHMaPGjZtijnHIw6nitbuEjrDZMIz/WJyJkTR+hgsaCzqdCc371PjSAWm7bzm8hvMNoYqlQPRhiOjqS13pNPldxcL0SbUYgLeA9adlXarGNFsNJNusxjFrBT31nTvnDbCGw1X+EYKwHzibcSE2aLko0hB81ifMK2xAz5W4bRehmcaLw1lW66pulusksdu/hsx8hPOo//wzZuwatzHqx11aNOdXnXtg==\",\"is_auto_select\":null},{\"type\":2,\"v_token\":\"EcNbxL3pxqaHz45KaZiWxvzhd2lVno56+SjSVAoVNSqoDex3T+4QiGSRihHuTuGZEj9CVkWmB0UlzX9GHXqFUlgd+5hKXAevyau4\",\"is_auto_select\":null}]}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/ivs/method/select",
+   "s": 200,
+   "b": "{\"data\":{\"credit_liveness_check\":null,\"masked_username\":null,\"is_new_lc_flow\":false,\"operation_code\":null},\"error\":0}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/ivs/token/verify",
+   "s": 200,
+   "b": "{\"data\":null,\"error\":211,\"error_msg\":\"\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/ivs/method/select",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"credit_liveness_check\":null,\"masked_username\":null,\"is_new_lc_flow\":false,\"operation_code\":null}}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/ivs/token/verify",
+   "s": 200,
+   "b": "{\"data\":null,\"error\":211,\"error_msg\":\"\"}"
+  }
+ ]
+}

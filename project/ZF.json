@@ -1,0 +1,44 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043145,\"parent_catid\":0,\"name\":\"Beauty \\u0026 Care\",\"display_name\":\"Perawatan \\u0026 Kecantikan\",\"image\":\"2715b985ae706a4c39a486f83da93c4b\",\"unselected_image\":\"4b917b8a5901a23b80b96b46fbf3429f\",\"selected_image\":\"5f151340c637126794015c"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":true,\"next_tos_consent_check_timestamp\":1795662864,\"is_mandatory\":false,\"terms_of_service_url\":\"https://help.shopee.co.id/portal/4/article/71187\",\"privacy_policy_url\":\"https://help.shopee.co.id/portal/4/article/71188\"}}"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQL7AAAADDPWtP1l_T27I-K_3KXgGzQ1WlYT31PWukF6E0uk0s4Z9RVfQL7gK7n5WST4LUlF4il6zfXzTSvAYQKl0WcpAIJ2rRxYVRC0iohVBrvAQWZJgCvbnlW3FcPvi_v_6iMFaVdQdeuZq7R3GakQSgRThUZQ7ZA79PuDzX-bx9MYAo9tgmDPn6Iq-LWb0RpYm3IriULcesY8NoSFtpqx5kERyE_8BXW2HMpWno-4OOj0saL3GdZ7Y1JSr2wGLMG4txYiB_8cDrSVm3KdRI7R7L-ASF3stWcV5BA3ZpKzLzBLSolB2cFOKrIWVXwzGMzW28Z5jCXPAPnG3xDrR6kwAdk0Vz3_iqANZpG8Z6ZkBX8Im6iTpRYjEn3s-cMG9IX66_Al0fqlC7x2YJCgjngtfgJ4zgzdMXUKDZHeD8yBd909cD-WGXwbGkPVUX6l8ZCiHY9dpAOJjWWx9xxbY-DVyV6z_WfX1ZYtZbOnB9VpkdR7iNox6jjdGImF5qs4s8te0Wm9rRgFjzNxLMmRxiK1Z594unSJaTqr7fQF1j1HcHkuV7l923pNF3OkTFAJ0HSimZ5Je0ZscxA9FVPsinapk9174wU8o6Upzen7LdZHaKonqh-O2tKoRQkDa9Und4_sEsv07Evr-Q1NdNz2ML-DGg1PxFbaejCWYYs_PMgTCle1Ap3A7hSxV866dN9aBXm-HS4ztFELakg7ubIllPHshXptvDZlACK_7gpyZsKtaEogxMTu8kFLVGwfaZTzyxPygKBuH1NM7clE_7DEVq3aL8ldUm-erkLKOKDPMWJ2pzjPJWP09Ms_k5X0RtWYWe4Dgtc3B98F4PXrOJGQGpjN"
+  },
+  {
+   "u": "/api/v4/pages/get_footer_layout",
+   "s": 200,
+   "b": "{\"data\":{\"id\":1,\"name\":\"Footer\",\"pc\":[{\"sections\":[{\"type\":0,\"title\":\"Layanan Pelanggan\",\"simple_section\":{\"image\":\"\",\"text\":\"\",\"url\":\"\"},\"text_link\":[{\"text\":\"Bantuan\",\"url\":\"https://help.shopee.co.id/s\"},{\"text\":\"Metode Pembayaran\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/388-Metode-Pembayaran?page=1\"},{\"text\":\"ShopeePay\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/389-ShopeePay?page=1\"},{\"text\":\"Koin Shopee\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/392-Koin-Shopee?page=1\"},{\"text\":\"Lacak Pesanan Pembeli\",\"url\":\"https://help.shopee.co.id/portal/category/15-Pesanan-Pengiriman/394-Pesanan?page=1\"},{\"text\":\"Lacak Pengiriman Penjual\",\"url\":\"https://help.shopee.co.id/portal/category/15-Pesanan-Pengiriman/395-Pilihan-Pengiriman?page=1\"},{\"text\":\"Gratis Ongkir\",\"url\":\"https://help.shopee.co.id/portal/4/article/73218\"},{\"text\":\"Pengembalian Barang & Dana\",\"url\":\"https://help.shopee.co.id/portal/category/16-Pengembalian-Barang-Dana/398-Pengajuan-Komplain?page=1\"},{\"text\":\"Garansi Shopee\",\"url\":\"https://help.shopee.co.id/portal/4/article/72327\"},{\"text\":\"XTRA Aman\",\"url\":\"https://shopee.co.id/m/xtraaman\"},{\"text\":\"Hubungi Kami\""
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  }
+ ]
+}

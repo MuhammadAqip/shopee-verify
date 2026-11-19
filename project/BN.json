@@ -1,0 +1,55 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOPAAAADNLwalRpvf9PPS0OsrEkc490UQrzVs4Pt8c0gU7E5U5wtlHhbJhWlHjQn7IXctlTDMG_o-E42lXVFGObS2SVu2O5FZ5q0H_j-NTrpafVKatxkOr04Sn6ZnO-xaLCy25AHp2sqYOuGKckV29Dys3DhHW9VOBjyryWAS0of2cXrF0r5DLcXldnm_HHczpsosBhOF3r0GOWLFntlfw7Gd--f-i9YibogAoHHHif0NlToJBlp_WLipKCwVtyKKNhrMYGzJtMYDAq3ocovLtEw8J-VHsHngGfQ9yatU9R30pNgyzVWRiv356IX3bViYbPPVo3PzWU3zoyCz4WRrK0DtDCpls1McxKdmX-LKBQNtma5mkn6XECiT3rec7d9TdSxRmoAbFNOlaoDSRvMQ28tE4ydkLI2zFA2QRf8sgKALcULB6ETRHb1yNrnHxrQnrwUHg-5zF_PXN6vi2YIXmomoaG4uwEizTkFvM-BY78gUTTgPWGIn2RhWOD7JW6aCc6OZ2H1DJjtUIGixzVLr0dwUBiP-ahfZuMAIQ0M4lV9KqTthTSWM5H-LyPygWb5LhmFPXw6OvSdHuKX37c0sIa0N1W3pZOI6B-PUHnQxCn3b6eA_quX1jPE_oUZ9obJ2pONC6NW_ZF3xWjqIwnBVUFC1NHS8PKkmlqLJU1H2hXmbecLRk2IWeXIKBU6YQKcDdItgfnZf_eTX58Pm0FtfbTj0MRL4kSJeX9eG5ZeT0s6mInGKEk4bLbdH1Oh-pYtEcdqeFW53JWFADdJ9szOdQ7Wyz47CmISR8H0PpsPiW_aJcMRO9vUMAGj52fWo6faq7b2ZZK4B7O6tbVa54E0BYDm0nZA0iU_Fpuht1pvNdeE-RSYubo5ddlk3C9oqpsclJF5YWQ9bOh58jjlnN9Mf8Aa4fDe4-jQ-9EmWIke2aEUDUBRi6-x60XjMjQUHBZiwWuh8S1_O0g6-neibSD1Ve3uKS1Kn4KJYzzxPu5PuIszLW5QEcuh3V0WHFv1uR11GxZvymHS6EML3axbBkLJWXweiJTzph_Gtgc0RDwhUcnqVY37iCxCwsUkCmwjpB2A3Zd6xm-guCKv28Wthk6tTKlaXhH4-yfchg_vcO4s8SvkZS2CtFF5q-7LybcXpa6BO3sUrNm8cn08Nm4QRJPZZ-KbQG06gLcm8fht9a0E1DSwdMxNDfBfZHREyjRDkqANyQ\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"88204284e78-3332-4dc5-9251-087e4b1d3116\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOfAAAADNhoPiKMtfY6G_d7wKAxWmhP4ntMSHHutycNwDcRAnNvxhHzN1TNx4cfmpwJVnrsvt7RlCr6MWd6SKIBRm37tJTKEsN8FyQqCC-4fyQFitLdCN7sWcaIx0l5H9FdbS1xC5EwxVfMcQQJOgVquDrSONp6gJzS68dYeAxCKlV8CREMXu797TpdAyTnRCVbjwbJUai0pRNqX_q3zbiViQ0pPFjQNzEFXj72eYAnA5mjt2gEmuD5XCo8QUV6tUB6p1OfWWN5OwMPwaJk1BcWS4NnZqBr3SMS2k4m_Y-EDr_ZRZOx0i9kgRHcSLedpsXgXygriObuYCnbnwR4CMqyEZnFaFm73r7Vu_KTmQw_LUAI3HPP_0ElOwCio9cnsPl5Oi-NAHp67G2S4VjNnhzAjmXO0fSlFq19TDk7TO2FSoXxSPec7EGDr90Ff76xft-T6--wcRjufTFg7lX0qQYfnD2jyaiLhLw2ZQ3rlZsWgtj0-jWOTme6rNyPNPW0Dk8QRhr6UOFNdsoMMbN2nG_CSHI4DjCEJFMJRKSKSQvD4bPml8ntf-FVlJSRheEn5TA95Vr8nHvKPOCLjwuCl55UfNa1EQZKwEcgnilYbgkG77rJeHuUh2RCN6-8tN47CREEpu6M2lXQ_8W89WvqcK1ciyfN_E6YbxzaJpscXvK6_xJPLYwrLnKxugmgRnz94RwUC71nDOvKbJCMz5SWeahpNavrgbuDy82XUSNMGD_2wbS2-ei00gPykqBYvD_68IL83lyjUMxdByhFouXB0pF7l1DzB_k5EjsRmkqVFfQ3SM6KEyaYjOe4aW3Lu17ntzkBAgU0T-kxs_hcqN8YT_j3cZEtSElUGYJQVPXJhpoYbDA0S15hFjVc3Qq0J5aIyjF-5joQ_PAw7BtZmw3w-nggE1-dbVDoGMeUqCnkFtXlvSNyTF4i-KiwaguZE0p8PcfaIFb6b_KkG1CFXNlcFk7CgPwEpzunIjjCtA1pmsjr1PmHd_3_jcNqv0lyh36pQ8yldr3pgcgZhuLNPCE6XDi3CLSesAjE2W-hT-flo6sp20bRqzvn_8o9-o7v7QkJ8osoje-BnqYhGOqXOlat1c8pjWrw88C6g-7yO-MVA3vkvGk3I4jli3UPO2YwR6JNsBiJlg4n3t7inZiHZG70c0FcoSTX7V5trnaywJLl0W-9w94UdrtaWfLwaOmewKFtyghrOWJHGOQDtfaWjZr3vPmw\"}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"change_phone_token\":\"EXvZweEp9Lbt2wfL8RRHraVJK14gt3prwRz+QvRfwRo+iO2mT2/GyVqradDUz9/CJcP2Yy8f7DgKyjTLP2WiZeEGCFqB20/+th5vh0rsV4rZwJ6Ey+1OA53ktzR3aG2Yx4U14XG6cBswEWw7ovoS5mD609GW86NeKTNVrtDvl1W4bwdWJrofPliDqiVqko4t6y6Co3jB3Hq83LBdfqDj6jOJ1epx4Dm1swyoAbV/9s7J\",\"ivs_required\":false,\"ivs_utoken\":\"\",\"is_delayed\":false,\"has_phone_pix_key\":false}}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"370ff1b9003-6845-41df-beb8-2ce22b0db428\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":false,\"need_captcha\":true,\"captcha_scene\":\"signup\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"45192eb4-cf65-4f81-8e8b-05224fc150bd\",\"flow_name\":\"default_flow\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500101,\"data\":{\"seed\":\"45192eb4-cf65-4f81-8e8b-05224fc150bd\",\"delivery_channel\":3,\"available_channels\":[3,2,1],\"otp_tracking_id\":\"\",\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"flow_name\":\"default_flow\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500152,\"data\":{\"seed\":\"45192eb4-cf65-4f81-8e8b-05224fc150bd\",\"delivery_channel\":2,\"available_channels\":[3,2,1],\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false}}"
+  }
+ ],
+ "cb": {
+  "ok": null,
+  "fail": null,
+  "load": null
+ },
+ "token": ""
+}

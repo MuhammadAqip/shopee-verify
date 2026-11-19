@@ -1,0 +1,429 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\","
+  },
+  {
+   "u": "/api/v4/homepage/mall_shops",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"shops\":[],\"brand_of_the_week\":null},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/flash_sale/flash_sale_get_items",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkZsYXNoU2FsZSIsIm1mciI6IjAiLCJtZnJfY2FwdGNoYSI6IiIsInBvcF91cCI6ZmFsc2V9\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOPAAAADMuFiDGlNx4ShfPXtcIfK0-xxyhmCnfJF9V-CKpquomLSrY6JQnkIK3Qfem80BsaSkrLSylevLAVs6lMSQ87FpI5Zbg-r9ftJw6M9utox2CqgMnr6bo-cer26UBB_hHkEkRDWavWAI0iJ3zuRjE80NMrn9ze1fxI6BZYjWJs5XNPn0CRpdYuqiBe2qoAZTANp18Lukpb4PkssPN8OJ8ydSRg1X4-sv2_a7I8aOUbFmVU80V5CAVum8cwyY_HLv1oCsJ4WY4dUcl1HmP-ymuktcMrqeVg19_miVffzyObrQoVvMJSVLENZrfl7SheeWX21B7OatVWbYCdumbhdyX2sSiMYrqe5E1kL7-vbUvou4p1CSz0igiKASPsgVUaxwnvwKuIuixJJraO_k43g97EIueEt9coIcUYGKl6aMHSDFniWaoENuonsyRqpALetsc74EuHZ3QwEX9Rb_74Yn19gk4qlGGxaNC1B2vD4K_shl6ketQV7vRjwh80GoLuPtQQUVkn4CGPuu9rAiVo0IRi-c7W-_zgRz"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/recommend/recommend",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"280a3c82ba7-fe4d-4f9b-b682-34301e3d7857\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":true,\"next_tos_consent_check_timestamp\":1795657551,\"is_mandatory\":false,\"terms_of_service_url\":\"https://help.shopee.co.id/portal/4/article/71187\",\"privacy_policy_url\":\"https://help.shopee.co.id/portal/4/article/71188\"}}"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/experiment/performance",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\","
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/homepage/mall_shops",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"shops\":[],\"brand_of_the_week\":null},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/flash_sale/flash_sale_get_items",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkZsYXNoU2FsZSIsIm1mciI6IjAiLCJtZnJfY2FwdGNoYSI6IiIsInBvcF91cCI6ZmFsc2V9\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOOAAAADMDAfDat5uBYQy9JHFMr52FiAN_ORMnI5uKnVsHYNJs05k0qiX2GKhAtDX1vuxWfJo2OxAixytssllIw350HhbeDHhRcdrMjlPE5MachVBBd10nx6u0z2qz6SsYphtuqdlAbMzdPIf-Thwke1T9GW_7WkFxJ9LbogAl2jk-yBBuaW6Vwk54EpzfT9wNgxyZ7ZWsY6tzwfIHWLRZP9GbqEgnkQ_tieMNGCRMYxhlhO4ZDrIxAK9D0TmkssFBoGkm66eFPK9r9IZ1N3MF2k8wbyMimVWYDounzEkCVUOJ96XZ842KQTu0cxjcVxPk414SllpBUELqAjznX1SNcGZF8dMasAu3AnnsaxrssxFn07HZEILWJIsBtGZUHzExJSgklx_0byD8Q3QnxsVLaKTLlUXgf9VGngVfzoC2Y5jSx1BuUpTfTk0nOOVxtgYmGMg2xAumxggvnWkJEd1a5tYdoxmoJTRxI-58BWJlosJYm_R8rp_QWnkvcxHYmDnnGzIpRJsWTMaF0I9ZMIMHk2fSe7M6_fP3ov9"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/recommend/recommend",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"1876bf7067a-db70-4a4f-80d0-2819817decc5\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":true,\"next_tos_consent_check_timestamp\":1795657561,\"is_mandatory\":false,\"terms_of_service_url\":\"https://help.shopee.co.id/portal/4/article/71187\",\"privacy_policy_url\":\"https://help.shopee.co.id/portal/4/article/71188\"}}"
+  },
+  {
+   "u": "/api/v4/notification/get_activities",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":null}"
+  },
+  {
+   "u": "/api/v4/notification/get_notifications",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":{\"actions\":[{\"content\":\"4b616b2c206b616d75206461706174204f6e676b6972205270302073652d496e646f6e65736961202b204469736b6f6e2031303025212059756b2c2067756e616b616e20756e74756b2062656c616e6a612070657274616d616d7520f09f9189\",\"action_redirect_type\":10,\"images\":[\"sg-11134004-7r98o-manwa2o8g4806a\"],\"action_id\":\"1021796378238727221\",\"createtime\":1795013640,\"action_type\":1219,\"title\":\"2b203120477261746973204f6e676b69722052703020646920416b756e6d75\",\"item_count\":null,\"id_info\":{\"orderid\":null,\"checkout_id\":null,\"refund_id\":null,\"return_id\":null,\"shopid\":0,\"itemid\":null,\"buyer_id\":0,\"taskid\":161019,\"withdrawal_id\":null,\"transaction_id\":null},\"action_redirect_url\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=appar\",\"action_cate\":1,\"action_app_path\":null,\"action_reactnative_path\":null,\"groupid\":\"0\",\"grouped_count\":"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/experiment/performance",
+   "s": 200,
+   "b": "{\"is_success\":true}"
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\","
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/flash_sale/flash_sale_get_items",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkZsYXNoU2FsZSIsIm1mciI6IjAiLCJtZnJfY2FwdGNoYSI6IiIsInBvcF91cCI6ZmFsc2V9\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPUAAAADKa-zfnvUgUN8JwCznkvtfNLyN6dXa86CEOHbpnX97MIx4AHoAzQgu2hmeHax4e17nHqq9HE_wXFxT6xSpvlOo4EDr38qoQLbZf2Q-ZWEdlOdlpBQs-m1HlBolCINu5iKJMr249kmC-L3behO599sK9DTq-dfEIMaFuAAN8wbEKzW-NmOB4YeRn6VvRUPNiBsjUEGSlOntTIYs3snq3T5RcXsenS3yMSLMuzz6187qm9wq1qLRPKAzb2jrjxXOuxZHVWZmNqMPYDj11lvGl6ngTny1zwC49lxmTb2cRtqOQ1HYw_t7tU3VYBoWfDUfwQb6A52L1eHbJiPE8P5jX7hhUkRl6YcUxSI4GuGb5EFipLIeUVGBA4LigJsxg8cc6FHsyAAJcDiO1mLERcK68E55uDgTtDggJDBI_z6FpBFjvP3F-SLMiUfD4NZ6sazncqmXCDWeNro1HjV8F79ogxElaae5cQeku2pp7quONmDalZZGzbVJz6-Iqk6h4mcR6Ia7AQXwuoXEEet59ZKr6KGgAYa1C0gm"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/recommend/recommend",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"2503b15a8c2-f474-48b1-9dd8-9a51e6370d59\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/homepage/mall_shops",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"shops\":[],\"brand_of_the_week\":null},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/experiment/performance",
+   "s": 200,
+   "b": "{\"is_success\":true}"
+  },
+  {
+   "u": "/api/v4/notification/get_activities",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":null}"
+  },
+  {
+   "u": "/api/v4/notification/get_notifications",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":{\"actions\":[{\"content\":\"4b616b2c206b616d75206461706174204f6e676b6972205270302073652d496e646f6e65736961202b204469736b6f6e2031303025212059756b2c2067756e616b616e20756e74756b2062656c616e6a612070657274616d616d7520f09f9189\",\"action_redirect_type\":10,\"images\":[\"sg-11134004-7r98o-manwa2o8g4806a\"],\"action_id\":\"1021796378238727221\",\"createtime\":1795013640,\"action_type\":1219,\"title\":\"2b203120477261746973204f6e676b69722052703020646920416b756e6d75\",\"item_count\":null,\"id_info\":{\"orderid\":null,\"checkout_id\":null,\"refund_id\":null,\"return_id\":null,\"shopid\":0,\"itemid\":null,\"buyer_id\":0,\"taskid\":161019,\"withdrawal_id\":null,\"transaction_id\":null},\"action_redirect_url\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=appar\",\"action_cate\":1,\"action_app_path\":null,\"action_reactnative_path\":null,\"groupid\":\"0\",\"grouped_count\":"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\","
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/flash_sale/flash_sale_get_items",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkZsYXNoU2FsZSIsIm1mciI6IjAiLCJtZnJfY2FwdGNoYSI6IiIsInBvcF91cCI6ZmFsc2V9\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPVAAAADBrfFXFK-k1rOu3JvrIdSV3ndE-Wcsog1PgVnsqy6DJ4FNzWHtooVIGn2mMFb5B-0fO79-wIZMKd-St4TPTDqYT6NQqY_LHz4e7EK6Isrj7RC7TPRGyM1B_tLrryF7aGgxMN7YMJdOdlmhZPJGO2Px-g2B6GFSbNOuoVrGmWfzDjywIaMQ7baDmMEAqYBuTc6tlbPclbeEvSz5qVyDzCGfmdsCDfBIm1U6QiOrFnw3wZ4AARd3dEmtYPcTqp7P2-E2FGM404nQ2_qD2qADq4iyMOZnRQR8SCSA0KD_K3h9u8WhI_3gRYuGX6MuaI8ZA9ibQxaquWRfPsH6aaxrLzJeMaWWhnjpnhawJtZXjlmW6vh57yHdBYGtbA5BnNWJjm0KWJCQaX6M18_S_SN8LUBM4SxUpCqbs3sHBpZ_Y8vEYChjhJXYxZNmY97SW0pqvcuM0AtmPDA1V8xmhQvCUpqii0TyG0ia734DehhwfkwGemJctFSMeu_5rgWBQs_GZgWRjOeQJZnEKTFDddA1h3wIHyFfn1Ei"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/recommend/recommend",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"5795d898cf9-71cd-4084-941b-b8eb3d6856a1\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/homepage/mall_shops",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"shops\":[],\"brand_of_the_week\":null},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":true,\"next_tos_consent_check_timestamp\":1795657578,\"is_mandatory\":false,\"terms_of_service_url\":\"https://help.shopee.co.id/portal/4/article/71187\",\"privacy_policy_url\":\"https://help.shopee.co.id/portal/4/article/71188\"}}"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/notification/get_activities",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":null}"
+  },
+  {
+   "u": "/api/v4/notification/get_notifications",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":{\"actions\":[{\"content\":\"4b616b2c206b616d75206461706174204f6e676b6972205270302073652d496e646f6e65736961202b204469736b6f6e2031303025212059756b2c2067756e616b616e20756e74756b2062656c616e6a612070657274616d616d7520f09f9189\",\"action_redirect_type\":10,\"images\":[\"sg-11134004-7r98o-manwa2o8g4806a\"],\"action_id\":\"1021796378238727221\",\"createtime\":1795013640,\"action_type\":1219,\"title\":\"2b203120477261746973204f6e676b69722052703020646920416b756e6d75\",\"item_count\":null,\"id_info\":{\"orderid\":null,\"checkout_id\":null,\"refund_id\":null,\"return_id\":null,\"shopid\":0,\"itemid\":null,\"buyer_id\":0,\"taskid\":161019,\"withdrawal_id\":null,\"transaction_id\":null},\"action_redirect_url\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=appar\",\"action_cate\":1,\"action_app_path\":null,\"action_reactnative_path\":null,\"groupid\":\"0\",\"grouped_count\":"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPVAAAADBrfFXFK-k1rOu3JvrIdSV3ndE-Wcsog1PgVnsqy6DJ4FNzWHtooVIGn2mMFb5B-0fO79-wIZMKd-St4TPTDqYT6NQqY_LHz4e7EK6Isrj7RC7TPRGyM1B_tLrryF7aGgxMN7YMJdOdlmhZPJGO2Px-g2B6GFSbNOuoVrGmWfzDjywIaMQ7baDmMEAqYBuTc6tlbPclbeEvSz5qVyDzCGfmdsCDfBIm1U6QiOrFnw3wZ4AARd3dEmtYPcTqp7P2-E2FGM404nQ2_qD2qADq4iyMOZnRQR8SCSA0KD_K3h9u8WhI_3gRYuGX6MuaI8ZA9ibQxaquWRfPsH6aaxrLzJeMaWWhnjpnhawJtZXjlmW6vh57yHdBYGtbA5BnNWJjm0KWJCQaX6M18_S_SN8LUBM4SxUpCqbs3sHBpZ_Y8vEYChjhJXYxZNmY97SW0pqvcuM0AtmPDA1V8xmhQvCUpqii0TyG0ia734DehhwfkwGemJctFSMeu_5rgWBQs"
+  },
+  {
+   "u": "/api/v4/experiment/performance",
+   "s": 200,
+   "b": "{\"is_success\":true}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"46942573c66-6a06-435b-b76f-26bbef5c1ef4\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOMAAAADKnuphCkkt-S4BTK0AN5Uc_epyjql-KCl5ZhwGnySFcFYfCiMVSHfQh4xD4bPhBlkHxMIJNmPaZ2YOKPjsWXCUPuDX1jvmYDjKn9mmhm8WD5hDz90PyVTegkMGazDiT57FPiE0ODFGma8f3MJ9DqlxFx2VDFuKVC_RifFhyMBs0q3C0n7KJN0KkBRW_RTEi2Zz6H2v3-D99oE3mU4tD2OKmwZ-3gZQLgnOAVdCrZKnkl9p7a2UppJyx1QSfrdA2nJ6-3Gm31sJxhvrZzs0ASPkxcc2yc4RENLojWlo_ZUdYaDVEdQnXMens6x-_gQm8_0jwtmn0yOFov8YAuZpHbQA3NhYjzDy66C6ZBZiEu1ScoCn44gugmbO1TWsYmFTK0tx2zVKc6Tqj-WsWYfTskRBdiZgDMhZZ_CjxoJmg6aKUP2ASod7snRDDsRI8E6rQ58v2hPMb0DzCRjl8ckPIVyJDWZQMS-z8AkJasx-rb00eVrqK_A_Yz4S-8oPT2faMUTgS1L_JT5z8HeRs-yvbYhkClREim5hkjflYD"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_account_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"userid\":16596703541,\"username\":\"v1ukcidf23\",\"email\":\"\",\"portrait\":\"\",\"shopid\":0,\"phone\":\"6285136881948\",\"phone_verified\":true,\"is_seller\":false,\"cb_option\":0,\"ctime\":1795009782,\"payment_password\":null,\"web_option\":null,\"access\":{\"hide_likes\":null,\"wallet_setting\":1,\"seller_coin_setting\":null,\"seller_wholesale_setting\":null,\"seller_ads_setting\":null,\"voucher_wallet_setting\":null,\"group_buy_setting\":null,\"seller_unlimited_reply\":null,\"show_imagesearch\":null,\"welcome_package_setting\":null,\"shopee_credit_setting\":null,\"pilot_test_features\":null,\"wallet_provider\":1,\"has_legacy_wallet\":null,\"auto_translation_enabled\":null,\"slash_price_setting\":null},\"holiday_mode_on\":null,\"holiday_mode_mtime\":null,\"not_new_user\":null,\"tos_accepted_time\":1795009782,\"feed_account_info\":null,\"birth_timestamp\":null,\"adult_consent\":null,\"has_password\":true,\"is_ma"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init",
+   "s": 200,
+   "b": "{\"error\":10002}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"change_phone_token\":\"EY3r8yqONRJufgihVyM9H9uUZFQZ3YTRMUwDFqGmtk/Mz/LTa3vrp9MV7twDofyWHA9MdlJpEv6oqhfhzA8IFhxQhuMMaE+F9xfatloAKkdBziBE4ahzAMVj8ZyAFCUW8dip1/oTiBVm0Rm3DcYnt+VK9TQZe0O0PfS4lbP1Tvp1UXw9uHdWb4UMwPiwlV/yY8dlLnCtWj92Srjo8tM+29TwiS72P4rzzaLpNOeMD2mO\",\"ivs_required\":false,\"ivs_utoken\":\"\",\"is_delayed\":false,\"has_phone_pix_key\":false}}"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":false,\"need_captcha\":true,\"captcha_scene\":\"signup\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"4025f8b4-1d66-4c98-9578-870c18c5ed0b\",\"flow_name\":\"default_flow\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500101,\"data\":{\"seed\":\"4025f8b4-1d66-4c98-9578-870c18c5ed0b\",\"delivery_channel\":3,\"available_channels\":[3,2,1],\"otp_tracking_id\":\"\",\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"flow_name\":\"default_flow\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500152,\"data\":{\"seed\":\"4025f8b4-1d66-4c98-9578-870c18c5ed0b\",\"delivery_channel\":2,\"available_channels\":[3,2,1],\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500158,\"error_msg\":\"(F00): Maaf, telah terjadi kesalahan. Shopee sedang menanganinya.\"}"
+  }
+ ],
+ "otp": {
+  "init": {
+   "error": 10002
+  },
+  "init2": {
+   "error": 0,
+   "data": {
+    "change_phone_token": "EY3r8yqONRJufgihVyM9H9uUZFQZ3YTRMUwDFqGmtk/Mz/LTa3vrp9MV7twDofyWHA9MdlJpEv6oqhfhzA8IFhxQhuMMaE+F9xfatloAKkdBziBE4ahzAMVj8ZyAFCUW8dip1/oTiBVm0Rm3DcYnt+VK9TQZe0O0PfS4lbP1Tvp1UXw9uHdWb4UMwPiwlV/yY8dlLnCtWj92Srjo8tM+29TwiS72P4rzzaLpNOeMD2mO",
+    "ivs_required": false,
+    "ivs_utoken": "",
+    "is_delayed": false,
+    "has_phone_pix_key": false
+   }
+  },
+  "settings": {
+   "error": 0,
+   "data": {
+    "need_login": false,
+    "need_captcha": true,
+    "captcha_scene": "signup",
+    "masked_phone": "",
+    "preferred_channel": 3,
+    "available_channels": [
+     3,
+     2,
+     1
+    ],
+    "hidden_available_channels": [
+     2
+    ],
+    "skip_channel_confirmation": false,
+    "seed": "4025f8b4-1d66-4c98-9578-870c18c5ed0b",
+    "flow_name": "default_flow",
+    "captcha_app_key": "User.PC",
+    "captcha_id": ""
+   }
+  },
+  "sends": [
+   {
+    "ch": 3,
+    "err": 23500101,
+    "data": {
+     "seed": "4025f8b4-1d66-4c98-9578-870c18c5ed0b",
+     "delivery_channel": 3,
+     "available_channels": [
+      3,
+      2,
+      1
+     ],
+     "otp_tracking_id": "",
+     "preferred_channel": 3,
+     "hidden_available_channels": [
+      2
+     ],
+     "skip_channel_confirmation": false,
+     "flow_name": "default_flow"
+    }
+   },
+   {
+    "ch": 2,
+    "err": 23500152,
+    "data": {
+     "seed": "4025f8b4-1d66-4c98-9578-870c18c5ed0b",
+     "delivery_channel": 2,
+     "available_channels": [
+      3,
+      2,
+      1
+     ],
+     "preferred_channel": 3,
+     "hidden_available_channels": [
+      2
+     ],
+     "skip_channel_confirmation": false
+    }
+   },
+   {
+    "ch": 1,
+    "err": 23500158,
+    "data": null
+   }
+  ],
+  "seq": null,
+  "seed": "4025f8b4-1d66-4c98-9578-870c18c5ed0b"
+ }
+}

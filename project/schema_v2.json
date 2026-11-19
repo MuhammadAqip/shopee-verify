@@ -1,0 +1,52 @@
+{
+ "tests": [
+  {
+   "name": "int7",
+   "err": 49900000,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "str7",
+   "err": 211,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "name_Qr",
+   "err": 211,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "name_QRCode",
+   "err": 211,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "name_qr",
+   "err": 211,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "no_mn",
+   "err": 49900000,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "field_method",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  },
+  {
+   "name": "ev_str",
+   "err": 90309999,
+   "sig": false,
+   "data": "None"
+  }
+ ]
+}

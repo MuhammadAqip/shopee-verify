@@ -1,0 +1,212 @@
+[
+ {
+  "op": 0,
+  "err": 0,
+  "need_cap": false,
+  "scene": "others",
+  "ch": [
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 1,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 2,
+  "err": 23500157,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 3,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 4,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 5,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 6,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 7,
+  "err": 0,
+  "need_cap": true,
+  "scene": "login",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 8,
+  "err": 0,
+  "need_cap": true,
+  "scene": "signup",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 9,
+  "err": 0,
+  "need_cap": true,
+  "scene": "login_otp",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 10,
+  "err": 0,
+  "need_cap": true,
+  "scene": "signup",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 11,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 12,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 13,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 14,
+  "err": 0,
+  "need_cap": true,
+  "scene": "phone_otp_reset_pw",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 15,
+  "err": 0,
+  "need_cap": false,
+  "scene": "phone_otp_account_set_password",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 16,
+  "err": 10002,
+  "need_cap": null,
+  "scene": null,
+  "ch": null,
+  "seed": false
+ },
+ {
+  "op": 17,
+  "err": 0,
+  "need_cap": false,
+  "scene": "phone_otp_account_add_phone_to_set_password",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 18,
+  "err": 0,
+  "need_cap": false,
+  "scene": "phone_otp_account_set_phone",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 19,
+  "err": 0,
+  "need_cap": true,
+  "scene": "phone_otp_account_set_phone_to_recover_account",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ },
+ {
+  "op": 20,
+  "err": 0,
+  "need_cap": false,
+  "scene": "",
+  "ch": [
+   3,
+   2,
+   1
+  ],
+  "seed": true
+ }
+]

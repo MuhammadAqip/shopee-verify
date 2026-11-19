@@ -1,0 +1,133 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/account/management/change_phone_init_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"change_phone_token\":\"EXPcYtuC4+581uoFwrv56yODpZTDH70gsnN+3b59fUs4zPhqSCA/nvZdePtChmvOq8W5dEPsT0SCrOIG2qQaurGsmM2HfSjsYbddXu5mpIOOVhB5dWg604hFmwXJRPp5jR75BI3gy+cEKJKKgKb7xqagHB+Snfb4HUxSvnIjoZc5osPPRcd+ozh4T7sABOaSZtWhtdrYgko3jnuz757pxtDSzHnkK/tGSqKphqxv5Y4T\",\"ivs_required\":false,\"ivs_utoken\":\"\",\"is_delayed\":false,\"has_phone_pix_key\":false}}"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":true,\"need_captcha\":false,\"captcha_scene\":\"phone_otp_account_set_phone\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"f9af9ac5-d468-4b05-80b6-7666de4d0791\",\"flow_name\":\"prefer_sms_and_hide_voice\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/otp/verify_vcode",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"vcode_token\":\"EL/tYOHctE58ZjKoBklJcrt05eFXixZ3VyIgOIo1oDF8K7ZogCGilSTDbH01GGzVuH7GvUxbyNqyCIWL3BufyiavAwPrIjQoX3UqnlUZJ8D8eHCp0pIoNdI5vKiTiO0CXW208WD5IR/hHiAowTWntsm1/YIlRfyBh70lGreqK56EbZeYHMdVDApZP7/h5TFUk/m39fhq1a7NIbijkAcRfZbVa8hAKLY8SYoA80xjRA==\"}}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_confirm_v2",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_confirm_v2",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_confirm_v2",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_v2",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_v2",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_v2",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/management/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/otp/bind_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/otp/bind_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/otp/bind_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/otp/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/otp/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  },
+  {
+   "u": "/api/v4/otp/set_phone",
+   "s": 404,
+   "b": "{\"error\":\"error_not_found\"}"
+  }
+ ],
+ "state": {
+  "init_err": 0,
+  "cp": "EXPcYtuC4+581uoFwrv56yODpZTDH70gsnN+3b59fUs4zPhqSCA/nvZdePtChmvOq8W5dEPsT0SCrOIG2qQaurGsmM2HfSjsYbddXu5mpIOOVhB5dWg604hFmwXJRPp5jR75BI3gy+cEKJKKgKb7xqagHB+Snfb4HUxSvnIjoZc5osPPRcd+ozh4T7sABOaSZtWhtdrYgko3jnuz757pxtDSzHnkK/tGSqKphqxv5Y4T",
+  "set_err": 0,
+  "seed": "f9af9ac5-d468-4b05-80b6-7666de4d0791",
+  "need_cap": false
+ },
+ "verify": {
+  "error": 0,
+  "data": {
+   "vcode_token": "EL/tYOHctE58ZjKoBklJcrt05eFXixZ3VyIgOIo1oDF8K7ZogCGilSTDbH01GGzVuH7GvUxbyNqyCIWL3BufyiavAwPrIjQoX3UqnlUZJ8D8eHCp0pIoNdI5vKiTiO0CXW208WD5IR/hHiAowTWntsm1/YIlRfyBh70lGreqK56EbZeYHMdVDApZP7/h5TFUk/m39fhq1a7NIbijkAcRfZbVa8hAKLY8SYoA80xjRA=="
+  }
+ },
+ "final": {
+  "err": 0,
+  "user": "4q6kh0y4kv",
+  "phone": "6282393580583",
+  "masked": null,
+  "pkeys": [
+   "phone",
+   "phone_verified"
+  ]
+ },
+ "done": false
+}

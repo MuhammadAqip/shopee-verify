@@ -1,0 +1,182 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043145,\"parent_catid\":0,\"name\":\"Beauty \\u0026 Care\",\"display_name\":\"Perawatan \\u0026 Kecantikan\",\"image\":\"2715b985ae706a4c39a486f83da93c4b\",\"unselected_image\":\"4b917b8a5901a23b80b96b46fbf3429f\",\"selected_image\":\"5f151340c637126794015c01b063a07c\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044458,\"parent_catid\":0,\"name\":\"Mobile \\u0026 Accessories\",\"display_name\":\"Handphone \\u0026 Aksesoris\",\"image\":\"5230277eefafad8611aaf703d3e99568\",\"unselected_image\":\"9bc2f9cf048663fcdb14c8b5629ba985\",\"selected_image\":\"a965"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":false,\"next_tos_consent_check_timestamp\":1795659276}}"
+  },
+  {
+   "u": "/api/v4/flash_sale/flash_sale_get_items",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkZsYXNoU2FsZSIsIm1mciI6IjAiLCJtZnJfY2FwdGNoYSI6IiIsInBvcF91cCI6ZmFsc2V9\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQLyAAAADAw7s8GMnaXddYkjZGldun_NTAG74FNVzjYB5k3Z5xuF1hw-7XjFhOb34NbliQAdyv6pFe90S_5CgUJDAxzhTCxT-1_haU9fWSUFVNptKhG8e_NWDrcrY1lfhkgf11RV_6RDyNgwWFYc8MPjUayLYW05-wW4ruuoHTKBuA5X7OX49AvwBIvZoIkSL3uRyaDHpXJyELy8anjr25Oz69pG8nWpvTfEov_Y9RhIojsSuFENE_X8GHFJ4X9m8l1VmVvjR9WYziz5YjMsPqm2nH8f4O32K6x2u362RYc9IbxO_TZfhHqXFrmI0BP4SgQ06_j9ZoLFLlViLlhhKkr0ZGvL4vYXhp_UB9nUBCoY8giXG2KAxMMzFxYRcw9vGNeeizDRcmn-zNPbgZS_cDpfmI29LsFu6pW1zQ2Jvl-eiDhw5AFJMT-o4Ptifi3HjlMEp8nga0S6agqNM72Fagt-H2LfmUCPP9oHsTz5NGiY_EwAUityJLE4r0wZBnu2wGVFeIdsVweQLUHyyA75bq3Q-bb11ZE3YL70c4rD0LAAFP-SGFM58G3SP6l_qotzkgQzAWNpNuvyKtukzppJOAEL5LG6dMYL7IgBCzcqSiSiblYYJq3OOQwZ6RlYymZvUNzWq3hN5_UW9oCMTeDnc07svauctxji75FTQUObV1WNXOZpNgk4Q-_GbFjd1c5F7XtXOphxHR_1gyWIUTUFGtf7J6Rzhp8nrxkntLH8-3vWq8fD6QZh9_Hy6B-mLQXreTzBnGUc-J-41Q5eiBxqd4Gu0m3kvvzvAPNio6JQDrVePC_kBIncNgvsle99Xjw2F-E0uteQu9Cg1KrPIEdxajwrnAVBFoRlcqLlRy6nbYf_RBvcm82lXftmVYs5e_hiTYKTwngMHvM9B76BOCBbl4D2X-JXTwjUi6evAzgyW7oeJXA5UVZn-Iz86mbylM3Z55pysDK39exBrDz1swdi6RsB5TX5oAcvENMaYBff02TJLX9zjQ\"},\"1\":\"11715dbf361-f806-435b-b9d5-b9df82098a7d\"}\n"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/recommend/recommend",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"25885af318c-ed65-4bf6-84a5-caa6159665c7\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/homepage/mall_shops",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"shops\":[],\"brand_of_the_week\":null},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQLyAAAADAw7s8GMnaXddYkjZGldun_NTAG74FNVzjYB5k3Z5xuF1hw-7XjFhOb34NbliQAdyv6pFe90S_5CgUJDAxzhTCxT-1_haU9fWSUFVNptKhG8e_NWDrcrY1lfhkgf11RV_6RDyNgwWFYc8MPjUayLYW05-wW4ruuoHTKBuA5X7OX49AvwBIvZoIkSL3uRyaDHpXJyELy8anjr25Oz69pG8nWpvTfEov_Y9RhIojsSuFENE_X8GHFJ4X9m8l1VmVvjR9WYziz5YjMsPqm2nH8f4O32K6x2u362RYc9IbxO_TZfhHqXFrmI0BP4SgQ06_j9ZoLFLlViLlhhKkr0ZGvL4vYXhp_UB9nUBCoY8giXG2KAxMMzFxYRcw9vGNeeizDRcmn-zNPbgZS_cDpfmI29LsFu6pW1zQ2Jvl-eiDhw5AFJMT-o4Ptifi3HjlMEp8nga0S6agqNM72Fagt-H2LfmUCPP9oHsTz5NGiY_EwAUityJLE4r0wZBnu2wGVFeIdsVweQLUHyyA75bq3Q-bb11ZE3YL70c4rD0LAAFP-SGFM58G3SP6l_qotzkgQzAWNpNuvyKtukzppJOAEL5LG6dMYL7IgBCzcqSiSiblYYJq3OOQwZ6RlYymZvUNzWq3hN5_UW9oCMTeDnc07svauctxji75FTQUObV1WNXOZpNgk4Q-_GbFjd1c5F7XtXOphxHR_1gyWIUTUFGtf7J6Rzhp8nrxkntLH8-3vWq8fD6QZh9_Hy6B-mLQXreTzBnGUc-J-41Q5eiBxqd4Gu0m3kvvzvAPNio6JQDrVePC_kBIncNgvsle99Xjw2F-E0uteQu9Cg1KrPIEdxajwrnAVBFoRlcqLlRy6nbYf_RBvcm82lXftmVYs5e_hiTYKTwngMHvM9B76BOCBbl4D2X-JXTwjUi6evAzgyW7oeJXA5UVZn-Iz86mbylM3Z55pysDK39exBrDz1swdi6RsB5TX5oAcvENMaYBff02TJLX9zjQ\"}"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"8949d4e6ce2-c7fa-4633-99ea-e57e37b67986\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPNAAAADAD79ao7K9SIkX7liZrVfzetdMEUboqqK0aeNizUuu7YbtcBhX4ljiawuCrwkMWPAuG3o_wfVazCDeFOSb4rrywaUZRZ0v2oobQB0xN4xehhYi_JVjABvy5EOpiygfypLavMuhHe2Q71qvFHlbO8QySktmdBkXLka7tnXgYY_Keyf0KS4QQ0bvrOINtJQYADPEQ-qM1DSsQbK7kqafJiaOMCh3vCEYGSjbOrDXdQnAFZhakRGqgVr4qEbaowAFyHs7m4k2OSD7tQVPSMNLRWgOK-dt7aHT4hGvtGC6C0Y47sSmDipqaUUHwWkMD4uK0VYMDgTEVF-FIxi04YkMj7oHQ0bPGPRjYRFbZJ_054pE0PWgAPn1eOahU-W7fVRsruqwon_hR_qmMdfg-lH9t_ILJg1Z6VQebXvvmUQTqaW2pjz7_eDiZd8nhoej1P9BwdsBvMHJJm5LncdgiEWxtGzeBkY1gx5K3kuKddIqPFlzHmC_Z43oD3yRMCIVltcRqyksWWaoUcJp9gT-fkTt_WuisCfbkcgU1nsLeCmqx2pBA07EdzIZNoRiHtr1zXjHc7GVKUpIIz5CBQCpThGVZhLmCeWO_t9LwBAVFVP_w6sQHQhve-JiCZYleTFstuQPUnmflciKJAMjYbBUvvOf8twkGSWw92O-JHPsV7MQ-J9rKwuxoNITm28Ft9qF5tufgE-JSLQoWm0cOY3zVGb8a50DuFL-vQM7ANYfl0nrVBD5Otq4ZPkSafXaNz-LioZHPG-fUvWWHFoWFAxQM9-tTbbOn5JvhnNbg1_4EE5Rsun38ESNSxgDYH12ytRY4s5A5L4Nl9plShy-QpeXGiGKpLPbt4T29k7Yig5CzM6prSz45a-EArVHDe4SLPGKFfG6882nK5cQUewwOIpe82TO8p83fXXhrCgLfv92zmOGddNL0HseZePVl52a_R_yQSzcBX34NrdgX5sjRcVp3iUxpcsSNYH9zki4yNb7Z1ropCGZKw5moJUvc8uOnw-B7DO7NkKRVzcZu99NAGboEm76K6X0fx_1v0je7kO2OBneMKZCtM8x8Nx0RJPhmY8wVYvmLonyyzAhhmlT1pYCJ3w6tzpl2eE6aguvPxKrRw2j5qT_j_4u7mxeisas3GojMi"
+  },
+  {
+   "u": "/api/v4/abtest/traffic/get_web_experiments",
+   "s": 200,
+   "b": "{\"data\":[],\"error\":null,\"error_msg\":null,\"debug\":null,\"retcode\":0}"
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "https://security-captcha.cache.susercontent.com/api/v4/50017751/client",
+   "s": 200,
+   "b": "!function(a){a=Date.now();var b=g;function c(p,s,w,K,n,y,h){for(var S,D,R,t,H,C,_,L,N,Z,i,Y,$,W,n1,t1,r,i1,r1,e1,o1,o,u,f1,u1,a1,c1,l1,a,v1,p1,s1,w1,y1,l,h1,O1,d1,b1,q1,v,Q1,B1,z1,g1,O,b,q,Q,B,z,X,A,U,j,F,T,M,P,V,J,I,E,G,x,X1,A1,U1,m,j1,k=g,F1=\"function\",T1=eval;U1=U1||(c.$=[c.$=\"PR\",c.apply[c.$]=c.call[c.$]=c.call,c.apply,[].push,[].pop,[].slice],P=15,V=4,I=void 0,J=String[k(0)],j1=Math[k(1)],m=function(n,t,i,r,e,o,u,a){var l,v=g;if(x<670)if(x<347)if(x<328)if(x<257)if(x<225)try{G(B,T1(y[E(z)]))}catch(n){G(B,I)}else n=f[p++],t=f[p++],i=f[p++],G(n,(l=w.slice(),function(){return x=844,m(3,l,[]),665===(a=c(t,t+i,l,this,arguments,y,h))&&(x=844,a=m(4,l[l.length-1])),l.pop(),a}));else for(T=0;!a&&T<A;T++)j[T]!=U&&null!=j[T]||(p+=F[T],a=!0);else{if(!(x<338))throw E(f[p++]);v(2),G(z,(F1!=typeof Symbol||\"symbol\"!=typeof Symbol.iterator)&&E(B)&&F1==typeof Symbol&&E(B).constructor===Symbol&&E(B)!==Symbol.prototype?\"symbol\":typeof E(B))}else if(x<621)if(x<480)for(a=[],A=0;A<z;A++)c.$[1][c.$[0]](c.$[3],a,E(f[p++]));else U=c(A=p,s,w,K,X1,y,h),p+=B,665==U&&0<w[w.length-1].length&&(Q=U);else if(x<633)p+=B,j=[],Array.prototype.push.apply(j,X1),c.$[1][c.$[0]](c.$[3],j,A1),665==(U=c(A=p,s,w,K,j,y,h))&&(Q=665);else for(U=0,a=\"\";U<X.length;)(n=X[U])<128?(a+=J(n),U++):n<224?(t=X[U+1],a+=J((31&n)<<6|63&t),U+=2):n<240?(t=X[U+1],i=X[U+2],a+=J((15&n)<<12|(63&t)<<6|63&i),U+=3):(t=X[U+1],i=X[U+2],r=X[U+3],e=(7&n)<<18|(63&t)<<12|(63&i)<<6|63&r,a+=J(55296+((e-=65536)>>>10),56320+(1023&e)),U+=4);else if(x<"
+  },
+  {
+   "u": "https://security-captcha.cache.susercontent.com/api/v4/50017751/client",
+   "s": 200,
+   "b": ".Hu8O1l{border:0;padding:0;margin:0;position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px, 1px, 1px, 1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);white-space:nowrap}\n\n.BlzSBH{opacity:0.7;cursor:not-allowed}.OHc2Kt{text-transform:uppercase}.gCoWhN{width:100%}\n\n.ZLtLVH{opacity:0.7;cursor:not-allowed}.VUNe9h,.cDUOQx,.KjwaR9{outline:none;padding:0;border:0;cursor:pointer}.VUNe9h{height:2.625rem;font-size:1rem;line-height:1.2;min-width:4rem;background-color:#2673dd;color:white;text-transform:capitalize;border-radius:2px;padding:0 1rem}.VUNe9h:not(.ZLtLVH):active{background-color:#1e62c1}.cDUOQx{height:2.625rem;font-size:1rem;line-height:1.2;min-width:4rem;background-color:#ee4d2d;color:white;text-transform:capitalize;border-radius:2px;padding:0 1rem}.cDUOQx:not(.ZLtLVH):active{background-color:#e2492b}.KjwaR9{height:42px;font-size:16px;line-height:1.2;min-width:64px;background-color:#1b92f5;color:white;text-transform:capitalize;border-radius:2px;padding:0 16px}.KjwaR9:not(.ZLtLVH):active{background-color:#1e62c1}.sT4RYC{margin:8px 0 8px;color:rgba(0,0,0,0.54);font-size:14px;max-height:54px;text-align:center}.zmcud2{color:rgba(0,0,0,0.65);font-size:16px;font-weight:500;text-align:center}.hNXCGm{background-color:#2673dd;border-radius:4px}._0ml6zu{background-color:#2673dd;-webkit-transform:translateX(-100%);transform:translateX(-100%)}.qiIuMC{background-color:#2673dd}.VznHVy{background-color:#2673dd;border-radius:4px}._81FllL{background-color:#ee4d"
+  },
+  {
+   "u": "/api/v4/experiment/performance",
+   "s": 200,
+   "b": "{\"is_success\":true}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init",
+   "s": 200,
+   "b": "{\"error\":10002}"
+  },
+  {
+   "u": "/api/v4/account/management/change_phone_init_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"change_phone_token\":\"Eez6ypXlyznLvxVOxWhTe+KwVfX8E8vZotWl01p6W2KORf7ntuzvRKjrwsV9T8/GnHthTvk3c3GBAmIyupMsqlE9FEolcqmKGZYfqX1btjSTqY85UXsl4RnHMZOzGOqFDaGsh21X52xc5LXFbwSfay1vVTvCaF404QWiXJayDPN/pCXY6PsxCgQsvs9+xYXxtTqyI/VPxAh2LWifT8vURSZOVN0mrEGl1W4eZsaoi9ss\",\"ivs_required\":false,\"ivs_utoken\":\"\",\"is_delayed\":false,\"has_phone_pix_key\":false}}"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":23500158,\"error_msg\":\"(F00): Maaf, telah terjadi kesalahan. Shopee sedang menanganinya.\"}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500158,\"error_msg\":\"(F00): Maaf, telah terjadi kesalahan. Shopee sedang menanganinya.\"}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500158,\"error_msg\":\"(F00): Maaf, telah terjadi kesalahan. Shopee sedang menanganinya.\"}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500158,\"error_msg\":\"(F00): Maaf, telah terjadi kesalahan. Shopee sedang menanganinya.\"}"
+  }
+ ],
+ "otp": {
+  "init": {
+   "error": 10002
+  },
+  "init2": {
+   "error": 0,
+   "data": {
+    "change_phone_token": "Eez6ypXlyznLvxVOxWhTe+KwVfX8E8vZotWl01p6W2KORf7ntuzvRKjrwsV9T8/GnHthTvk3c3GBAmIyupMsqlE9FEolcqmKGZYfqX1btjSTqY85UXsl4RnHMZOzGOqFDaGsh21X52xc5LXFbwSfay1vVTvCaF404QWiXJayDPN/pCXY6PsxCgQsvs9+xYXxtTqyI/VPxAh2LWifT8vURSZOVN0mrEGl1W4eZsaoi9ss",
+    "ivs_required": false,
+    "ivs_utoken": "",
+    "is_delayed": false,
+    "has_phone_pix_key": false
+   }
+  },
+  "settings": {
+   "error": 23500158,
+   "error_msg": "(F00): Maaf, telah terjadi kesalahan. Shopee sedang menanganinya."
+  },
+  "sends": [
+   {
+    "ch": 3,
+    "err": 23500158,
+    "data": null
+   },
+   {
+    "ch": 2,
+    "err": 23500158,
+    "data": null
+   },
+   {
+    "ch": 1,
+    "err": 23500158,
+    "data": null
+   }
+  ],
+  "seed": null,
+  "seq": null
+ }
+}

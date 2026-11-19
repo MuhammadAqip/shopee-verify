@@ -1,0 +1,72 @@
+{
+ "exports": [
+  "adPost",
+  "antiFraudSubaccountCheck",
+  "fetch",
+  "fetchInfo",
+  "formPost",
+  "genericHttp",
+  "get",
+  "getLongToken",
+  "getWebDeviceFingerprint",
+  "http",
+  "initSecuritySdk",
+  "jsonPost",
+  "makeFullUrl",
+  "onFailHandler",
+  "post",
+  "postFetchHandler",
+  "postForm",
+  "remaskSfuError",
+  "simplePost",
+  "syncPost",
+  "utilFetch"
+ ],
+ "results": [
+  {
+   "fn": "getLongToken",
+   "ok": true,
+   "len": 17460,
+   "val": "JxcBAAAABAAAAIAAADMOtYsIiQBNXqRaFPJSrqNH40/0AtfB+IIQd9zWgGiDJqqNm3r/mDP2BvnUzpQwPJDPraTYYi64grGF8T3mg1OrZ3Ws1Pga4WIRpOIEjK08Q1A+856FD4u3YgRXCKH3mBS5QPb7xbc/vYXdLCODGqgfzXGZRz2NK9S2OnO8n54lwMn3kpIIYqE+uQAAAAYAAAAAAAAAADKArRgJzOfA+xG2MfHBtiI0Td+nNTr0px/XuI95uhVsa9ZLID0vMcW2WI1wtUXby6R5PjNSreZOgS5dYfb+ub1qY/5zCLSocZOrmfQfqr3QS8t0PeCFaZ1KA+vRhKBAmDFsxCBSiSWChPkSfSjJ3u1wSDnMSPiT3aNEZ89BfDx3hRHVEdoioFAq"
+  },
+  {
+   "fn": "fetchInfo",
+   "ok": false,
+   "err": "TypeError: Cannot read properties of undefined (reading 'slice')"
+  },
+  {
+   "fn": "antiFraudSubaccountCheck",
+   "ok": true,
+   "len": 0,
+   "val": ""
+  },
+  {
+   "fn": "get",
+   "ok": true,
+   "len": 30,
+   "val": "{\"error\":10005,\"error_msg\":{}}"
+  }
+ ],
+ "mType": "object",
+ "src_adPost": "function(e,t){return(0,a.g.fetch)(e,{method:\"post\",body:JSON.stringify(t)}).then(R).catch(O)}",
+ "src_antiFraudSubaccountCheck": "()=>{var e;let a;return e=t.cookieDomain,(a=t=>(0,u.n0)(\"sense_sa_r\",t,void 0,e))(\"p\"),T(\"/api/v4/account/subaccount\").then(e=>a(e&&\"object\"==typeof e&&\"error\"in e&&\"number\"==typeo",
+ "src_fetch": "function fetch() { [native code] }",
+ "src_fetchInfo": "function(e,t={}){let r=e.slice(e.indexOf(\"?\")+1),n=N({...o,...u(),...t.headers,\"X-Shopee-Language\":(0,s.mf)()},r.replace(/[!'()*]/g,escape));return(0,a.g.fetch)(A(e),{credentials:t",
+ "src_formPost": "function(e,t){return function(e,t,r={}){let n=new FormData;for(let e in t)n.append(e,t[e]);return(0,a.g.fetch)(A(e),{method:\"POST\",headers:{...o,...u(),\"X-CSRFToken\":L(g,f),...r},c",
+ "src_genericHttp": "function(e,t={},r){let n=e.slice(e.indexOf(\"?\")+1);e=A(e);let i=JSON.stringify(r),s=n.replace(/[!'()*]/g,escape);return(0,a.g.fetch)(e,{method:t&&t.method?t.method:\"GET\",headers:N(",
+ "src_get": "async(e,t)=>(await f()).get(e,c(t))",
+ "src_getLongToken": "async(...e)=>(await f()).getLongToken(...e)",
+ "src_getWebDeviceFingerprint": "async(...e)=>(await f()).getWebDeviceFingerprint(...e)",
+ "src_http": "async(...e)=>(await f()).http(e[0],c(e[1]),e[2])",
+ "src_initSecuritySdk": "initSecuritySdk(...e){f().then(t=>t.initSecuritySdk(...e))}",
+ "src_jsonPost": "function(e,t,r={}){e=A(e);let n=r.skipStringify?t:JSON.stringify(t);return(0,a.g.fetch)(e,{method:\"POST\",headers:N({...o,...u(),\"X-CSRFToken\":L(g,f),Accept:\"application/json\",\"Cont",
+ "src_makeFullUrl": "function A(e,t={appendHost:p}){let{appendHost:a}=t;return!d.find(t=>e.startsWith(t))&&-1===e.indexOf(\"/api/v1\")&&-1===e.indexOf(\"/api/v2\")&&-1===e.indexOf(\"/api/v3\")&&-1===e.indexO",
+ "src_onFailHandler": "function O(e){return new Promise(t=>{t({error:-111,message:e.message})})}",
+ "src_post": "async(...e)=>(await f()).post(e[0],e[1],c(e[2]))",
+ "src_postFetchHandler": "function R(e){return new Promise(t=>{t(e)}).then(I).then(y).then(T).catch(e=>(e.response.status,{error:\"server-error\",status:e.response.status}))}",
+ "src_postForm": "async(...e)=>(await f()).postForm(e[0],e[1],c(e[2]))",
+ "src_remaskSfuError": "e=>{if(!e.error)return e;let t=e.error;return(e.__raw?e.__raw.ok||(t=e.__raw.status?-e.__raw.status:-999):t=-999,t===e.error)?e:{...e,error:t}}",
+ "src_simplePost": "function(e,t){return(0,a.g.fetch)(A(e),{method:\"POST\",body:JSON.stringify(t),headers:{...o,...u()}}).then(R).catch(O)}",
+ "src_syncPost": "function(e,t){let a=document.createElement(\"form\");for(let r in a.setAttribute(\"method\",\"post\"),a.setAttribute(\"action\",A(e)),t){let e=t[r],n=document.createElement(\"input\");n.setA",
+ "src_utilFetch": "function fetch() { [native code] }"
+}

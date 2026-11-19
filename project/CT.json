@@ -1,0 +1,35 @@
+{
+ "trk_all": [],
+ "gen": null,
+ "canvas": 0,
+ "send": {
+  "tries": [
+   {
+    "ch": 3,
+    "err": 23500101,
+    "trk": ""
+   },
+   {
+    "ch": 2,
+    "err": 23500152,
+    "trk": null
+   },
+   {
+    "ch": 1,
+    "err": 23500152,
+    "trk": null
+   }
+  ],
+  "settings": {
+   "err": 0,
+   "seed": "5691bbbf-cd15-4c2f-8",
+   "ch": [
+    3,
+    2,
+    1
+   ],
+   "need_cap": true,
+   "scene": "signup"
+  }
+ }
+}

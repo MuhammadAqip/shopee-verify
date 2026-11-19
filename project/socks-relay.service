@@ -1,0 +1,21 @@
+[Unit]
+Description=SOCKS5 -> HTTP relay untuk Shopee worker (vsproxy)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/shopee-verify
+Environment=UP_HOST=sg.gb.vsproxy.org
+Environment=UP_PORT=12000
+Environment=UP_USER=Vsx_Premium_B65xVWHdYyta-type-residential-country-id-lifetime-2-session-relay01
+Environment=UP_PASS=3263bd4d-0f5c-4952-a512-a43708e927a1
+EnvironmentFile=/root/shopee-verify/relay.env
+ExecStart=/root/sniffenv/bin/python3 socks_relay.py 18080
+Restart=always
+RestartSec=3
+StandardOutput=append:/var/log/socks-relay.log
+StandardError=append:/var/log/socks-relay.log
+
+[Install]
+WantedBy=multi-user.target

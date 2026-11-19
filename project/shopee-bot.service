@@ -1,0 +1,21 @@
+[Unit]
+Description=Shopee Phone Checker Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/shopee-verify
+EnvironmentFile=/root/shopee-verify/.env
+ExecStart=/root/sniffenv/bin/python3 /root/shopee-verify/shopee_bot.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/shopee-bot.log
+StandardError=append:/var/log/shopee-bot.log
+# Chromium butuh shared memory
+PrivateTmp=false
+Environment=PLAYWRIGHT_BROWSERS_PATH=/root/.cache/ms-playwright
+
+[Install]
+WantedBy=multi-user.target

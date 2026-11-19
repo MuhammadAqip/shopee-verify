@@ -1,0 +1,88 @@
+{
+ "tid": "gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQLrAAAADA5VGslmwesc",
+ "otp": {
+  "init": {
+   "error": 10002
+  },
+  "init2": {
+   "error": 0,
+   "data": {
+    "change_phone_token": "ES/5UTcbqSkpIwmRU41RNqnSY2t24DGTWI9jojoIehiHMsbmKncOQOmiUM1x4Hzoh80+zczNs5B0EJBIWKDbQjy45GizebuivqnoOSITqLQuS4DELwc75BEpdz2aTsMK9H2SFEhXmhOSy4ofNR4jOKUNLjVGi2hYLRcxOmgxzxc1QZ7oU79dOXmSjUhwDLOoqlcy9VWOMDqmh/xAKpHOaDjKh/GyxlTGYRwPe+cmR7fL",
+    "ivs_required": false,
+    "ivs_utoken": "",
+    "is_delayed": false,
+    "has_phone_pix_key": false
+   }
+  },
+  "settings": {
+   "error": 0,
+   "data": {
+    "need_login": false,
+    "need_captcha": true,
+    "captcha_scene": "signup",
+    "masked_phone": "",
+    "preferred_channel": 3,
+    "available_channels": [
+     3,
+     2,
+     1
+    ],
+    "hidden_available_channels": [
+     2
+    ],
+    "skip_channel_confirmation": false,
+    "seed": "93cdc389-9213-44d3-9a81-def5e507e79f",
+    "flow_name": "default_flow",
+    "captcha_app_key": "User.PC",
+    "captcha_id": ""
+   }
+  },
+  "sends": [
+   {
+    "ch": 3,
+    "err": 23500101,
+    "data": {
+     "seed": "93cdc389-9213-44d3-9a81-def5e507e79f",
+     "delivery_channel": 3,
+     "available_channels": [
+      3,
+      2,
+      1
+     ],
+     "otp_tracking_id": "",
+     "preferred_channel": 3,
+     "hidden_available_channels": [
+      2
+     ],
+     "skip_channel_confirmation": false,
+     "flow_name": "default_flow"
+    }
+   },
+   {
+    "ch": 2,
+    "err": 23500152,
+    "data": {
+     "seed": "93cdc389-9213-44d3-9a81-def5e507e79f",
+     "delivery_channel": 2,
+     "available_channels": [
+      3,
+      2,
+      1
+     ],
+     "preferred_channel": 3,
+     "hidden_available_channels": [
+      2
+     ],
+     "skip_channel_confirmation": false
+    }
+   },
+   {
+    "ch": 1,
+    "err": 23500158,
+    "data": null
+   }
+  ],
+  "seq": null,
+  "seed": "93cdc389-9213-44d3-9a81-def5e507e79f"
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "sdk": {
+  "props": [
+   {
+    "k": "version",
+    "tp": "string",
+    "sample": "1.2.2"
+   },
+   {
+    "k": "store",
+    "tp": "object",
+    "sample": null
+   },
+   {
+    "k": "load",
+    "tp": "function",
+    "sample": null
+   },
+   {
+    "k": "init",
+    "tp": "function",
+    "sample": null
+   },
+   {
+    "k": "__generateModule",
+    "tp": "function",
+    "sample": null
+   },
+   {
+    "k": "param",
+    "tp": "function",
+    "sample": null
+   },
+   {
+    "k": "dep",
+    "tp": "object",
+    "sample": null
+   },
+   {
+    "k": "ubt",
+    "tp": "function",
+    "sample": null
+   },
+   {
+    "k": "algo",
+    "tp": "function",
+    "sample": null
+   },
+   {
+    "k": "debugview",
+    "tp": "function",
+    "sample": null
+   },
+   {
+    "k": "visualisation",
+    "tp": "function",
+    "sample": null
+   }
+  ],
+  "methods": [
+   "constructor",
+   "__defineGetter__",
+   "__defineSetter__",
+   "hasOwnProperty",
+   "__lookupGetter__",
+   "__lookupSetter__",
+   "isPrototypeOf",
+   "propertyIsEnumerable",
+   "toString",
+   "valueOf",
+   "toLocaleString"
+  ],
+  "ver": "2.52.58-r.5vrfn0ttbw"
+ },
+ "gen": {},
+ "headers_sample": [],
+ "captured_last": {
+  "err": "tidak ada capture"
+ }
+}

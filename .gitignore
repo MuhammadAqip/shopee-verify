@@ -1,0 +1,18 @@
+# kredensial
+config.json
+accounts*.json
+keypool*.json
+*.env
+.env
+token*.txt
+proxies*.txt
+cookies*.txt
+*.log
+# python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+# arsip
+*.zip
+*.tgz

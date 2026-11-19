@@ -1,0 +1,22 @@
+{
+ "chunks": [
+  "webpackChunkshopee_pc",
+  "webpackChunkwpJsonpPcmallFlashsale",
+  "webpackChunk_shopee_antifraud_captcha_pc"
+ ],
+ "usedChunk": "webpackChunkshopee_pc",
+ "modCount": 562,
+ "cacheCount": 0,
+ "srcHits": [
+  {
+   "id": "66264",
+   "len": 5033,
+   "head": "(e,t,a)=>{\"use strict\";a.d(t,{cB:()=>E,tj:()=>A,MM:()=>m,Rn:()=>g,HB:()=>f,S4:()=>h});var r=a(82007),n=a(89213),o=a(5678"
+  },
+  {
+   "id": "68094",
+   "len": 30105,
+   "head": "function(t){t.exports=(()=>{\"use strict\";var t={d:(e,n)=>{for(var r in n)t.o(n,r)&&!t.o(e,r)&&Object.defineProperty(e,r,"
+  }
+ ]
+}

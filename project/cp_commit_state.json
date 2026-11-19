@@ -1,0 +1,35 @@
+{
+ "send": {
+  "seed": "edc05648-ebe0-4358-8373-044121f7dd01",
+  "delivery_channel": 1,
+  "available_channels": [
+   1
+  ],
+  "otp_tracking_id": "edc05648-ebe0-4358-8373-044121f7dd01",
+  "preferred_channel": 1,
+  "skip_channel_confirmation": false,
+  "flow_name": ""
+ },
+ "commit": [
+  {
+   "v": "cp_phone_vt",
+   "err": 10002
+  },
+  {
+   "v": "cp_phone_vt_sig",
+   "err": 10002
+  },
+  {
+   "v": "cp_vcode",
+   "err": 10002
+  },
+  {
+   "v": "phone_key",
+   "err": 10002
+  },
+  {
+   "v": "with_seq",
+   "err": 10002
+  }
+ ]
+}

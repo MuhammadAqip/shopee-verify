@@ -1,0 +1,85 @@
+{
+ "net": [
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"error\":31500000,\"is_non_retryable\":true}"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOcAAAADGb1UlZcQt4grAKw5836l3dFW6iqUiq4z1_8y3jCevfOtyw2RN1HVGsXa3OngC2qAiVHqRfCMb-mui_JVybNVxT4hi5fdTeGvXKTAjzKfp_u-ABLTZUOxii32O4i0ufhunsa6AFxBjIe90kFMZzZkAxa6lon9FskMlLAhHcOGK7H2esJpzyXzRfORpanaaGc6oygv-Lmh1SSTSTprafyqhyTv1MwIAQsVpzj5AA9BudkktjL-tYLYnLR3PLRYoNb7t7AA-aa3dsxmbsubnzEH1TNGP25izO8R4roiEbW2feWu2fITMTjrgwwNjwfx89Efy5s8p16fLv0zXZ-0vd_6LYMV7mTQURtfg3zaU4AlsnCig68lgqXAS_OZkmJ6hHy1nx3QSTfdyW4wf5RONgw1r0G3n-siWS_XBuXlLojS3y9vkC-FD9KhdLKZRam-Bu6lVtH9kcYsKGkSuE-qYGxUu9jNvIGT6x1OQdqjH_E3l5xQp4BGFFLUXzzXxV4r_Laoj-41Ddojzm00Mg8X9TpqKtxFEXf8M-VBbdwSSTFaCQwv3PpKwMJOz5sLIqDHB-vpRrkVs53jPKcaP6zBhDCZ8Nj8savz1nJaLV5mY7KKW1NrPImMznQUyIaV-FRI2DL6_kVHU0ed8_C3znBmkmp0VfNqIHlxcD5Ph0NJzogxTYZorDqPfRHs2f6EQ_jhankdllAPVIX8sz_ZsL0CiUlWUJ5RxeSOCVEBdbF4e3TLOQLSZ2VdLPdFZSFuYiqDqvAzHsn6_t3NDuE9UIOgBhWWDaaY2lNdzKweq4c8tyLFPHR6MGPiIO_UKar-gWfH0rcTZOFhh1ngmLzlbaC"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/get_config",
+   "s": 200,
+   "b": "{\"bundle_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.js\",\"style_url\":\"https://deo.shopeemobile.com/shopee/captcha/jenkins/pc/bundle.5a2382fb.css\",\"error\":0,\"tracking_id\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQOcAAAADGb1UlZcQt4grAKw5836l3dFW6iqUiq4z1_8y3jCevfOtyw2RN1HVGsXa3OngC2qAiVHqRfCMb-mui_JVybNVxT4hi5fdTeGvXKTAjzKfp_u-ABLTZUOxii32O4i0ufhunsa6AFxBjIe90kFMZzZkAxa6lon9FskMlLAhHcOGK7H2esJpzyXzRfORpanaaGc6oygv-Lmh1SSTSTprafyqhyTv1MwIAQsVpzj5AA9BudkktjL-tYLYnLR3PLRYoNb7t7AA-aa3dsxmbsubnzEH1TNGP25izO8R4roiEbW2feWu2fITMTjrgwwNjwfx89Efy5s8p16fLv0zXZ-0vd_6LYMV7mTQURtfg3zaU4AlsnCig68lgqXAS_OZkmJ6hHy1nx3QSTfdyW4wf5RONgw1r0G3n-siWS_XBuXlLojS3y9vkC-FD9KhdLKZRam-Bu6lVtH9kcYsKGkSuE-qYGxUu9jNvIGT6x1OQdqjH_E3l5xQp4BGFFLUXzzXxV4r_Laoj-41Ddojzm00Mg8X9TpqKtxFEXf8M-VBbdwSSTFaCQwv3PpKwMJOz5sLIqDHB-vpRrkVs53jPKcaP6zBhDCZ8Nj8savz1nJaLV5mY7KKW1NrPImMznQUyIaV-FRI2DL6_kVHU0ed8_C3znBmkmp0VfNqIHlxcD5Ph0NJzogxTYZorDqPfRHs2f6EQ_jhankdllAPVIX8sz_ZsL0CiUlWUJ5RxeSOCVEBdbF4e3TLOQLSZ2VdLPdFZSFuYiqDqvAzHsn6_t3NDuE9UIOgBhWWDaaY2lNdzKweq4c8tyL"
+  },
+  {
+   "u": "/api/v4/anti_fraud/captcha/generate",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"79046a36008-1594-4441-b594-5837c74d7549\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/otp/get_settings_v2",
+   "s": 200,
+   "b": "{\"error\":0,\"data\":{\"need_login\":false,\"need_captcha\":true,\"captcha_scene\":\"signup\",\"masked_phone\":\"\",\"preferred_channel\":3,\"available_channels\":[3,2,1],\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"seed\":\"6c8d27bd-9cb9-401c-a89f-ca6813bd21d6\",\"flow_name\":\"default_flow\",\"captcha_app_key\":\"User.PC\",\"captcha_id\":\"\"}}"
+  },
+  {
+   "u": "/api/v4/otp/send_vcode",
+   "s": 200,
+   "b": "{\"error\":23500101,\"data\":{\"seed\":\"6c8d27bd-9cb9-401c-a89f-ca6813bd21d6\",\"delivery_channel\":3,\"available_channels\":[3,2,1],\"otp_tracking_id\":\"\",\"preferred_channel\":3,\"hidden_available_channels\":[2],\"skip_channel_confirmation\":false,\"flow_name\":\"default_flow\"}}"
+  }
+ ],
+ "meta_keys": [
+  "apmsPromotionLiveKey",
+  "apmsPromotionNonLiveKey",
+  "googleMapsApiKey_Live",
+  "googleMapsApiKey_NonLive",
+  "googleMapsBuyerApiKey_Live",
+  "googleMapsBuyerApiKey_NonLive",
+  "googleMapsOrderOpsApiKey_Live",
+  "googleMapsOrderOpsApiKey_NonLive"
+ ],
+ "send": {
+  "tries": [
+   {
+    "ch": 3,
+    "err": 23500101,
+    "trk": ""
+   },
+   {
+    "ch": 2,
+    "err": 23500152,
+    "trk": null
+   }
+  ],
+  "settings": {
+   "err": 0,
+   "seed": "6c8d27bd-9cb9-401c-a",
+   "ch": [
+    3,
+    2,
+    1
+   ],
+   "need_cap": true
+  }
+ },
+ "sec_len": 16776,
+ "dfp_len": 2814
+}

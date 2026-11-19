@@ -1,0 +1,1 @@
+"use strict";(("u">typeof self?self:this).webpackChunkshopee_pc=REDACTED"u">typeof self?self:this).webpackChunkshopee_pc||[]).push([[6678],{89287:(e,s,p)=>{e.exports=p.microfeI(8)}}]);

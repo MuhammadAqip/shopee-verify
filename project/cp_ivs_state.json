@@ -1,0 +1,34 @@
+{
+ "seq_no": "aaa5075b-2a84-4524-9ad5-337103967ade",
+ "v2": {
+  "ivs_required": false,
+  "has_ut": false,
+  "has_cp": true
+ },
+ "precheck": [
+  {
+   "v": "phone",
+   "err": 10002
+  },
+  {
+   "v": "p_seq",
+   "err": 10002
+  },
+  {
+   "v": "p_tok",
+   "err": 10002
+  },
+  {
+   "v": "p_both",
+   "err": 10002
+  },
+  {
+   "v": "p_np_seq",
+   "err": 10002
+  },
+  {
+   "v": "p_sig",
+   "err": 10002
+  }
+ ]
+}

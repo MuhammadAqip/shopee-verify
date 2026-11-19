@@ -1,0 +1,251 @@
+{
+ "cap": [
+  {
+   "k": "init",
+   "ok": true
+  }
+ ],
+ "net": [
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQMKAAAADE66Kea2njyU4fT4kMu7tecrZZ-Yk6FePzc2uO5CWUC1LO92-OGsEM-nPO4jM2z-LMTAN0ey2AlmESRmAZlKihtX4IKXNCMmjhM_tl8fkr7pv_FvVONLfQb43UEsEveVXyCTA9KI2EQ5dgkT9j3XOxNuVssM7ktWzzx3AwbgEFeWCY3skPL5iRsY-uq24pomL7f5gxLrM-EohJ4avK4n8ac4Vy8IB41sfDSRvFppN0kF8IJSP5C-4tYUaUyaW87n7VCi3N2uwc8OYSuvRb3ZP59N-65iPAkMi1l3MiUGFpPlkJqccKY4KzCCnz6ACHIv5TgGCt1XRta0nVKJ4GAXcClu_t-fADf-VZh9N3EaJgC54nJ9oeKOf_Ulblp9pF5O2YNL6agzITqYBUu0aPOKwS4Ie55e3p8e-6speZvxDv2DAFpSEBnCyZDRviucBLece8JaQ763Tg7Tkk6m9O0-N90eEDkPs06Afs5_DPH5iSlClYrYn9SBfOzCVusv2u_f8LelJ0gKbjQCzeu-CrUN35DUptU2etM-mGz54l62UZuEa4zMg039cxYZWrVOBS0EoaqznBLNM6sWZTGrfHwG0dXxL0c2P6RgMn-_Mx98cQUj6nhSAsoheCnnMjlggbEPbHT5PiL2KnSU0QEpQvpqENO4GOHlAMrurhxqvPIOnwqznuadw4p6RcwuxySVxHp1r1Yyws7UXjWKE7KFMfHdBobrIvW9twQ3jqwkzCW5ctjS_IlsdJBCIhYiEPmlCpK-6jfR9arxMlD8fOKJqos07iA1pCiWdO7w7WbUJ8cCrKvFbY3gdBN4Eu_QAYZndWSECG6uXHr4WzaYgQij"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/pages/get_footer_layout",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/pages/get_footer_layout",
+   "s": 200,
+   "b": "{\"data\":{\"id\":1,\"name\":\"Footer\",\"pc\":[{\"sections\":[{\"type\":0,\"title\":\"Layanan Pelanggan\",\"simple_section\":{\"image\":\"\",\"text\":\"\",\"url\":\"\"},\"text_link\":[{\"text\":\"Bantuan\",\"url\":\"https://help.shopee.co.id/s\"},{\"text\":\"Metode Pembayaran\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/388-Metode-Pembayaran?page=1\"},{\"text\":\"ShopeePay\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/389-ShopeePay?page=1\"},{\"text\":\"Koin Shopee\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/392-Koin-Shopee?page=1\"},{\"text\":\"Lacak Pesanan Pembeli\",\"url\":\"https://help.shopee.co.id/portal/category/15-Pesanan-Pengiriman/394-Pesanan?page=1\"},{\"text\":\"Lacak Pengiriman Penjual\",\"url\":\"https://help.shopee.co.id/portal/category/15-Pesanan-Pengiriman/395-Pilihan-Pengiriman?page=1\"},{\"text\":\"Gratis Ongkir\",\"url\":\"https://help.shopee.co.id/portal/4/article/73218\"},{\"text\":\"Pengembalian Barang & Dana\",\"url\":\"https://help.shopee.co.id/portal/category/16-Pengembalian-Barang-Dana/398-Pengajuan-Komplain?page=1\"},{\"text\":\"Garansi Shopee\",\"url\":\"https://help.shopee.co.id/portal/4/article/72327\"},{\"text\":\"XTRA Aman\",\"url\":\"https://shopee.co.id/m/xtraaman\"},{\"text\":\"Hubungi Kami\""
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQL5AAAADP6jvk6faXkbKSJR4MRX6ZI0VSe0Vxsf8ApIeKVttVum_1x2IrPbCNpH1K5eHlLw4IOZ5H5zo9sKPmKvTKUK-9rKcbNV-yOqGNT3y5KpX5y3_ZbjECE0jq8I5qLOaE1KTE3vgYp95PbK7lpVk6N-f7eAs35Vw9p_72WI3Tk6Z5l9_h0FzHD1Ea9uTc_KJ0d4999lDpcs9T4I8Bi_N5Li_yU12IUw7UpnpomOBSx4CWzTkAxX9LGRT5iy_Qkd4nmSqqE-RqCYDzi41pHRdhPfLx9djOs-a25UFpQgLQ3uAAv3hejqLTCulu7J967mXYyM0FguSb0LK5EZ5CrHiGcEhxuQt7aDI0ljErb6msery-OCyESK7HUsSch1jLitVQt_6Ndp9ZSTU99FPDgBiYe5Vmh3d5XBAgK02kXsprJpEszo0QMm9DkYDTyfezU9gcZhik5mBp0hgcSfgFBjCxu97qoZC1Do8cZ13tEMaGe6i68Ql41aGKrVHXMSHH5ZGCkn4t_jkBT9FFlw3eKohcvIuBQ6z2dVJ7k1aVZ-S41Uu0ZrevxnmppJDw_zdJqgQZUYEL_-sb_V7-IYcYBRogAOyQnmRsZu4-jCFDxC0jT0pYBCurP_N3UkLNJe_Wj8uGZwUXGUxNvgutHWLxoKMwh_1zX-VVSKqH-FBRAq53_F6EVsWQdK32M-nDlmCB8ei1vSZ-V2sJLvTN8iqJHyTss5aIe6t52LFDOdLrxk2JkL7DzGCrTO9fCz-hCeOa67xz366UQ8dQiwmzAxj9d2RJgFwunRvhICX4ec4KIUab9RBXOD7cpQhMJRtP5UG8Eif8cCDe8fxS-N6vF_1IwK"
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043145,\"parent_catid\":0,\"name\":\"Beauty \\u0026 Care\",\"display_name\":\"Perawatan \\u0026 Kecantikan\",\"image\":\"2715b985ae706a4c39a486f83da93c4b\",\"unselected_image\":\"4b917b8a5901a23b80b96b46fbf3429f\",\"selected_image\":\"5f151340c637126794015c"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":true,\"next_tos_consent_check_timestamp\":1795657846,\"is_mandatory\":false,\"terms_of_service_url\":\"https://help.shopee.co.id/portal/4/article/71187\",\"privacy_policy_url\":\"https://help.shopee.co.id/portal/4/article/71188\"}}"
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043145,\"parent_catid\":0,\"name\":\"Beauty \\u0026 Care\",\"display_name\":\"Perawatan \\u0026 Kecantikan\",\"image\":\"2715b985ae706a4c39a486f83da93c4b\",\"unselected_image\":\"4b917b8a5901a23b80b96b46fbf3429f\",\"selected_image\":\"5f151340c637126794015c"
+  },
+  {
+   "u": "/api/v4/homepage/mall_shops",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"shops\":[],\"brand_of_the_week\":null},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/flash_sale/flash_sale_get_items",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkZsYXNoU2FsZSIsIm1mciI6IjAiLCJtZnJfY2FwdGNoYSI6IiIsInBvcF91cCI6ZmFsc2V9\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPLAAAADCXa-1Y3hqgLIVQzKnMij0NccE5XWTZZ5eIdf9eHs3DORGTPDiLsDfemzXeNJsnO2uNQjNB5PusPxL5XoohsAWz6UaWg9EPzUE7aSrT35KKFsL4yGRStpmfnF530Qob5RLZNTrRNXii85fWilQtNE-UkvzvlrtKHShCsdbzLifhEL0rXrUuNdkjswb3TIzvW-8RypJYvwnBkC3CJxZ4mJ74xO6DoqZzcJkl2nMCA41VdvXHypri1EoFM-GsblWxiC_WU-UvvpFikPEhlxG3anggqeWwc3lKOfWAt3qOClIEqjhsvU1NwLKQBa2ifBy5RyOuV9H2mcZL12TofoXXS5ZOz69AWxMHTkhXzwCyvribQIhzKPLQkwA_-b_DyLxH_WXSG4bfVTBAH7l6yrLkS5mj22XfrCbNbpi5eC0nYppCyPolLWkeqfZyogQz055ig70EUXkHA5c28ZdflAs3sMT3Jl5a2pPVdcDeIQiGtFkXsMZKYdhM7xzl4WUzrtfd6w90o3PXuKF_Su-W4-MInll_q_ZH3EPzUdfVXUAlETxkA5yN7bhj5Hnly4SG8V7x1FwPH9N-wPj7YTEnWXdvLKzUu1chdP_09nF1C71C3DWWMbRyjBYarBcTJ67HCBKgtqRMG2p_GNG6VFPoUE41tWEH1UnMlyF7YSwF4qsBqmr3JC0iesnNZeQbMqADisqBTK4mcz6UY8qxfaKbRHjYQ9WnkmrRMqsFCaMmJajKfl1eO1FTRAV6FgloAWp5sqXizxaWBb1xkRV_bpDGbHlCG5VBt5oK-Jeh1reyjwlusdEErabt3BWbBaaM5WznkbGE7sS3gsKzLNW"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/recommend/recommend",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"46149580b81-772d-4d5e-a373-2edbde423535\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPVAAAADHUVGyP7qGc6_0xFRRFwo2flWfVXx6vp-1Ibgj5SHXux8ZL8TrIrzsHf_DDl15-WhYtdVyH15O8crXiquKisYDlaMaBpfq4_s5_phtlDcw7d9OYLCDmzox0Uys3tyXfW0BtxDWqNg-bc0Gph47A8wWaA-u-dwM-6jYlWowk56Isjj2yAIge0p4AS6rkd-RGEr1vUIUlV1tmqjhC_bkFvBq2B6Y6WXsaAmAj-KwbFNSlZD1PhwcGnZhRgZ0V_cADhn-YaciUixGzZaH8vftXt0rqKW0H7iYq8E0X2nCU1wxxF0ADRH878XKnEDn7L5JxfbbnJhp__TDgM9GXoeUnWQzRtfcYjoEnJaYQyvgnubBNsUrsDmdp1Sqq2ADuSy_OesyzkXrMqbVqagvdk-Eo8SPjuneRLcix9mGnhwAVK9OJPOKNCyaYCwqMUqxWinuYWTbZlsyX4cFEiQzxcyAgye87j6_FDsD5t0XRFE-l6TMDXYhf8vGEw8h1_QYgwa7GLGVbw1ldqHU-HooFH8C2cc-Mt0vV1sswnxJeL9tEmzuLra8-BMsgPwL43WvxfM0k7pcwlOk02fNyyR3H6515q09io_swO11h6KcW3x2s9VdGuREJ8huHrlbkp0G_vS_Q5CoTjav-sbNfwOLIiNGHkR0s6e9My6POHAztjWVNQ61fAVapdjB16A_8QEEncHsUhLR4hhlA1wbEGCmpu07uVPWKPZ1sDG7Hhn1E2BA4Liby-qlkWOqqrZlfr3d_7yJPlug5nksUMyDIrKst9mtlAgee5dq6uPBocDNr8_QH5Y-YqH3t3ygs7pErx7mCpfw6Rgti01RN_0uLhI3jr"
+  },
+  {
+   "u": "/api/v4/pages/get_footer_layout",
+   "s": 200,
+   "b": "{\"data\":{\"id\":1,\"name\":\"Footer\",\"pc\":[{\"sections\":[{\"type\":0,\"title\":\"Layanan Pelanggan\",\"simple_section\":{\"image\":\"\",\"text\":\"\",\"url\":\"\"},\"text_link\":[{\"text\":\"Bantuan\",\"url\":\"https://help.shopee.co.id/s\"},{\"text\":\"Metode Pembayaran\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/388-Metode-Pembayaran?page=1\"},{\"text\":\"ShopeePay\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/389-ShopeePay?page=1\"},{\"text\":\"Koin Shopee\",\"url\":\"https://help.shopee.co.id/portal/category/21-Pembayaran/392-Koin-Shopee?page=1\"},{\"text\":\"Lacak Pesanan Pembeli\",\"url\":\"https://help.shopee.co.id/portal/category/15-Pesanan-Pengiriman/394-Pesanan?page=1\"},{\"text\":\"Lacak Pengiriman Penjual\",\"url\":\"https://help.shopee.co.id/portal/category/15-Pesanan-Pengiriman/395-Pilihan-Pengiriman?page=1\"},{\"text\":\"Gratis Ongkir\",\"url\":\"https://help.shopee.co.id/portal/4/article/73218\"},{\"text\":\"Pengembalian Barang & Dana\",\"url\":\"https://help.shopee.co.id/portal/category/16-Pengembalian-Barang-Dana/398-Pengajuan-Komplain?page=1\"},{\"text\":\"Garansi Shopee\",\"url\":\"https://help.shopee.co.id/portal/4/article/72327\"},{\"text\":\"XTRA Aman\",\"url\":\"https://shopee.co.id/m/xtraaman\"},{\"text\":\"Hubungi Kami\""
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":true,\"next_tos_consent_check_timestamp\":1795657860,\"is_mandatory\":false,\"terms_of_service_url\":\"https://help.shopee.co.id/portal/4/article/71187\",\"privacy_policy_url\":\"https://help.shopee.co.id/portal/4/article/71188\"}}"
+  },
+  {
+   "u": "/api/v4/notification/get_activities",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":null}"
+  },
+  {
+   "u": "/api/v4/notification/get_notifications",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":{\"actions\":[{\"content\":\"4b616b2c206b616d75206461706174204f6e676b6972205270302073652d496e646f6e65736961202b204469736b6f6e2031303025212059756b2c2067756e616b616e20756e74756b2062656c616e6a612070657274616d616d7520f09f9189\",\"action_redirect_type\":10,\"images\":[\"sg-11134004-7r98o-manwa2o8g4806a\"],\"action_id\":\"1021796378238727221\",\"createtime\":1795013640,\"action_type\":1219,\"title\":\"2b203120477261746973204f6e676b69722052703020646920416b756e6d75\",\"item_count\":null,\"id_info\":{\"orderid\":null,\"checkout_id\":null,\"refund_id\":null,\"return_id\":null,\"shopid\":0,\"itemid\":null,\"buyer_id\":0,\"taskid\":161019,\"withdrawal_id\":null,\"transaction_id\":null},\"action_redirect_url\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=appar\",\"action_cate\":1,\"action_app_path\":null,\"action_reactnative_path\":null,\"groupid\":\"0\",\"grouped_count\":null,\"avatar_image\":null,\"apprl\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=appar\",\"trace_id\":\"dburo248egls7k1140h0\",\"rich_images\":null,\"pc_redirect_url\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=webar\",\"status\":1,\"ar_big"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": ""
+  },
+  {
+   "u": "/api/v4/homepage/campaign_modules",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"campaign_top_visual\":null,\"campaign_bottom_visual\":null,\"campaign_images\":null,\"featured_products\":{\"header_text_color\":null,\"items\":[],\"price_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"see_more_info\":null,\"item_card_labels\":null},\"featured_collections\":{\"header_text_color\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"collection_title_text_color\":null,\"banner_image\":null,\"collections\":[],\"see_more_info\":null},\"featured_shops\":{\"header_text_color\":null,\"default_shop_text\":null,\"section_background_color\":null,\"header_text\":null,\"see_more_link\":null,\"banner_image\":null,\"promo_text_color\":null,\"shops\":[],\"see_more_info\":null}},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/account/subaccount",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/pages/get_homepage_category_list",
+   "s": 200,
+   "b": "{\"data\":{\"category_list\":[{\"catid\":11044258,\"parent_catid\":0,\"name\":\"Electronics\",\"display_name\":\"Elektronik\",\"image\":\"dcd61dcb7c1448a132f49f938b0cb553\",\"unselected_image\":\"19d4e64920ada4d5f9f608de0332a2d2\",\"selected_image\":\"285876d496983ee1e50d4cb693708112\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043451,\"parent_catid\":0,\"name\":\"Food \\u0026 Beverages\",\"display_name\":\"Makanan \\u0026 Minuman\",\"image\":\"7873b8c3824367239efb02d18eeab4f5\",\"unselected_image\":\"c9b23a3da0c9b107e932680ad3e1af29\",\"selected_image\":\"4c790ade312ca9ca0d27f6cba22e1008\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11044364,\"parent_catid\":0,\"name\":\"Computer \\u0026 Accessories\",\"display_name\":\"Komputer \\u0026 Aksesoris\",\"image\":\"id-50009109-0bd6a9ebd0f2ae9b7e8b9ce7d89897d6\",\"unselected_image\":\"9f8c5ce5ac2fd7f6f4b9165aceb10d0e\",\"selected_image\":\"8633a6f4d73e30544d2aeee7e7d037f6\",\"level\":1,\"children\":null,\"block_buyer_platform\":null},{\"catid\":11043145,\"parent_catid\":0,\"name\":\"Beauty \\u0026 Care\",\"display_name\":\"Perawatan \\u0026 Kecantikan\",\"image\":\"2715b985ae706a4c39a486f83da93c4b\",\"unselected_image\":\"4b917b8a5901a23b80b96b46fbf3429f\",\"selected_image\":\"5f151340c637126794015c"
+  },
+  {
+   "u": "/api/v4/account/check_tos_consent",
+   "s": 200,
+   "b": "{\"data\":{\"need_tos_consent\":true,\"next_tos_consent_check_timestamp\":1795657871,\"is_mandatory\":false,\"terms_of_service_url\":\"https://help.shopee.co.id/portal/4/article/71187\",\"privacy_policy_url\":\"https://help.shopee.co.id/portal/4/article/71188\"}}"
+  },
+  {
+   "u": "/api/v4/notification/get_activities",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":null}"
+  },
+  {
+   "u": "/api/v4/homepage/mall_shops",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"data\":{\"shops\":[],\"brand_of_the_week\":null},\"error\":null,\"error_msg\":null}"
+  },
+  {
+   "u": "/api/v4/notification/get_notifications",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":null,\"error_msg\":null,\"data\":{\"actions\":[{\"content\":\"4b616b2c206b616d75206461706174204f6e676b6972205270302073652d496e646f6e65736961202b204469736b6f6e2031303025212059756b2c2067756e616b616e20756e74756b2062656c616e6a612070657274616d616d7520f09f9189\",\"action_redirect_type\":10,\"images\":[\"sg-11134004-7r98o-manwa2o8g4806a\"],\"action_id\":\"1021796378238727221\",\"createtime\":1795013640,\"action_type\":1219,\"title\":\"2b203120477261746973204f6e676b69722052703020646920416b756e6d75\",\"item_count\":null,\"id_info\":{\"orderid\":null,\"checkout_id\":null,\"refund_id\":null,\"return_id\":null,\"shopid\":0,\"itemid\":null,\"buyer_id\":0,\"taskid\":161019,\"withdrawal_id\":null,\"transaction_id\":null},\"action_redirect_url\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=appar\",\"action_cate\":1,\"action_app_path\":null,\"action_reactnative_path\":null,\"groupid\":\"0\",\"grouped_count\":null,\"avatar_image\":null,\"apprl\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=appar\",\"trace_id\":\"dburo248egls7k1140h0\",\"rich_images\":null,\"pc_redirect_url\":\"https://shopee.co.id/user/voucher-wallet?utm_medium=notification\\u0026utm_source=webar\",\"status\":1,\"ar_big"
+  },
+  {
+   "u": "/api/v4/flash_sale/flash_sale_get_items",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkZsYXNoU2FsZSIsIm1mciI6IjAiLCJtZnJfY2FwdGNoYSI6IiIsInBvcF91cCI6ZmFsc2V9\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPSAAAADCAGLBY3Q-7ir0rby_N5SdfFihYtSfdl0ZjgK78DsTD3Gd0I4q7VbtYa-mpjVWcdCvl5cHudDfm5MSedqg0EaB3ZmNqEGQNTIQqS7hGRcvNMoFhBusjqYjHtvW45uBSdKPPHSLLGqd62sRVoOsiOmUj4SFVopa-7Z04ACnsxJDXCjD9O_TNyNgDcL-SRkKRKSTdusW0Q_4tFNUiSZT0jFMPi-vN3UdRSPJTKl82z1fITA3Q0G50CxerWsRuRnKxEn5w8l9vPbuKPnxToA5PCypiGOTJUme1IWRjrXKQegafCBx70Kq1siUK0fArOQU2jwciZZ5igwGbbdVX07fAG3_9YhKVIja1rpOYhGPPeaec3JBEZzCdLSCUrybGwm5YvqLc5aWKzeISYHhpJUGv7EqzG26yaOqX5YSHjg-zDZUkCMsUS2Ce1TSz0LUmrqCA4717meBiSz9hIPjkxtTGRfCIvxYtQ85CUpIZQynpvpibGFDx1QAvPiPw5Rq6ymM-_ljhIfRgnXR-QvKUHyBdvpl9x8XK1T53ROzN4mEd6KYeU82DgniXzA4zcKqhvNngLFy-7m0FiQAx4UEE4Cw2QjdQWr1lOkbshTIAcCVO6tQAtYLGIxgSxQn1xqNz_DTjvSs0rCs_fSUmGn0EV9-mqb69AvYTNdt2NxWmjce7ujb1HtbZi3MRCKEgcqllwAFzB2zCQCKdLqljkGsMDy4Pf5ioBuomIvx1YXjykSPg-2u2ZCN4pHUemyvA-_SZ_BaHMdbxRc72LQm56jg1yrhtF4GeIpmh6TKqT-gAbXlhwrhnpD0CRqKAcbv4bIfJaxu3HKGgYivI4O0"
+  },
+  {
+   "u": "/api/v4/recommend/recommend",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"0\":2,\"3\":90309999,\"error\":90309999,\"1\":\"54adb92f71-3e7c-402a-8d75-8b5c70f7297e\",\"9\":true}\n"
+  },
+  {
+   "u": "/api/v4/account/basic/get_payment_info",
+   "s": 200,
+   "b": "{\"bff_meta\":null,\"error\":0,\"error_msg\":null,\"data\":{\"is_cc_installment_payment_eligible\":true,\"is_non_cc_installment_payment_eligible\":true}}"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/experiment/config",
+   "s": 200,
+   "b": "{\"is_success\":true,\"url\":\"https://deo.shopeemobile.com/shopee/dynamic-experiment/browser-signals/bundle.fa90a8c0ee0ac35e6f7272cc73ae1bac08607861c7bccfc40658810cac222c12.js\"}"
+  },
+  {
+   "u": "/api/v4/account/accept_tos_consent",
+   "s": 200,
+   "b": "{\"error\":0}"
+  },
+  {
+   "u": "/api/v4/experiment/performance",
+   "s": 200,
+   "b": "{\"is_success\":true}"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPZAAAADIol1D46w64zJft5XjPxAjiZ_WwYWVZEO20N528WAdYsfhA-Qufs0qGqLBDtdOvZ5AoL7UTSc0gR8iLVPNDV0Wr2BUo6GD4S1qTVwvw8cdXNQypqlgUuQ110YSK1XvDmxLGPS8BVyQIwdEzYwFwx8eckrWfDLElnRKt5w19Uwdvm97DlbQtiDB-jPoiu08Kx_gaX_RFKDyd84nBE7HhoeL0MwjabcldAfLzeNnUliznE6wPMJp9FMMo3Pz0rwzb7O60UA7IYLuwp6L26je5uzmyoOrcQEdMxSFH5SVn2l1vWC0QProWurTw5KkXBsmpHUyP9XNZwdX86FOaQBZ3y5-xUsT3t_Ob50vasiNpUuyD33ke7KDxZlSKwTwAO_FaKaygJ98hjCS3JPH9mmZwY7COfykAUAk64coECaefD-MH4FwG2aTrs1dDl75WSkxG1_wubDoOPVvdSy_xj09GFDAOMz_TrqSFBDvxOyl-G3cyv2cXV7N-kRPfIBxrgQoUUgYIOmAzYTY3VSsCCLrBUl4BQHHfysNNmRsm9LGU9ivy_-sfdMx7XUOFsXXIf-Il5cS1vVUuwNW9wuqzBWqCDo-YUmwEMTpJ2O-rta2QWhEoQd7PeQ_BvT1uMrO8-UHhIGNBOMEp6_ujNbPEf3fdY0MwJgeIQR6oY-rLWIi-hdihdm2Ze4HXjNRg9ywnD3_aDy5i4rKAtAuRvhBTItVgP-53NbiQAGMOfBZWjtAtzBIhyD3bIsP6usgSUnUHe7csmqV2l8uUQd9uIdkqcAWw6TMg80smU2olmsb3PsxspvvEf73lLNrcGT2MULuUQcVppDucMDc3GnuJoGKm5"
+  },
+  {
+   "u": "/api/v4/web/subcart",
+   "s": 200,
+   "b": "{\"data\":\"OK\"}"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQPZAAAADJQ351f-x_I75_5R8Qd3w8w-IrDNpn_R6PyrnNtlmYHKsmW0fxpQ_NbKZDN5XVNQ9oEVF3k2IoTREIjM64k0LDSMu5tj5ZdF2AQHXdSFXSIN-_2YeuFoA6FIG7UfVXA5fkF0_uHLdiCBb4Ybd6XFt56INBpgfJL1A7o7NJosifLJwLBtPBcYE-lW4tQQ-IMDc2YOflnvU91bM-uG_bBHoxrpTeBAsI3Cfgt0aVwLiVOCLk2KKnVwj5MbHLAdfif26GphihXI3yg0sV4PG21lobuhfwnImHBgbt0usbY7KQ9qtLcvpVlLAdJVcAiaiing5qFLfDXYL8weE4b1PNkSBDTKqWAO-NRjl_iKzF2Mma8miz0OwxKUpF8C0_K5KfJqG5exuj6eSz3xcoPMzLEg5tczYw84AliMJUWoT_x1ri1RC8gLG-_-435a_0dDPIbkvfFTlF-mi8dDfpLExrToEvrFla8ljica41HlJkLa6Z0sc-BcbXq603ktvEdc2-4ClsTlOAE_6eN_L59VrRzFm0FM_ulaY2UCnjcPKRDnoXaUfQE5t2STZkv57-SXiZEoxcuKkxeuqUuKdHBOGuCDOiy4w0tgKE9dfIq06DgaihR-0TrG4_lnzrXo47XB8GQRlq2UTgFLI6tHqhwD5ZKB2WIrDLRsnNNzzhRSeCSd4nKqmOa0YiThXYh5gHE1fwstJdTNKGdePiLC5yqdQOH_szsdCRTjTe-zbokOF-QyslK0Hh5DsXVWahCrtY9ewcElzxnUizahCRAR_WcZfmMav-bXB-HgMIeT3Jx1PtFQ-7eEtw7nHS1hZ6wa5v9S6fR16BG2VPatE1NCRH5K"
+  },
+  {
+   "u": "/api/v4/cart/mini",
+   "s": 200,
+   "b": "{\"5\":false,\"2\":true,\"4\":1,\"0\":3,\"3\":90309999,\"error\":90309999,\"6\":{\"1\":\"mfreyJidXNpbmVzcyI6IkNhcnQiLCJtZnIiOiIwIiwibWZyX2NhcHRjaGEiOiIiLCJwb3BfdXAiOmZhbHNlfQ\",\"0\":\"gqRjZGVrxHSFomtptTE0MjUxOnRyYWNraW5nX2lkX2tleaJrdtEAAqRhbGdv0gAAAGSjZGVrwKJjdMRAAAAADIKMyZ1P2O2Qvasq83S5AwzeFIVi130gJEs0rzTO_4iwfIWyFzi6GeoS0al_i_SqWqJfxR5gmm_2D9B-AqpjaXBoZXJ0ZXh0xQP3AAAADJ583tjq5CjqBNOljBpFnL3Uxx5la82OFQb7_xo7eQr-68ZVlgqqlqIpHVJICFhXvSF3Co6aXomwiC4_ice6E9OPzvrjXHUfYamW26w6dhwT64oLcxRT9PapyRd2sqO9V4KtVm4rnQ0vHDngxt3DJENDEp0TiEMHzxMkcX6GQcfK8JXvctZkRuw-_lMpz8p5uvp8spJcMH6-ANacSo1r6ApLYNGT5lLohuZ2X1JR20noFiBDD14vPUBsTxtaGirP-BTBl8GusjlnD01A0tqPNfaJ4lBhx8YSCj_P_C3cbDUvCY4qfZCFkzKzFPPLogoEhD2V920_bXa8tRC6zzwkMnqgoASdlnn_UfiQANByidRAB3rUUY_xvhlL3-mOxUe6CJyFw0fwbj0DOPP1ma4eB9GYBkm2yjQ7pkb07cMCj9p9jbPuC5w5rcjhVvdmsZsGJRL4Oh8m7132kOsdeJJ3YVVg80_py8HWxEH1IbWpN-clICoh0p-7lHgGVe8pzSFS1MUITF3xGqxr4rIvyuQWNawZu2HnXz6kmyVmMMuGy--P8JCmJPb4c4eWGnKaQ1YgrwJq-jZd0ofHdLfAyGnGoN6JvesDz5OVpjjW_GDah-tBk-VTxIbExryEIvPL7KajQhU6kTcJYx9wHWFh0fSO0Hg1SIFoBQapld0hpfG8Xk5JgFUBEvaI43hfR2Urj6R_OwO6EtTcavUqr_Gjsl7IMpOihwK8k_uMez31nsxvWiS059klZ3AIMwytHAMGmXDKtBY_BMvn-VokuSTC_w7Xp4cOHBX825SvcK47Jyam3hDMnrsfI2skKWRG5AYQVO-P1KAUItS1bHoQGgdl"
+  }
+ ],
+ "url": "https://shopee.co.id/verify/traffic/error?home_url=https%3A%2F%2Fshopee.co.id&is_logged_in=true&tracking_id=54adb92f71-3e7c-402a-8d75-8b5c70f7297e"
+}

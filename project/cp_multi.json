@@ -1,0 +1,197 @@
+[
+ {
+  "file": "ck_1425.txt",
+  "uid": null,
+  "phone": "",
+  "acc_err": 19
+ },
+ {
+  "file": "ck_1445.txt",
+  "uid": 14450081261,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_1445_solved.txt",
+  "uid": 14450081261,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_1533.txt",
+  "uid": null,
+  "phone": "",
+  "acc_err": 19
+ },
+ {
+  "file": "ck_1553.txt",
+  "uid": 15539296185,
+  "phone": "6285119115863",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_1659.txt",
+  "uid": 16596703541,
+  "phone": "6285136881948",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 10002,
+  "init_v2": 0,
+  "ivs_required": false
+ },
+ {
+  "file": "ck_1659_browser.txt",
+  "uid": 16596703541,
+  "phone": "6285136881948",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 10002,
+  "init_v2": 0,
+  "ivs_required": false
+ },
+ {
+  "file": "ck_5th.txt",
+  "uid": 17124851618,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_5th_solved.txt",
+  "uid": 17124851618,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_after_solve.txt",
+  "uid": 17124851618,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_autologin.txt",
+  "uid": null,
+  "phone": "",
+  "acc_err": 19
+ },
+ {
+  "file": "ck_browser_api.txt",
+  "uid": 17124851618,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_clean.txt",
+  "uid": 15539296185,
+  "phone": "6285119115863",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_email.txt",
+  "uid": null,
+  "phone": "",
+  "acc_err": 19
+ },
+ {
+  "file": "ck_fresh.txt",
+  "uid": 17124851618,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_freshbrowser.txt",
+  "uid": 17124851618,
+  "phone": "",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_new.txt",
+  "uid": 13214525873,
+  "phone": "6285124525711",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_relogin.txt",
+  "uid": null,
+  "phone": "",
+  "acc_err": 19
+ },
+ {
+  "file": "ck_solved.txt",
+  "uid": 15539296185,
+  "phone": "6285119115863",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ },
+ {
+  "file": "ck_test.txt",
+  "uid": 15539296185,
+  "phone": "6285119115863",
+  "acc_err": 0,
+  "init": 0,
+  "seq": true,
+  "verify_method": 0,
+  "init_v2": 0,
+  "ivs_required": true
+ }
+]
