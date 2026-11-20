@@ -111,11 +111,27 @@ def from_init(data: dict) -> str:
 
 
 def resolve(init_data: dict | None = None) -> str:
-    """DF untuk flow ini: init_v2 dulu, lalu disk, lalu kosong."""
+    """DF untuk flow ini: init_v2 dulu, lalu disk, lalu kosong.
+
+    PENTING: DF dari disk BELUM TERBUKTI bisa dipakai commit. Satu-satunya
+    commit sukses (CC_capture.json, error=0) memakai DF dari flow yang sama.
+    DF di DFP_TOKEN.txt beda di segmen [0][1][2] — itu bukti setiap generate
+    menghasilkan nilai baru. Jadi disk-DF hanya fallback eksperimental;
+    caller wajib tahu risikonya.
+    """
     df = from_init(init_data or {})
     if df:
         return df
     return from_disk()
+
+
+def resolve_strict(init_data: dict | None = None) -> str:
+    """Versi ketat: HANYA pakai DF dari init_v2 flow ini. Kosong kalau tidak ada.
+
+    Pakai ini untuk commit. Tidak ada reuse lintas flow — sesuai temuan
+    bahwa segmen [0][1][2] selalu berubah antar sampel.
+    """
+    return from_init(init_data or {})
 
 
 def describe(df: str) -> str:
@@ -126,6 +142,18 @@ def describe(df: str) -> str:
     if len(segs) > 1:
         return f"{len(df)}B/{len(segs)}seg pipe [" + ",".join(str(len(s)) for s in segs) + "]"
     return f"{len(df)}B tanpa pipe"
+
+
+def compare(a: str, b: str) -> list[tuple[int, int, int, str]]:
+    """Bandingkan dua DF segmen per segmen. Dipakai untuk membuktikan
+    apakah DF itu statis (reusable) atau berubah per generate."""
+    sa, sb = a.split("|"), b.split("|")
+    out = []
+    for i in range(max(len(sa), len(sb))):
+        x = sa[i] if i < len(sa) else ""
+        y = sb[i] if i < len(sb) else ""
+        out.append((i, len(x), len(y), "SAMA" if x == y else "beda"))
+    return out
 
 
 def save(df: str, name: str = "DFP_TOKEN.txt") -> bool:
