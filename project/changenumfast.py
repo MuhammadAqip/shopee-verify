@@ -48,8 +48,9 @@ NUMBER_BAD = {
 }
 
 
-# CHG_ERR_DETAIL_V7
+# CHG_ERR_DETAIL_V8  (19: cookie expired, saran Muse)
 HINTS = {
+    19: "Cookie expired. Ambil cookie baru dari browser.",
     23500158: "Nomor/akun diblok sementara oleh anti-abuse Shopee. "
               "Tunggu beberapa jam atau ganti nomor.",
     23500152: "Rate limit nomor. Tunggu 15-30 menit.",

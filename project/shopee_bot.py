@@ -79,7 +79,7 @@ if not BOT_TOKEN:
     log.error("SHOPEE_BOT_TOKEN kosong. Isi env atau edit BOT_TOKEN di file ini.")
     sys.exit(1)
 
-bot = telebot.TeleBot(BOT_TOKEN, parse_mode="HTML")
+bot = telebot.TeleBot(BOT_TOKEN, parse_mode="HTML", threaded=False)
 
 
 # ================= DB =================

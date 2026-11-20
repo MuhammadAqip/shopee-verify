@@ -41,7 +41,13 @@ IVS_TYPE = {
 IVS_EVENT = 2          # enum event untuk change-phone
 IVS_OP = 0             # operation asli
 
-DEVICE_FP = "e6d7f3a1c8b94e2d5f0a7c3b1d8e4f6a"
+# IVS_DF_FIX_V1 — jangan hardcode DF. Format Shopee = 5 segmen pipe,
+# bukan 32 hex. Resolve dari init_v2 / DFP_TOKEN.txt / device_df.json.
+try:
+    import df_source
+    DEVICE_FP = df_source.from_disk()
+except Exception:
+    DEVICE_FP = ""
 
 
 def sha_md5(pw):
