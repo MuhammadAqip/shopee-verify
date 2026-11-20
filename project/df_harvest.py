@@ -140,11 +140,20 @@ with sync_playwright() as pw:
     json.dump(res, open(OUT, "w"), indent=1)
 
     if dfs:
-        best = max(dfs.keys(), key=len)
-        json.dump({"security_device_fingerprint": best},
-                  open("device_df.json", "w"))
-        log(f"\n🟢 DF FRESH tersimpan: {len(best)}B")
-        log(f"   {best[:100]}...")
+        # JANGAN max(key=len) — itu memilih blob report SZ-SDK 2534 char
+        # (prefix JxcBAAAABAAAAIAAA) yang muncul juga di SEC.txt,
+        # SAP_CAPTURE.json, MITM.jsonl di konteks /v2/shpsec/web/report.
+        # DF yang benar = 5 segmen pipe.
+        valid = [d for d in dfs.keys() if d.count("|") == 4]
+        if valid:
+            best = min(valid, key=len)
+            json.dump({"security_device_fingerprint": best},
+                      open("device_df.json", "w"))
+            log(f"\n🟢 DF FRESH tersimpan: {len(best)}B")
+            log(f"   {best[:100]}...")
+        else:
+            log(f"\n⚠️ {len(dfs)} kandidat tapi TIDAK ADA yang format pipe 5 segmen.")
+            log("   device_df.json tidak ditulis (fail-closed).")
     else:
         log("\n❌ DF tidak tertangkap")
 

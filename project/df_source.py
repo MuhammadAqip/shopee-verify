@@ -2,15 +2,24 @@
 
 Masalah yang diselesaikan:
   Ada 3 format DF berbeda di repo ini:
-    - device_df.json      : 2534 char, protobuf-ish, 2 pipe (format penuh SDK)
-    - DFP_TOKEN.txt       : 139 char, 5 segmen pipe (format request HTTP)
+    - device_df.json      : 2534 char, blob SZ-SDK — BUKAN fingerprint
+                            (prefix JxcBAAAABAAAAIAAA muncul di SEC.txt,
+                             SEC_TOKENS.json, SAP_CAPTURE.json, MITM.jsonl
+                             di konteks df.infra.sz.shopee.co.id/v2/shpsec/web/report)
+    - DFP_TOKEN.txt       : 139 char, 5 segmen pipe (format request HTTP, TERVERIFIKASI
+                            sukses di CC_capture.json error=0)
     - ivs_engine.py:44    : 32 hex char (SALAH — hardcode, bukan format Shopee)
 
 Urutan prioritas pengambilan:
   1. DF dari respons init_v2 (paling benar: server yang kasih untuk sesi itu)
   2. DFP_TOKEN.txt / *.fp  (5 segmen pipe — format request HTTP yang terverifikasi)
-  3. device_df.json        (format SDK penuh — valid untuk endpoint SDK-body)
-  4. kosong                (jangan pernah hardcode 32-hex palsu)
+  3. kosong                (jangan pernah pakai blob SDK atau 32-hex palsu)
+
+device_df.json SENGAJA DITOLAK. df_harvest.py:143 memakai
+  best = max(dfs.keys(), key=len)
+yang memilih string terpanjang — hasilnya blob report SZ-SDK 2534 char,
+bukan device fingerprint. Tidak ada satu pun bukti call sukses memakai
+format itu sebagai security_device_fingerprint.
 
 Dipakai oleh: ivs_engine.py, cp_v3.py, changenumfast.py
 
@@ -27,26 +36,42 @@ import time
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
-# Kandidat file, urut prioritas
-CANDIDATES = ("DFP_TOKEN.txt", "device_fp.txt", "device_fp.json", "device_df.json")
+# Kandidat file, urut prioritas. device_df.json TIDAK dimasukkan (ditolak).
+CANDIDATES = ("DFP_TOKEN.txt", "device_fp.txt", "device_fp.json")
 
 # DF yang diketahui salah — tolak kalau ketemu
 _INVALID = {
     "e6d7f3a1c8b94e2d5f0a7c3b1d8e4f6a",  # hardcode lama ivs_engine.py:44
 }
 
+# Prefix blob SZ-SDK yang salah label sebagai DF
+_SDK_BLOB_PREFIX = "JxcBAAAABAAAAIAAA"
+
 
 def _valid(df: str) -> bool:
-    """DF dianggap valid kalau bukan placeholder dan panjangnya masuk akal."""
+    """DF valid HARUS 5 segmen pipe (format request HTTP Shopee).
+
+    Fail-closed: kalau bukan format pipe 5 segmen, tolak. Lebih baik kosong
+    (dan error jelas) daripada kirim blob yang server tidak kenal.
+    """
     if not df or not isinstance(df, str):
         return False
     df = df.strip()
     if df in _INVALID:
         return False
+    # blob SZ-SDK salah label
+    if df.startswith(_SDK_BLOB_PREFIX):
+        return False
     # 32 hex tanpa pipe = format palsu, bukan Shopee
     if len(df) == 32 and "|" not in df and all(c in "0123456789abcdef" for c in df.lower()):
         return False
-    return len(df) >= 16
+    parts = df.split("|")
+    if len(parts) != 5:
+        return False
+    # dua segmen pertama wajib base64 non-kosong
+    if len(parts[0]) < 8 or len(parts[1]) < 8:
+        return False
+    return True
 
 
 def _read_file(path: str) -> str:
