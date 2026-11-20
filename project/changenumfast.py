@@ -255,7 +255,12 @@ def check_account(cookie):
 
 
 # OP FALLBACK V3 — op=23 bisa diblok per-nomor, op=18 tetap jalan.
-OP_CHAIN = (0, 23, 18)   # REAL_REQUEST_V1 — 0 = asli
+# OP_CHAIN_V10 — Muse crosscheck: op=18 scene "set_phone" (bukan change),
+# vcode_token-nya BELUM TERBUKTI diterima commit_change. Jangan dipakai
+# sebagai fallback otomatis — hanya op yang jadi jalur asli.
+# op=0 (scene others) = SMS-only, fallback terakhir kalau WA diblok.
+OP_CHAIN = (23, 0)
+OP_CHAIN_EXTENDED = (23, 18, 8, 0)   # manual only — untuk tes akun test
 OP_BLOCKED = {23500158, 23500152, 90309999}
 
 
@@ -353,8 +358,10 @@ def check_number(cookie, phone):
                                bool(sd.get("need_captcha")),
                                sd.get("preferred_channel"),
                                sd.get("masked_phone") or ""))
-            # op tanpa captcha = langsung menang
-            if not sd.get("need_captcha"):
+            # CHG_CHANNEL_PRIORITY_V9
+            # Jangan break di op tanpa-captcha kalau channel-nya cuma SMS —
+            # op berikutnya (23/18) bisa kasih WhatsApp tanpa captcha juga.
+            if not sd.get("need_captcha") and any(c != 1 for c in chans):
                 break
             continue
         if err in OP_BLOCKED:
