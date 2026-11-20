@@ -67,3 +67,34 @@ Jangan pernah men-deploy tanpa `regression.py` lulus. Skrip itu mengecek handler
 - `request_otp` mengembalikan `op` yang dipakai; `verify_vcode` **harus** memakai `op` yang sama. Kalau tidak, kode valid akan ditolak.
 - Field verifikasi OTP bernama `vcode`, bukan `code`. Field token verifikasi bernama `vcode_token`, dan dikirim sebagai query param pada commit.
 - Commit butuh service runtime webpack (`req.e(8167)`, `req.e(5358)`, `req.e(896)`, lalu `req(66199).K.changePhoneCommitV2`). Memanggil endpoint HTTP langsung menghasilkan `10002`.
+
+## Change PHONE — jalur commit yang TERBUKTI (2026-11-20)
+
+`change_phone_commit_v2` **berhasil lewat HTTP biasa**, bukan webpack. Akun
+`4mmwafs78t` uid `16760004662` berhasil dipindah `6285129270853` →
+`6289611116321`, `verified: true`, response `{"error":0,"data":{"is_delayed":false}}`.
+
+Body yang benar — **enam field**, snake_case:
+
+```json
+{
+  "change_phone_token": "<cp 236B dari change_phone_init_v2>",
+  "new_phone": "6289611116321",
+  "vcode_token": "<vt 236B dari /api/v4/otp/verify_vcode>",
+  "ivs_signature": "",
+  "ivs_method": null,
+  "client_info": {"identifier": {"security_device_fingerprint": "<DF pipe-5 139B>"}}
+}
+```
+
+Kenapa semua percobaan sebelumnya gagal `10002`: field keenam `client_info`
+tidak dikirim. Itu satu-satunya beda dengan capture sukses `CC_capture.json`.
+
+Kenapa jalur webpack mati: Shopee migrasi bundler **webpack → rspack**. Global
+sekarang `rspackChunkshopee_pc`, bukan `webpackChunkshopee_pc`. Lebih jauh,
+modul `66199` **tidak ada** di bundle mana pun yang bisa dijangkau — dipindai
+540–564 modul di `/verify/captcha`, nol yang mengekspor `changePhoneCommitV2`.
+Jangan habiskan waktu di jalur webpack.
+
+`verify_vcode` endpoint yang benar: **`POST /api/v4/otp/verify_vcode`**
+(bukan `/api/v4/account/management/otp/verify_vcode` — itu `error_not_found`).

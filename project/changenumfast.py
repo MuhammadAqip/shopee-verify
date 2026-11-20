@@ -468,29 +468,44 @@ def verify_vcode(cookie, phone, code, cp, op=None):
 # ---------------------------------------------------------------------------
 
 def commit_change(cookie, phone, cp, vt, headless=True):
-    """Panggil req(66199).K.changePhoneCommitV2() dari runtime Shopee.
+    """Commit ganti nomor — HTTP langsung, TANPA webpack.
 
-    Ini SATU-SATUNYA endpoint yang tidak ada di HTTP API publik — service
-    modul 66199 hanya hidup di bundle browser. ~13s karena warm-up.
+    COMMIT_HTTP_V1 (2026-11-20): jalur webpack mati total sejak Shopee migrasi
+    bundler ke rspack. Modul 66199 tidak ada di bundle manapun yang bisa
+    dijangkau (dipindai 540-564 modul di /verify/captcha: nol yang mengekspor
+    changePhoneCommitV2). Terbukti berhasil lewat HTTP biasa pada akun
+    4mmwafs78t → 6289611116321, error 0 / is_delayed false.
+
+    KUNCI: field keenam `client_info.identifier.security_device_fingerprint`
+    WAJIB. Tanpa itu selalu 10002. DF harus format pipe-5 segmen (139B),
+    bukan blob SDK 2534B dan bukan hex32.
     """
-    import sys
-    sys.path.insert(0, "/root/shopee-verify")
-    from changenum import Session as BrowserSession  # reuse session yang sudah ada
+    import df_source
 
-    with BrowserSession(cookie, headless=headless) as s:
-        c = s.commit(phone, cp, vt)
-        if c.get("err") != 0:
-            if c.get("err") in ("svc_null", "no_webpack"):
-                return {"ok": False, "code": "webpack",
-                        "reason": "Modul Shopee tidak ter-load.",
-                        "hint": "Coba lagi — browser perlu warm-up ulang."}
-            e = err_obj(c.get("err"), c.get("ex") or "")
-            return e
-        info = s.account_info()
-        return {"ok": True,
-                "new_phone": info.get("phone") or phone,
-                "username": info.get("username") or "?",
-                "verified": info.get("verified")}
+    df = df_source.from_disk()
+    a = Api(cookie)
+    body = {
+        "change_phone_token": cp,
+        "new_phone": phone,
+        "vcode_token": vt,
+        "ivs_signature": "",
+        "ivs_method": None,
+        "client_info": {"identifier": {"security_device_fingerprint": df}},
+    }
+    r = a.post("/api/v4/account/management/change_phone_commit_v2", body)
+    if r.get("error") != 0:
+        e = err_obj(r.get("error"), r.get("error_msg") or "")
+        if r.get("error") == 10002:
+            e["hint"] = ("10002 = client_info/DF ditolak. Pastikan DF format "
+                         "pipe-5 (24|92|16|2|1), bukan blob SDK.")
+        return e
+
+    info = check_account(cookie)
+    return {"ok": True,
+            "new_phone": info.get("phone") or phone,
+            "username": info.get("username") or "?",
+            "verified": info.get("verified"),
+            "is_delayed": (r.get("data") or {}).get("is_delayed")}
 
 
 # ---------------------------------------------------------------------------
