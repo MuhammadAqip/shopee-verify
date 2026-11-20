@@ -99,7 +99,7 @@ for b in [{"phone": NEWPHONE, "operation": 0, "change_phone_token": CP,
 
 if VCODE:
     print("\n=== 9. verify_vcode ===")
-    r = api("/api/v4/account/management/otp/verify_vcode",
+    r = api("/api/v4/otp/verify_vcode",
             {"phone": NEWPHONE, "vcode": VCODE, "operation": 0})
     print(f"  error={r.get('error')} {json.dumps(r, ensure_ascii=False)[:250]}")
     vt = (r.get("data") or {}).get("vcode_token")

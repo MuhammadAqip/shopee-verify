@@ -143,7 +143,7 @@ print(f"error={r7.get('error')} {j(r7, 240)}")
 
 if VCODE:
     print("\n=== 8. verify_vcode ===")
-    r8 = api("/api/v4/account/management/otp/verify_vcode",
+    r8 = api("/api/v4/otp/verify_vcode",
              {"phone": NEWPHONE, "vcode": VCODE, "operation": 0})
     print(f"error={r8.get('error')} {j(r8, 240)}")
     vt = (r8.get("data") or {}).get("vcode_token")
