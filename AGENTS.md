@@ -19,8 +19,21 @@ Endpoint itu membalas `90309999` untuk hampir semua request web-PC. Memakainya s
 **5. Proxy wajib dipakai, dan wajib benar-benar tersambung.**
 `Api.__init__` harus men-set `self.s.proxies`. Kalau proxy gagal, tandai error (`-997`) — jangan diam-diam jatuh ke koneksi langsung. Request langsung dari IP datacenter akan ditolak, dan kegagalannya terlihat seperti masalah akun.
 
-**6. `operation` untuk change-phone adalah `0`.**
-Bukan 23, bukan 18. Angka 23/18 adalah operation OTP yang berbeda dan punya perilaku counter yang lebih ketat.
+**6. `operation` menentukan channel mana yang ditawarkan — dan `0` TIDAK memberi WhatsApp.**
+Diukur pada akun `4mmwafs78t` / nomor `6287876125617` (satu panggilan per op):
+
+| op | scene | available_channels | need_captcha |
+|---|---|---|---|
+| 0  | `others` | `[1]` (SMS saja) | false |
+| 23 | `phone_otp_account_change_phone` | `[3,2,1]` (WA, Voice, SMS) | **false** |
+| 18 | `phone_otp_account_set_phone` | `[3,2,1]` | false |
+| 8  | `signup` | `[3,2,1]` | **true** (butuh captcha) |
+
+Karena itu `OP_CHAIN = (23, 0)` — `23` dulu, `0` sebagai fallback SMS. Jangan taruh `0` di depan: loop lama `break` di op pertama yang `need_captcha=false`, jadi `op=0` selalu menang dengan SMS-only dan `op=23` tidak pernah dicoba.
+
+Catatan lama "operation change-phone adalah 0" **hanya benar untuk jalur SMS**; ia mengorbankan channel WhatsApp. `op=18` (scene `set_phone`) dan `op=8` (captcha) dipindah ke `OP_CHAIN_EXTENDED` untuk tes manual di akun test — `vcode_token` dari `op=18` belum terbukti diterima `commit_change`.
+
+`verify_vcode` **wajib** memakai `op` yang sama dengan `send_vcode`.
 
 ## Di mana harus melihat
 
